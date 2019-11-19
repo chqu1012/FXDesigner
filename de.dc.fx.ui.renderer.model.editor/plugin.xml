@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="UIEditorAdvisorApplication">
+      <!-- @generated renderer -->
+      <application>
+         <run class="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated renderer -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisor$Perspective"
+            id="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated renderer -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated renderer -->
+      <key
+            commandId="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated renderer -->
+      <actionSet
+            label="%_UI_UIEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="UIEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenURICommand"
+               class="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenCommand"
+               class="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="de.dc.fx.ui.renderer.model.presentation.UIEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated renderer -->
+      <actionSet
+            label="%_UI_UIModelWizard_ActionSet_label"
+            visible="true"
+            id="de.dc.fx.ui.renderer.model.presentation.UIActionBarContributorActionSet">
+         <action
+               label="%_UI_UIModelWizard_label"
+               class="de.dc.fx.ui.renderer.model.presentation.UIActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="de.dc.fx.ui.renderer.model.presentation.UIActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated renderer -->
+      <editor
+            id="de.dc.fx.ui.renderer.model.presentation.UIEditorID"
+            name="%_UI_UIEditor_label"
+            icon="icons/full/obj16/UIModelFile.gif"
+            extensions="ui"
+            class="de.dc.fx.ui.renderer.model.presentation.UIEditor"
+            contributorClass="de.dc.fx.ui.renderer.model.presentation.UIActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,62 @@
+@Ecore(nsURI="http://www.frateranatis.org/ui")
+@GenModel(multipleEditorPages="false", 
+	creationIcons="false", 
+	editDirectory="/de.dc.fx.ui.renderer.model.edit/src-gen",
+	editorDirectory="/de.dc.fx.ui.renderer.model.editor/src-gen", 
+	richClientPlatform="true", 
+	codeFormatting="true",
+	importerID="org.eclipse.emf.importer.ecore", 
+	runtimePlatform="RCP", 
+	fileExtensions="ui", 
+	tableProviders="true", dataTypeConverters="true", modelName="UI", prefix="UI")
+package de.dc.fx.ui.renderer.model
+
+class FXRoot{
+	contains FXNode [0..*] children
+	String controller
+	String styleClass
+//	contains FXBinding[0..*] binding
+}
+
+abstract class FXNode{
+	String ^id
+	String name
+	double prefWidth
+	double prefHeight
+	double minWidth
+	double minHeight
+	double maxWidth
+	double maxHeight
+	contains FXNode[0..*] children
+}
+
+abstract class FXLayout extends FXNode{
+}
+
+class FXHBox extends FXLayout{
+	double spacing
+}
+
+class FXBorderPane extends FXLayout{
+	contains FXNode left
+	contains FXNode right
+	contains FXNode center
+	contains FXNode bottom
+	contains FXNode top
+}
+
+class FXButton extends FXNode{}
+class FXLabel extends FXNode{}
+class FXCheckButton extends FXNode{}
+class FXRadioButton extends FXNode{}
+
+class FXTableView extends FXNode{
+//	refers FXBinding binding
+	contains FXTableColumn[0..*] columns
+}
+
+class FXTableColumn{
+//	refers FXField field
+	String name
+	double width
+}

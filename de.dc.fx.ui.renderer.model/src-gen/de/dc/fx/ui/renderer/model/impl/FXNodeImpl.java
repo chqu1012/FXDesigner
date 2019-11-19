@@ -1,0 +1,621 @@
+/**
+ */
+package de.dc.fx.ui.renderer.model.impl;
+
+import de.dc.fx.ui.renderer.model.FXNode;
+import de.dc.fx.ui.renderer.model.UIPackage;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>FX Node</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getId <em>Id</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getPrefWidth <em>Pref Width</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getPrefHeight <em>Pref Height</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMinWidth <em>Min Width</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMinHeight <em>Min Height</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMaxWidth <em>Max Width</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMaxHeight <em>Max Height</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getChildren <em>Children</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements FXNode {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrefWidth() <em>Pref Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double PREF_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getPrefWidth() <em>Pref Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double prefWidth = PREF_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrefHeight() <em>Pref Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double PREF_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getPrefHeight() <em>Pref Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double prefHeight = PREF_HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMinWidth() <em>Min Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MIN_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMinWidth() <em>Min Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double minWidth = MIN_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMinHeight() <em>Min Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MIN_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMinHeight() <em>Min Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMinHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double minHeight = MIN_HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaxWidth() <em>Max Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MAX_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMaxWidth() <em>Max Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double maxWidth = MAX_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMaxHeight() <em>Max Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double MAX_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getMaxHeight() <em>Max Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMaxHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double maxHeight = MAX_HEIGHT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChildren()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FXNode> children;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXNodeImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return UIPackage.Literals.FX_NODE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getPrefWidth() {
+		return prefWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPrefWidth(double newPrefWidth) {
+		double oldPrefWidth = prefWidth;
+		prefWidth = newPrefWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__PREF_WIDTH, oldPrefWidth,
+					prefWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getPrefHeight() {
+		return prefHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPrefHeight(double newPrefHeight) {
+		double oldPrefHeight = prefHeight;
+		prefHeight = newPrefHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__PREF_HEIGHT, oldPrefHeight,
+					prefHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMinWidth() {
+		return minWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMinWidth(double newMinWidth) {
+		double oldMinWidth = minWidth;
+		minWidth = newMinWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__MIN_WIDTH, oldMinWidth, minWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMinHeight() {
+		return minHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMinHeight(double newMinHeight) {
+		double oldMinHeight = minHeight;
+		minHeight = newMinHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__MIN_HEIGHT, oldMinHeight,
+					minHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMaxWidth() {
+		return maxWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMaxWidth(double newMaxWidth) {
+		double oldMaxWidth = maxWidth;
+		maxWidth = newMaxWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__MAX_WIDTH, oldMaxWidth, maxWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getMaxHeight() {
+		return maxHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setMaxHeight(double newMaxHeight) {
+		double oldMaxHeight = maxHeight;
+		maxHeight = newMaxHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__MAX_HEIGHT, oldMaxHeight,
+					maxHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<FXNode> getChildren() {
+		if (children == null) {
+			children = new EObjectContainmentEList<FXNode>(FXNode.class, this, UIPackage.FX_NODE__CHILDREN);
+		}
+		return children;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case UIPackage.FX_NODE__CHILDREN:
+			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case UIPackage.FX_NODE__ID:
+			return getId();
+		case UIPackage.FX_NODE__NAME:
+			return getName();
+		case UIPackage.FX_NODE__PREF_WIDTH:
+			return getPrefWidth();
+		case UIPackage.FX_NODE__PREF_HEIGHT:
+			return getPrefHeight();
+		case UIPackage.FX_NODE__MIN_WIDTH:
+			return getMinWidth();
+		case UIPackage.FX_NODE__MIN_HEIGHT:
+			return getMinHeight();
+		case UIPackage.FX_NODE__MAX_WIDTH:
+			return getMaxWidth();
+		case UIPackage.FX_NODE__MAX_HEIGHT:
+			return getMaxHeight();
+		case UIPackage.FX_NODE__CHILDREN:
+			return getChildren();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case UIPackage.FX_NODE__ID:
+			setId((String) newValue);
+			return;
+		case UIPackage.FX_NODE__NAME:
+			setName((String) newValue);
+			return;
+		case UIPackage.FX_NODE__PREF_WIDTH:
+			setPrefWidth((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__PREF_HEIGHT:
+			setPrefHeight((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__MIN_WIDTH:
+			setMinWidth((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__MIN_HEIGHT:
+			setMinHeight((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__MAX_WIDTH:
+			setMaxWidth((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__MAX_HEIGHT:
+			setMaxHeight((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__CHILDREN:
+			getChildren().clear();
+			getChildren().addAll((Collection<? extends FXNode>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case UIPackage.FX_NODE__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__PREF_WIDTH:
+			setPrefWidth(PREF_WIDTH_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__PREF_HEIGHT:
+			setPrefHeight(PREF_HEIGHT_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__MIN_WIDTH:
+			setMinWidth(MIN_WIDTH_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__MIN_HEIGHT:
+			setMinHeight(MIN_HEIGHT_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__MAX_WIDTH:
+			setMaxWidth(MAX_WIDTH_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__MAX_HEIGHT:
+			setMaxHeight(MAX_HEIGHT_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__CHILDREN:
+			getChildren().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case UIPackage.FX_NODE__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case UIPackage.FX_NODE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case UIPackage.FX_NODE__PREF_WIDTH:
+			return prefWidth != PREF_WIDTH_EDEFAULT;
+		case UIPackage.FX_NODE__PREF_HEIGHT:
+			return prefHeight != PREF_HEIGHT_EDEFAULT;
+		case UIPackage.FX_NODE__MIN_WIDTH:
+			return minWidth != MIN_WIDTH_EDEFAULT;
+		case UIPackage.FX_NODE__MIN_HEIGHT:
+			return minHeight != MIN_HEIGHT_EDEFAULT;
+		case UIPackage.FX_NODE__MAX_WIDTH:
+			return maxWidth != MAX_WIDTH_EDEFAULT;
+		case UIPackage.FX_NODE__MAX_HEIGHT:
+			return maxHeight != MAX_HEIGHT_EDEFAULT;
+		case UIPackage.FX_NODE__CHILDREN:
+			return children != null && !children.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", prefWidth: ");
+		result.append(prefWidth);
+		result.append(", prefHeight: ");
+		result.append(prefHeight);
+		result.append(", minWidth: ");
+		result.append(minWidth);
+		result.append(", minHeight: ");
+		result.append(minHeight);
+		result.append(", maxWidth: ");
+		result.append(maxWidth);
+		result.append(", maxHeight: ");
+		result.append(maxHeight);
+		result.append(')');
+		return result.toString();
+	}
+
+} //FXNodeImpl

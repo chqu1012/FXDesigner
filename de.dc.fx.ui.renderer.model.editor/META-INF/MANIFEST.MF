@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: de.dc.fx.ui.renderer.model.editor;singleton:=true
+Automatic-Module-Name: de.dc.fx.ui.renderer.model.editor
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: de.dc.fx.ui.renderer.model.presentation.UIEditorPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.dc.fx.ui.renderer.model.presentation
+Require-Bundle: org.eclipse.core.runtime,
+ de.dc.fx.ui.renderer.model.edit;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.emf.edit.ui;visibility:=reexport
+Bundle-ActivationPolicy: lazy
