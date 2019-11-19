@@ -58,10 +58,28 @@ public class FXRootItemProvider extends ItemProviderAdapter
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addBasePackagePropertyDescriptor(object);
 			addControllerPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Base Package feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBasePackagePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXRoot_basePackage_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXRoot_basePackage_feature",
+								"_UI_FXRoot_type"),
+						UIPackage.Literals.FX_ROOT__BASE_PACKAGE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -77,6 +95,21 @@ public class FXRootItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXRoot_controller_feature",
 								"_UI_FXRoot_type"),
 						UIPackage.Literals.FX_ROOT__CONTROLLER, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXRoot_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXRoot_name_feature", "_UI_FXRoot_type"),
+						UIPackage.Literals.FX_ROOT__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -170,7 +203,7 @@ public class FXRootItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXRoot) object).getController();
+		String label = ((FXRoot) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_FXRoot_type")
 				: getString("_UI_FXRoot_type") + " " + label;
 	}
@@ -202,7 +235,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(FXRoot.class)) {
+		case UIPackage.FX_ROOT__BASE_PACKAGE:
 		case UIPackage.FX_ROOT__CONTROLLER:
+		case UIPackage.FX_ROOT__NAME:
 		case UIPackage.FX_ROOT__STYLE_CLASS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

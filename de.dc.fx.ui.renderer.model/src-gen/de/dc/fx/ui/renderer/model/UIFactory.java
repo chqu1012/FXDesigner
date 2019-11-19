@@ -31,6 +31,24 @@ public interface UIFactory extends EFactory {
 	FXRoot createFXRoot();
 
 	/**
+	 * Returns a new object of class '<em>FX Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Event</em>'.
+	 * @generated
+	 */
+	FXEvent createFXEvent();
+
+	/**
+	 * Returns a new object of class '<em>FX Insets</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Insets</em>'.
+	 * @generated
+	 */
+	FXInsets createFXInsets();
+
+	/**
 	 * Returns a new object of class '<em>FXH Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

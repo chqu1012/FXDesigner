@@ -98,6 +98,52 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXEvent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXEventItemProvider fxEventItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXEvent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXEventAdapter() {
+		if (fxEventItemProvider == null) {
+			fxEventItemProvider = new FXEventItemProvider(this);
+		}
+
+		return fxEventItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXInsets} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXInsetsItemProvider fxInsetsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXInsets}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXInsetsAdapter() {
+		if (fxInsetsItemProvider == null) {
+			fxInsetsItemProvider = new FXInsetsItemProvider(this);
+		}
+
+		return fxInsetsItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXHBox} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -388,6 +434,10 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	public void dispose() {
 		if (fxRootItemProvider != null)
 			fxRootItemProvider.dispose();
+		if (fxEventItemProvider != null)
+			fxEventItemProvider.dispose();
+		if (fxInsetsItemProvider != null)
+			fxInsetsItemProvider.dispose();
 		if (fxhBoxItemProvider != null)
 			fxhBoxItemProvider.dispose();
 		if (fxBorderPaneItemProvider != null)

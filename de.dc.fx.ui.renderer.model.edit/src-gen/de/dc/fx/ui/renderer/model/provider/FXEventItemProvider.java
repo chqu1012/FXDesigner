@@ -2,31 +2,39 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
-import de.dc.fx.ui.renderer.model.FXCheckButton;
-
-import de.dc.fx.ui.renderer.model.UIPackage;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXCheckButton} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXEvent} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXCheckButtonItemProvider extends FXNodeItemProvider {
+public class FXEventItemProvider extends ItemProviderAdapter
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+		IItemLabelProvider, IItemPropertySource, ITableItemLabelProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXCheckButtonItemProvider(AdapterFactory adapterFactory) {
+	public FXEventItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -46,14 +54,29 @@ public class FXCheckButtonItemProvider extends FXNodeItemProvider {
 	}
 
 	/**
-	 * This returns FXCheckButton.gif.
+	 * This returns FXEvent.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXCheckButton"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXEvent"));
+	}
+
+	/**
+	 * This returns <code>getImage(object)</code> for the column index <code>0</code> or <code>super.getImage(object)</code> otherwise.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText(Object)
+	 * @see #getColumnText(Object, int)
+	 * @generated
+	 */
+	@Override
+	public Object getColumnImage(Object object, int columnIndex) {
+		// TODO: implement this method to return appropriate information for each column.
+		// Ensure that you remove @generated or mark it @generated NOT
+		return columnIndex == 0 ? getImage(object) : super.getImage(object);
 	}
 
 	/**
@@ -74,9 +97,22 @@ public class FXCheckButtonItemProvider extends FXNodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXCheckButton) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXCheckButton_type")
-				: getString("_UI_FXCheckButton_type") + " " + label;
+		return getString("_UI_FXEvent_type");
+	}
+
+	/**
+	 * This returns <code>getText(object)</code> for the column index <code>0</code> or <code>super.getText(object)</code> otherwise.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImage(Object)
+	 * @see #getColumnImage(Object, int)
+	 * @generated
+	 */
+	@Override
+	public String getColumnText(Object object, int columnIndex) {
+		// TODO: implement this method to return appropriate information for each column.
+		// Ensure that you remove @generated or mark it @generated NOT
+		return columnIndex == 0 ? getText(object) : super.getText(object);
 	}
 
 	/**
@@ -105,24 +141,14 @@ public class FXCheckButtonItemProvider extends FXNodeItemProvider {
 	}
 
 	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify = childFeature == UIPackage.Literals.FX_NODE__PADDING
-				|| childFeature == UIPackage.Literals.FX_NODE__MARGIN;
-
-		if (qualify) {
-			return getString("_UI_CreateChild_text2",
-					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+	public ResourceLocator getResourceLocator() {
+		return UIEditPlugin.INSTANCE;
 	}
 
 }

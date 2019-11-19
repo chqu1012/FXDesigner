@@ -57,6 +57,10 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 		switch (eClass.getClassifierID()) {
 		case UIPackage.FX_ROOT:
 			return createFXRoot();
+		case UIPackage.FX_EVENT:
+			return createFXEvent();
+		case UIPackage.FX_INSETS:
+			return createFXInsets();
 		case UIPackage.FXH_BOX:
 			return createFXHBox();
 		case UIPackage.FX_BORDER_PANE:
@@ -87,6 +91,28 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXRoot createFXRoot() {
 		FXRootImpl fxRoot = new FXRootImpl();
 		return fxRoot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXEvent createFXEvent() {
+		FXEventImpl fxEvent = new FXEventImpl();
+		return fxEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXInsets createFXInsets() {
+		FXInsetsImpl fxInsets = new FXInsetsImpl();
+		return fxInsets;
 	}
 
 	/**

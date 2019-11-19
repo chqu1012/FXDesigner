@@ -20,13 +20,36 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl#getWidth <em>Width</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl#getCellValueFactory <em>Cell Value Factory</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl#getCellFactory <em>Cell Factory</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements FXTableColumn {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,7 +78,7 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double WIDTH_EDEFAULT = 0.0;
+	protected static final double WIDTH_EDEFAULT = 150.0;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
@@ -66,6 +89,46 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	 * @ordered
 	 */
 	protected double width = WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCellValueFactory() <em>Cell Value Factory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCellValueFactory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CELL_VALUE_FACTORY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCellValueFactory() <em>Cell Value Factory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCellValueFactory()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cellValueFactory = CELL_VALUE_FACTORY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCellFactory() <em>Cell Factory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCellFactory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CELL_FACTORY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCellFactory() <em>Cell Factory</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCellFactory()
+	 * @generated
+	 * @ordered
+	 */
+	protected String cellFactory = CELL_FACTORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -84,6 +147,29 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	protected EClass eStaticClass() {
 		return UIPackage.Literals.FX_TABLE_COLUMN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_TABLE_COLUMN__ID, oldId, id));
 	}
 
 	/**
@@ -138,12 +224,66 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	 * @generated
 	 */
 	@Override
+	public String getCellValueFactory() {
+		return cellValueFactory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCellValueFactory(String newCellValueFactory) {
+		String oldCellValueFactory = cellValueFactory;
+		cellValueFactory = newCellValueFactory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_TABLE_COLUMN__CELL_VALUE_FACTORY,
+					oldCellValueFactory, cellValueFactory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCellFactory() {
+		return cellFactory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setCellFactory(String newCellFactory) {
+		String oldCellFactory = cellFactory;
+		cellFactory = newCellFactory;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_TABLE_COLUMN__CELL_FACTORY,
+					oldCellFactory, cellFactory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case UIPackage.FX_TABLE_COLUMN__ID:
+			return getId();
 		case UIPackage.FX_TABLE_COLUMN__NAME:
 			return getName();
 		case UIPackage.FX_TABLE_COLUMN__WIDTH:
 			return getWidth();
+		case UIPackage.FX_TABLE_COLUMN__CELL_VALUE_FACTORY:
+			return getCellValueFactory();
+		case UIPackage.FX_TABLE_COLUMN__CELL_FACTORY:
+			return getCellFactory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,11 +296,20 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case UIPackage.FX_TABLE_COLUMN__ID:
+			setId((String) newValue);
+			return;
 		case UIPackage.FX_TABLE_COLUMN__NAME:
 			setName((String) newValue);
 			return;
 		case UIPackage.FX_TABLE_COLUMN__WIDTH:
 			setWidth((Double) newValue);
+			return;
+		case UIPackage.FX_TABLE_COLUMN__CELL_VALUE_FACTORY:
+			setCellValueFactory((String) newValue);
+			return;
+		case UIPackage.FX_TABLE_COLUMN__CELL_FACTORY:
+			setCellFactory((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,11 +323,20 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case UIPackage.FX_TABLE_COLUMN__ID:
+			setId(ID_EDEFAULT);
+			return;
 		case UIPackage.FX_TABLE_COLUMN__NAME:
 			setName(NAME_EDEFAULT);
 			return;
 		case UIPackage.FX_TABLE_COLUMN__WIDTH:
 			setWidth(WIDTH_EDEFAULT);
+			return;
+		case UIPackage.FX_TABLE_COLUMN__CELL_VALUE_FACTORY:
+			setCellValueFactory(CELL_VALUE_FACTORY_EDEFAULT);
+			return;
+		case UIPackage.FX_TABLE_COLUMN__CELL_FACTORY:
+			setCellFactory(CELL_FACTORY_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -192,10 +350,17 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case UIPackage.FX_TABLE_COLUMN__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case UIPackage.FX_TABLE_COLUMN__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case UIPackage.FX_TABLE_COLUMN__WIDTH:
 			return width != WIDTH_EDEFAULT;
+		case UIPackage.FX_TABLE_COLUMN__CELL_VALUE_FACTORY:
+			return CELL_VALUE_FACTORY_EDEFAULT == null ? cellValueFactory != null
+					: !CELL_VALUE_FACTORY_EDEFAULT.equals(cellValueFactory);
+		case UIPackage.FX_TABLE_COLUMN__CELL_FACTORY:
+			return CELL_FACTORY_EDEFAULT == null ? cellFactory != null : !CELL_FACTORY_EDEFAULT.equals(cellFactory);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -211,10 +376,16 @@ public class FXTableColumnImpl extends MinimalEObjectImpl.Container implements F
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", name: ");
 		result.append(name);
 		result.append(", width: ");
 		result.append(width);
+		result.append(", cellValueFactory: ");
+		result.append(cellValueFactory);
+		result.append(", cellFactory: ");
+		result.append(cellFactory);
 		result.append(')');
 		return result.toString();
 	}

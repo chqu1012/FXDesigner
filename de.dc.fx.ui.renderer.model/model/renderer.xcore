@@ -13,14 +13,27 @@ package de.dc.fx.ui.renderer.model
 
 class FXRoot{
 	contains FXNode [0..*] children
+	String basePackage
 	String controller
-	String styleClass
+	String name
+	String[0..*] styleClass
 //	contains FXBinding[0..*] binding
+}
+
+class FXEvent{
+	
 }
 
 abstract class FXNode{
 	String ^id
 	String name
+	double layoutX
+	double layoutY
+	double opacity
+	String style
+	String[0..*] styleClass
+	boolean visible
+	boolean disable
 	double prefWidth
 	double prefHeight
 	double minWidth
@@ -28,6 +41,15 @@ abstract class FXNode{
 	double maxWidth
 	double maxHeight
 	contains FXNode[0..*] children
+	contains FXInsets padding
+	contains FXInsets margin
+}
+
+class FXInsets{
+	double top ='0.0'
+	double bottom ='0.0'
+	double right ='0.0'
+	double left ='0.0'
 }
 
 abstract class FXLayout extends FXNode{
@@ -57,6 +79,9 @@ class FXTableView extends FXNode{
 
 class FXTableColumn{
 //	refers FXField field
+	String ^id
 	String name
-	double width
+	double width = '150'
+	String cellValueFactory
+	String cellFactory
 }

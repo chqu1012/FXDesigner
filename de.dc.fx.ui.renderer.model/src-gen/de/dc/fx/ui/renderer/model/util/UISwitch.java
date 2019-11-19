@@ -73,9 +73,23 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case UIPackage.FX_EVENT: {
+			FXEvent fxEvent = (FXEvent) theEObject;
+			T result = caseFXEvent(fxEvent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FX_NODE: {
 			FXNode fxNode = (FXNode) theEObject;
 			T result = caseFXNode(fxNode);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UIPackage.FX_INSETS: {
+			FXInsets fxInsets = (FXInsets) theEObject;
+			T result = caseFXInsets(fxInsets);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -184,6 +198,21 @@ public class UISwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXEvent(FXEvent object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>FX Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -195,6 +224,21 @@ public class UISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXNode(FXNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Insets</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Insets</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXInsets(FXInsets object) {
 		return null;
 	}
 

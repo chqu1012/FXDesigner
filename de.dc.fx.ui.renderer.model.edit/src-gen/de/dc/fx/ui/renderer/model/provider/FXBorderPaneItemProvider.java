@@ -273,7 +273,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__RIGHT
 				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__CENTER
 				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__BOTTOM
-				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__TOP;
+				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__TOP
+				|| childFeature == UIPackage.Literals.FX_NODE__PADDING
+				|| childFeature == UIPackage.Literals.FX_NODE__MARGIN;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

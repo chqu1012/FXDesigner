@@ -2,7 +2,7 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
-import de.dc.fx.ui.renderer.model.FXTableColumn;
+import de.dc.fx.ui.renderer.model.FXInsets;
 import de.dc.fx.ui.renderer.model.UIPackage;
 
 import java.util.Collection;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXTableColumn} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXInsets} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXTableColumnItemProvider extends ItemProviderAdapter
+public class FXInsetsItemProvider extends ItemProviderAdapter
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource, ITableItemLabelProvider {
 	/**
@@ -40,7 +40,7 @@ public class FXTableColumnItemProvider extends ItemProviderAdapter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXTableColumnItemProvider(AdapterFactory adapterFactory) {
+	public FXInsetsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -55,104 +55,87 @@ public class FXTableColumnItemProvider extends ItemProviderAdapter
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addWidthPropertyDescriptor(object);
-			addCellValueFactoryPropertyDescriptor(object);
-			addCellFactoryPropertyDescriptor(object);
+			addTopPropertyDescriptor(object);
+			addBottomPropertyDescriptor(object);
+			addRightPropertyDescriptor(object);
+			addLeftPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
+	 * This adds a property descriptor for the Top feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIdPropertyDescriptor(Object object) {
+	protected void addTopPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableColumn_id_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableColumn_id_feature",
-								"_UI_FXTableColumn_type"),
-						UIPackage.Literals.FX_TABLE_COLUMN__ID, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_FXInsets_top_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_top_feature",
+								"_UI_FXInsets_type"),
+						UIPackage.Literals.FX_INSETS__TOP, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Bottom feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addBottomPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableColumn_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableColumn_name_feature",
-								"_UI_FXTableColumn_type"),
-						UIPackage.Literals.FX_TABLE_COLUMN__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Width feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableColumn_width_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableColumn_width_feature",
-								"_UI_FXTableColumn_type"),
-						UIPackage.Literals.FX_TABLE_COLUMN__WIDTH, true, false, false,
+						getResourceLocator(), getString("_UI_FXInsets_bottom_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_bottom_feature",
+								"_UI_FXInsets_type"),
+						UIPackage.Literals.FX_INSETS__BOTTOM, true, false, false,
 						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Cell Value Factory feature.
+	 * This adds a property descriptor for the Right feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCellValueFactoryPropertyDescriptor(Object object) {
+	protected void addRightPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableColumn_cellValueFactory_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableColumn_cellValueFactory_feature",
-								"_UI_FXTableColumn_type"),
-						UIPackage.Literals.FX_TABLE_COLUMN__CELL_VALUE_FACTORY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_FXInsets_right_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_right_feature",
+								"_UI_FXInsets_type"),
+						UIPackage.Literals.FX_INSETS__RIGHT, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Cell Factory feature.
+	 * This adds a property descriptor for the Left feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCellFactoryPropertyDescriptor(Object object) {
+	protected void addLeftPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXTableColumn_cellFactory_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXTableColumn_cellFactory_feature",
-								"_UI_FXTableColumn_type"),
-						UIPackage.Literals.FX_TABLE_COLUMN__CELL_FACTORY, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_FXInsets_left_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_left_feature",
+								"_UI_FXInsets_type"),
+						UIPackage.Literals.FX_INSETS__LEFT, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
-	 * This returns FXTableColumn.gif.
+	 * This returns FXInsets.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXTableColumn"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXInsets"));
 	}
 
 	/**
@@ -188,9 +171,8 @@ public class FXTableColumnItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXTableColumn) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXTableColumn_type")
-				: getString("_UI_FXTableColumn_type") + " " + label;
+		FXInsets fxInsets = (FXInsets) object;
+		return getString("_UI_FXInsets_type") + " " + fxInsets.getTop();
 	}
 
 	/**
@@ -219,12 +201,11 @@ public class FXTableColumnItemProvider extends ItemProviderAdapter
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FXTableColumn.class)) {
-		case UIPackage.FX_TABLE_COLUMN__ID:
-		case UIPackage.FX_TABLE_COLUMN__NAME:
-		case UIPackage.FX_TABLE_COLUMN__WIDTH:
-		case UIPackage.FX_TABLE_COLUMN__CELL_VALUE_FACTORY:
-		case UIPackage.FX_TABLE_COLUMN__CELL_FACTORY:
+		switch (notification.getFeatureID(FXInsets.class)) {
+		case UIPackage.FX_INSETS__TOP:
+		case UIPackage.FX_INSETS__BOTTOM:
+		case UIPackage.FX_INSETS__RIGHT:
+		case UIPackage.FX_INSETS__LEFT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

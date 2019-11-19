@@ -72,8 +72,18 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXEvent(FXEvent object) {
+			return createFXEventAdapter();
+		}
+
+		@Override
 		public Adapter caseFXNode(FXNode object) {
 			return createFXNodeAdapter();
+		}
+
+		@Override
+		public Adapter caseFXInsets(FXInsets object) {
+			return createFXInsetsAdapter();
 		}
 
 		@Override
@@ -155,6 +165,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXEvent <em>FX Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXEvent
+	 * @generated
+	 */
+	public Adapter createFXEventAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXNode <em>FX Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -165,6 +189,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXInsets <em>FX Insets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXInsets
+	 * @generated
+	 */
+	public Adapter createFXInsetsAdapter() {
 		return null;
 	}
 

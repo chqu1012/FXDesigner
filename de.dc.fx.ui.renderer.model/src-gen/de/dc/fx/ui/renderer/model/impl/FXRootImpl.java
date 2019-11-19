@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -31,7 +32,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl#getChildren <em>Children</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl#getController <em>Controller</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl#getName <em>Name</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl#getStyleClass <em>Style Class</em>}</li>
  * </ul>
  *
@@ -47,6 +50,26 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 	 * @ordered
 	 */
 	protected EList<FXNode> children;
+
+	/**
+	 * The default value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasePackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BASE_PACKAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasePackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String basePackage = BASE_PACKAGE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getController() <em>Controller</em>}' attribute.
@@ -69,24 +92,34 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 	protected String controller = CONTROLLER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String STYLE_CLASS_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStyleClass()
 	 * @generated
 	 * @ordered
 	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
+	protected EList<String> styleClass;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,6 +159,30 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 	 * @generated
 	 */
 	@Override
+	public String getBasePackage() {
+		return basePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBasePackage(String newBasePackage) {
+		String oldBasePackage = basePackage;
+		basePackage = newBasePackage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_ROOT__BASE_PACKAGE, oldBasePackage,
+					basePackage));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getController() {
 		return controller;
 	}
@@ -150,8 +207,8 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 	 * @generated
 	 */
 	@Override
-	public String getStyleClass() {
-		return styleClass;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -160,12 +217,24 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 	 * @generated
 	 */
 	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_ROOT__STYLE_CLASS, oldStyleClass,
-					styleClass));
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_ROOT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<String> getStyleClass() {
+		if (styleClass == null) {
+			styleClass = new EDataTypeEList<String>(String.class, this, UIPackage.FX_ROOT__STYLE_CLASS);
+		}
+		return styleClass;
 	}
 
 	/**
@@ -192,8 +261,12 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 		switch (featureID) {
 		case UIPackage.FX_ROOT__CHILDREN:
 			return getChildren();
+		case UIPackage.FX_ROOT__BASE_PACKAGE:
+			return getBasePackage();
 		case UIPackage.FX_ROOT__CONTROLLER:
 			return getController();
+		case UIPackage.FX_ROOT__NAME:
+			return getName();
 		case UIPackage.FX_ROOT__STYLE_CLASS:
 			return getStyleClass();
 		}
@@ -213,11 +286,18 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 			getChildren().clear();
 			getChildren().addAll((Collection<? extends FXNode>) newValue);
 			return;
+		case UIPackage.FX_ROOT__BASE_PACKAGE:
+			setBasePackage((String) newValue);
+			return;
 		case UIPackage.FX_ROOT__CONTROLLER:
 			setController((String) newValue);
 			return;
+		case UIPackage.FX_ROOT__NAME:
+			setName((String) newValue);
+			return;
 		case UIPackage.FX_ROOT__STYLE_CLASS:
-			setStyleClass((String) newValue);
+			getStyleClass().clear();
+			getStyleClass().addAll((Collection<? extends String>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -234,11 +314,17 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 		case UIPackage.FX_ROOT__CHILDREN:
 			getChildren().clear();
 			return;
+		case UIPackage.FX_ROOT__BASE_PACKAGE:
+			setBasePackage(BASE_PACKAGE_EDEFAULT);
+			return;
 		case UIPackage.FX_ROOT__CONTROLLER:
 			setController(CONTROLLER_EDEFAULT);
 			return;
+		case UIPackage.FX_ROOT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		case UIPackage.FX_ROOT__STYLE_CLASS:
-			setStyleClass(STYLE_CLASS_EDEFAULT);
+			getStyleClass().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -254,10 +340,14 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 		switch (featureID) {
 		case UIPackage.FX_ROOT__CHILDREN:
 			return children != null && !children.isEmpty();
+		case UIPackage.FX_ROOT__BASE_PACKAGE:
+			return BASE_PACKAGE_EDEFAULT == null ? basePackage != null : !BASE_PACKAGE_EDEFAULT.equals(basePackage);
 		case UIPackage.FX_ROOT__CONTROLLER:
 			return CONTROLLER_EDEFAULT == null ? controller != null : !CONTROLLER_EDEFAULT.equals(controller);
+		case UIPackage.FX_ROOT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case UIPackage.FX_ROOT__STYLE_CLASS:
-			return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
+			return styleClass != null && !styleClass.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -273,8 +363,12 @@ public class FXRootImpl extends MinimalEObjectImpl.Container implements FXRoot {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (controller: ");
+		result.append(" (basePackage: ");
+		result.append(basePackage);
+		result.append(", controller: ");
 		result.append(controller);
+		result.append(", name: ");
+		result.append(name);
 		result.append(", styleClass: ");
 		result.append(styleClass);
 		result.append(')');

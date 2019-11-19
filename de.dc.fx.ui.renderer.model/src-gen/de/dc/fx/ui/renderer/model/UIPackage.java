@@ -76,22 +76,40 @@ public interface UIPackage extends EPackage {
 	int FX_ROOT__CHILDREN = 0;
 
 	/**
+	 * The feature id for the '<em><b>Base Package</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_ROOT__BASE_PACKAGE = 1;
+
+	/**
 	 * The feature id for the '<em><b>Controller</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_ROOT__CONTROLLER = 1;
+	int FX_ROOT__CONTROLLER = 2;
 
 	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_ROOT__STYLE_CLASS = 2;
+	int FX_ROOT__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_ROOT__STYLE_CLASS = 4;
 
 	/**
 	 * The number of structural features of the '<em>FX Root</em>' class.
@@ -100,7 +118,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_ROOT_FEATURE_COUNT = 3;
+	int FX_ROOT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>FX Root</em>' class.
@@ -112,6 +130,34 @@ public interface UIPackage extends EPackage {
 	int FX_ROOT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXEventImpl <em>FX Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXEventImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXEvent()
+	 * @generated
+	 */
+	int FX_EVENT = 1;
+
+	/**
+	 * The number of structural features of the '<em>FX Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_EVENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>FX Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_EVENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl <em>FX Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,7 +165,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXNode()
 	 * @generated
 	 */
-	int FX_NODE = 1;
+	int FX_NODE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -140,13 +186,76 @@ public interface UIPackage extends EPackage {
 	int FX_NODE__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__LAYOUT_X = 2;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__LAYOUT_Y = 3;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__OPACITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__STYLE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__STYLE_CLASS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__VISIBLE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__DISABLE = 8;
+
+	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__PREF_WIDTH = 2;
+	int FX_NODE__PREF_WIDTH = 9;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -155,7 +264,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__PREF_HEIGHT = 3;
+	int FX_NODE__PREF_HEIGHT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -164,7 +273,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MIN_WIDTH = 4;
+	int FX_NODE__MIN_WIDTH = 11;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -173,7 +282,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MIN_HEIGHT = 5;
+	int FX_NODE__MIN_HEIGHT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -182,7 +291,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MAX_WIDTH = 6;
+	int FX_NODE__MAX_WIDTH = 13;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -191,7 +300,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MAX_HEIGHT = 7;
+	int FX_NODE__MAX_HEIGHT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -200,7 +309,25 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__CHILDREN = 8;
+	int FX_NODE__CHILDREN = 15;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__PADDING = 16;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__MARGIN = 17;
 
 	/**
 	 * The number of structural features of the '<em>FX Node</em>' class.
@@ -209,7 +336,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE_FEATURE_COUNT = 9;
+	int FX_NODE_FEATURE_COUNT = 18;
 
 	/**
 	 * The number of operations of the '<em>FX Node</em>' class.
@@ -221,6 +348,70 @@ public interface UIPackage extends EPackage {
 	int FX_NODE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl <em>FX Insets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXInsetsImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXInsets()
+	 * @generated
+	 */
+	int FX_INSETS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_INSETS__TOP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_INSETS__BOTTOM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_INSETS__RIGHT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_INSETS__LEFT = 3;
+
+	/**
+	 * The number of structural features of the '<em>FX Insets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_INSETS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>FX Insets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_INSETS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXLayoutImpl <em>FX Layout</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -228,7 +419,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLayout()
 	 * @generated
 	 */
-	int FX_LAYOUT = 2;
+	int FX_LAYOUT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -247,6 +438,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_LAYOUT__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -312,6 +566,24 @@ public interface UIPackage extends EPackage {
 	int FX_LAYOUT__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__MARGIN = FX_NODE__MARGIN;
+
+	/**
 	 * The number of structural features of the '<em>FX Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -337,7 +609,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXHBox()
 	 * @generated
 	 */
-	int FXH_BOX = 3;
+	int FXH_BOX = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -356,6 +628,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FXH_BOX__NAME = FX_LAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__OPACITY = FX_LAYOUT__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__STYLE = FX_LAYOUT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__STYLE_CLASS = FX_LAYOUT__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__VISIBLE = FX_LAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__DISABLE = FX_LAYOUT__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -421,6 +756,24 @@ public interface UIPackage extends EPackage {
 	int FXH_BOX__CHILDREN = FX_LAYOUT__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__PADDING = FX_LAYOUT__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__MARGIN = FX_LAYOUT__MARGIN;
+
+	/**
 	 * The feature id for the '<em><b>Spacing</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -455,7 +808,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXBorderPane()
 	 * @generated
 	 */
-	int FX_BORDER_PANE = 4;
+	int FX_BORDER_PANE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -474,6 +827,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_BORDER_PANE__NAME = FX_LAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__OPACITY = FX_LAYOUT__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__STYLE = FX_LAYOUT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__STYLE_CLASS = FX_LAYOUT__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__VISIBLE = FX_LAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__DISABLE = FX_LAYOUT__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -537,6 +953,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_BORDER_PANE__CHILDREN = FX_LAYOUT__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__PADDING = FX_LAYOUT__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__MARGIN = FX_LAYOUT__MARGIN;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -609,7 +1043,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXButton()
 	 * @generated
 	 */
-	int FX_BUTTON = 5;
+	int FX_BUTTON = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -628,6 +1062,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_BUTTON__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -693,6 +1190,24 @@ public interface UIPackage extends EPackage {
 	int FX_BUTTON__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__MARGIN = FX_NODE__MARGIN;
+
+	/**
 	 * The number of structural features of the '<em>FX Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -718,7 +1233,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLabel()
 	 * @generated
 	 */
-	int FX_LABEL = 6;
+	int FX_LABEL = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -737,6 +1252,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_LABEL__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -802,6 +1380,24 @@ public interface UIPackage extends EPackage {
 	int FX_LABEL__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__MARGIN = FX_NODE__MARGIN;
+
+	/**
 	 * The number of structural features of the '<em>FX Label</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -827,7 +1423,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXCheckButton()
 	 * @generated
 	 */
-	int FX_CHECK_BUTTON = 7;
+	int FX_CHECK_BUTTON = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -846,6 +1442,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_CHECK_BUTTON__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -911,6 +1570,24 @@ public interface UIPackage extends EPackage {
 	int FX_CHECK_BUTTON__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__MARGIN = FX_NODE__MARGIN;
+
+	/**
 	 * The number of structural features of the '<em>FX Check Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -936,7 +1613,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXRadioButton()
 	 * @generated
 	 */
-	int FX_RADIO_BUTTON = 8;
+	int FX_RADIO_BUTTON = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -955,6 +1632,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_RADIO_BUTTON__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1020,6 +1760,24 @@ public interface UIPackage extends EPackage {
 	int FX_RADIO_BUTTON__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__MARGIN = FX_NODE__MARGIN;
+
+	/**
 	 * The number of structural features of the '<em>FX Radio Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1045,7 +1803,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableView()
 	 * @generated
 	 */
-	int FX_TABLE_VIEW = 9;
+	int FX_TABLE_VIEW = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1064,6 +1822,69 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_TABLE_VIEW__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1129,6 +1950,24 @@ public interface UIPackage extends EPackage {
 	int FX_TABLE_VIEW__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__MARGIN = FX_NODE__MARGIN;
+
+	/**
 	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1163,7 +2002,16 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 10;
+	int FX_TABLE_COLUMN = 12;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_COLUMN__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1172,7 +2020,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_COLUMN__NAME = 0;
+	int FX_TABLE_COLUMN__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Width</b></em>' attribute.
@@ -1181,7 +2029,25 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_COLUMN__WIDTH = 1;
+	int FX_TABLE_COLUMN__WIDTH = 2;
+
+	/**
+	 * The feature id for the '<em><b>Cell Value Factory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_COLUMN__CELL_VALUE_FACTORY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Cell Factory</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_COLUMN__CELL_FACTORY = 4;
 
 	/**
 	 * The number of structural features of the '<em>FX Table Column</em>' class.
@@ -1190,7 +2056,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_COLUMN_FEATURE_COUNT = 2;
+	int FX_TABLE_COLUMN_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>FX Table Column</em>' class.
@@ -1223,6 +2089,17 @@ public interface UIPackage extends EPackage {
 	EReference getFXRoot_Children();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXRoot#getBasePackage <em>Base Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base Package</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXRoot#getBasePackage()
+	 * @see #getFXRoot()
+	 * @generated
+	 */
+	EAttribute getFXRoot_BasePackage();
+
+	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXRoot#getController <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1234,15 +2111,36 @@ public interface UIPackage extends EPackage {
 	EAttribute getFXRoot_Controller();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXRoot#getStyleClass <em>Style Class</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXRoot#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXRoot#getName()
+	 * @see #getFXRoot()
+	 * @generated
+	 */
+	EAttribute getFXRoot_Name();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.dc.fx.ui.renderer.model.FXRoot#getStyleClass <em>Style Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Style Class</em>'.
 	 * @see de.dc.fx.ui.renderer.model.FXRoot#getStyleClass()
 	 * @see #getFXRoot()
 	 * @generated
 	 */
 	EAttribute getFXRoot_StyleClass();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXEvent <em>FX Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Event</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXEvent
+	 * @generated
+	 */
+	EClass getFXEvent();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXNode <em>FX Node</em>}'.
@@ -1275,6 +2173,83 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFXNode_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getLayoutX <em>Layout X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Layout X</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getLayoutX()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_LayoutX();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getLayoutY <em>Layout Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Layout Y</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getLayoutY()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_LayoutY();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getOpacity <em>Opacity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Opacity</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getOpacity()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Opacity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getStyle()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Style();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link de.dc.fx.ui.renderer.model.FXNode#getStyleClass <em>Style Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Style Class</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getStyleClass()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_StyleClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#isVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visible</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#isVisible()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Visible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#isDisable <em>Disable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Disable</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#isDisable()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Disable();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getPrefWidth <em>Pref Width</em>}'.
@@ -1352,6 +2327,82 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFXNode_Children();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.renderer.model.FXNode#getPadding <em>Padding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Padding</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getPadding()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EReference getFXNode_Padding();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.renderer.model.FXNode#getMargin <em>Margin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Margin</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getMargin()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EReference getFXNode_Margin();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXInsets <em>FX Insets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Insets</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXInsets
+	 * @generated
+	 */
+	EClass getFXInsets();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getTop <em>Top</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Top</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXInsets#getTop()
+	 * @see #getFXInsets()
+	 * @generated
+	 */
+	EAttribute getFXInsets_Top();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getBottom <em>Bottom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bottom</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXInsets#getBottom()
+	 * @see #getFXInsets()
+	 * @generated
+	 */
+	EAttribute getFXInsets_Bottom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Right</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXInsets#getRight()
+	 * @see #getFXInsets()
+	 * @generated
+	 */
+	EAttribute getFXInsets_Right();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Left</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXInsets#getLeft()
+	 * @see #getFXInsets()
+	 * @generated
+	 */
+	EAttribute getFXInsets_Left();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXLayout <em>FX Layout</em>}'.
@@ -1521,6 +2572,17 @@ public interface UIPackage extends EPackage {
 	EClass getFXTableColumn();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXTableColumn#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTableColumn#getId()
+	 * @see #getFXTableColumn()
+	 * @generated
+	 */
+	EAttribute getFXTableColumn_Id();
+
+	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXTableColumn#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1541,6 +2603,28 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFXTableColumn_Width();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXTableColumn#getCellValueFactory <em>Cell Value Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cell Value Factory</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTableColumn#getCellValueFactory()
+	 * @see #getFXTableColumn()
+	 * @generated
+	 */
+	EAttribute getFXTableColumn_CellValueFactory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXTableColumn#getCellFactory <em>Cell Factory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cell Factory</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTableColumn#getCellFactory()
+	 * @see #getFXTableColumn()
+	 * @generated
+	 */
+	EAttribute getFXTableColumn_CellFactory();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1584,6 +2668,14 @@ public interface UIPackage extends EPackage {
 		EReference FX_ROOT__CHILDREN = eINSTANCE.getFXRoot_Children();
 
 		/**
+		 * The meta object literal for the '<em><b>Base Package</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_ROOT__BASE_PACKAGE = eINSTANCE.getFXRoot_BasePackage();
+
+		/**
 		 * The meta object literal for the '<em><b>Controller</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1592,12 +2684,30 @@ public interface UIPackage extends EPackage {
 		EAttribute FX_ROOT__CONTROLLER = eINSTANCE.getFXRoot_Controller();
 
 		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_ROOT__NAME = eINSTANCE.getFXRoot_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute FX_ROOT__STYLE_CLASS = eINSTANCE.getFXRoot_StyleClass();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXEventImpl <em>FX Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXEventImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXEvent()
+		 * @generated
+		 */
+		EClass FX_EVENT = eINSTANCE.getFXEvent();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl <em>FX Node</em>}' class.
@@ -1624,6 +2734,62 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_NODE__NAME = eINSTANCE.getFXNode_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Layout X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__LAYOUT_X = eINSTANCE.getFXNode_LayoutX();
+
+		/**
+		 * The meta object literal for the '<em><b>Layout Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__LAYOUT_Y = eINSTANCE.getFXNode_LayoutY();
+
+		/**
+		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__OPACITY = eINSTANCE.getFXNode_Opacity();
+
+		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__STYLE = eINSTANCE.getFXNode_Style();
+
+		/**
+		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__STYLE_CLASS = eINSTANCE.getFXNode_StyleClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__VISIBLE = eINSTANCE.getFXNode_Visible();
+
+		/**
+		 * The meta object literal for the '<em><b>Disable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__DISABLE = eINSTANCE.getFXNode_Disable();
 
 		/**
 		 * The meta object literal for the '<em><b>Pref Width</b></em>' attribute feature.
@@ -1680,6 +2846,64 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FX_NODE__CHILDREN = eINSTANCE.getFXNode_Children();
+
+		/**
+		 * The meta object literal for the '<em><b>Padding</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_NODE__PADDING = eINSTANCE.getFXNode_Padding();
+
+		/**
+		 * The meta object literal for the '<em><b>Margin</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_NODE__MARGIN = eINSTANCE.getFXNode_Margin();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl <em>FX Insets</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXInsetsImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXInsets()
+		 * @generated
+		 */
+		EClass FX_INSETS = eINSTANCE.getFXInsets();
+
+		/**
+		 * The meta object literal for the '<em><b>Top</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_INSETS__TOP = eINSTANCE.getFXInsets_Top();
+
+		/**
+		 * The meta object literal for the '<em><b>Bottom</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_INSETS__BOTTOM = eINSTANCE.getFXInsets_Bottom();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_INSETS__RIGHT = eINSTANCE.getFXInsets_Right();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_INSETS__LEFT = eINSTANCE.getFXInsets_Left();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXLayoutImpl <em>FX Layout</em>}' class.
@@ -1828,6 +3052,14 @@ public interface UIPackage extends EPackage {
 		EClass FX_TABLE_COLUMN = eINSTANCE.getFXTableColumn();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TABLE_COLUMN__ID = eINSTANCE.getFXTableColumn_Id();
+
+		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1842,6 +3074,22 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_TABLE_COLUMN__WIDTH = eINSTANCE.getFXTableColumn_Width();
+
+		/**
+		 * The meta object literal for the '<em><b>Cell Value Factory</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TABLE_COLUMN__CELL_VALUE_FACTORY = eINSTANCE.getFXTableColumn_CellValueFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>Cell Factory</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TABLE_COLUMN__CELL_FACTORY = eINSTANCE.getFXTableColumn_CellFactory();
 
 	}
 
