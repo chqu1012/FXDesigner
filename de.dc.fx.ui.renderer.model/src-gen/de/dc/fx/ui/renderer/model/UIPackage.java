@@ -303,22 +303,13 @@ public interface UIPackage extends EPackage {
 	int FX_NODE__MAX_HEIGHT = 14;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_NODE__CHILDREN = 15;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__PADDING = 16;
+	int FX_NODE__PADDING = 15;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -327,7 +318,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MARGIN = 17;
+	int FX_NODE__MARGIN = 16;
 
 	/**
 	 * The number of structural features of the '<em>FX Node</em>' class.
@@ -336,7 +327,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE_FEATURE_COUNT = 18;
+	int FX_NODE_FEATURE_COUNT = 17;
 
 	/**
 	 * The number of operations of the '<em>FX Node</em>' class.
@@ -557,15 +548,6 @@ public interface UIPackage extends EPackage {
 	int FX_LAYOUT__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_LAYOUT__CHILDREN = FX_NODE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -584,13 +566,22 @@ public interface UIPackage extends EPackage {
 	int FX_LAYOUT__MARGIN = FX_NODE__MARGIN;
 
 	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__CHILDREN = FX_NODE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>FX Layout</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_LAYOUT_FEATURE_COUNT = FX_NODE_FEATURE_COUNT + 0;
+	int FX_LAYOUT_FEATURE_COUNT = FX_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>FX Layout</em>' class.
@@ -747,15 +738,6 @@ public interface UIPackage extends EPackage {
 	int FXH_BOX__MAX_HEIGHT = FX_LAYOUT__MAX_HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FXH_BOX__CHILDREN = FX_LAYOUT__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -772,6 +754,15 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FXH_BOX__MARGIN = FX_LAYOUT__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__CHILDREN = FX_LAYOUT__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Spacing</b></em>' attribute.
@@ -946,15 +937,6 @@ public interface UIPackage extends EPackage {
 	int FX_BORDER_PANE__MAX_HEIGHT = FX_LAYOUT__MAX_HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_BORDER_PANE__CHILDREN = FX_LAYOUT__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -971,6 +953,15 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_BORDER_PANE__MARGIN = FX_LAYOUT__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__CHILDREN = FX_LAYOUT__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1181,15 +1172,6 @@ public interface UIPackage extends EPackage {
 	int FX_BUTTON__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_BUTTON__CHILDREN = FX_NODE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1369,15 +1351,6 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_LABEL__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_LABEL__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -1561,15 +1534,6 @@ public interface UIPackage extends EPackage {
 	int FX_CHECK_BUTTON__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_CHECK_BUTTON__CHILDREN = FX_NODE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1751,15 +1715,6 @@ public interface UIPackage extends EPackage {
 	int FX_RADIO_BUTTON__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_RADIO_BUTTON__CHILDREN = FX_NODE__CHILDREN;
-
-	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1939,15 +1894,6 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_TABLE_VIEW__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
-
-	/**
-	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_TABLE_VIEW__CHILDREN = FX_NODE__CHILDREN;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -2318,17 +2264,6 @@ public interface UIPackage extends EPackage {
 	EAttribute getFXNode_MaxHeight();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link de.dc.fx.ui.renderer.model.FXNode#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Children</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#getChildren()
-	 * @see #getFXNode()
-	 * @generated
-	 */
-	EReference getFXNode_Children();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.renderer.model.FXNode#getPadding <em>Padding</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2413,6 +2348,17 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFXLayout();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.fx.ui.renderer.model.FXLayout#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Children</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXLayout#getChildren()
+	 * @see #getFXLayout()
+	 * @generated
+	 */
+	EReference getFXLayout_Children();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXHBox <em>FXH Box</em>}'.
@@ -2840,14 +2786,6 @@ public interface UIPackage extends EPackage {
 		EAttribute FX_NODE__MAX_HEIGHT = eINSTANCE.getFXNode_MaxHeight();
 
 		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FX_NODE__CHILDREN = eINSTANCE.getFXNode_Children();
-
-		/**
 		 * The meta object literal for the '<em><b>Padding</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2914,6 +2852,14 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FX_LAYOUT = eINSTANCE.getFXLayout();
+
+		/**
+		 * The meta object literal for the '<em><b>Children</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_LAYOUT__CHILDREN = eINSTANCE.getFXLayout_Children();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXHBoxImpl <em>FXH Box</em>}' class.

@@ -40,7 +40,6 @@ abstract class FXNode{
 	double minHeight
 	double maxWidth
 	double maxHeight
-	contains FXNode[0..*] children
 	contains FXInsets padding
 	contains FXInsets margin
 }
@@ -53,6 +52,7 @@ class FXInsets{
 }
 
 abstract class FXLayout extends FXNode{
+	contains FXNode[0..*] children
 }
 
 class FXHBox extends FXLayout{

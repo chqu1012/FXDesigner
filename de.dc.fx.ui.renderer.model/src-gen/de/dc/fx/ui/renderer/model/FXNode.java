@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.fx.ui.renderer.model.FXNode#getMinHeight <em>Min Height</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.FXNode#getMaxWidth <em>Max Width</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.FXNode#getMaxHeight <em>Max Height</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.FXNode#getChildren <em>Children</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.FXNode#getPadding <em>Padding</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.FXNode#getMargin <em>Margin</em>}</li>
  * </ul>
@@ -359,18 +358,6 @@ public interface FXNode extends EObject {
 	 * @generated
 	 */
 	void setMaxHeight(double value);
-
-	/**
-	 * Returns the value of the '<em><b>Children</b></em>' containment reference list.
-	 * The list contents are of type {@link de.dc.fx.ui.renderer.model.FXNode}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' containment reference list.
-	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXNode_Children()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<FXNode> getChildren();
 
 	/**
 	 * Returns the value of the '<em><b>Padding</b></em>' containment reference.

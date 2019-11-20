@@ -426,7 +426,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFXNode_Children() {
+	public EReference getFXNode_Padding() {
 		return (EReference) fxNodeEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -436,18 +436,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFXNode_Padding() {
-		return (EReference) fxNodeEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getFXNode_Margin() {
-		return (EReference) fxNodeEClass.getEStructuralFeatures().get(17);
+		return (EReference) fxNodeEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -508,6 +498,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	@Override
 	public EClass getFXLayout() {
 		return fxLayoutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFXLayout_Children() {
+		return (EReference) fxLayoutEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -765,7 +765,6 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEAttribute(fxNodeEClass, FX_NODE__MIN_HEIGHT);
 		createEAttribute(fxNodeEClass, FX_NODE__MAX_WIDTH);
 		createEAttribute(fxNodeEClass, FX_NODE__MAX_HEIGHT);
-		createEReference(fxNodeEClass, FX_NODE__CHILDREN);
 		createEReference(fxNodeEClass, FX_NODE__PADDING);
 		createEReference(fxNodeEClass, FX_NODE__MARGIN);
 
@@ -776,6 +775,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEAttribute(fxInsetsEClass, FX_INSETS__LEFT);
 
 		fxLayoutEClass = createEClass(FX_LAYOUT);
+		createEReference(fxLayoutEClass, FX_LAYOUT__CHILDREN);
 
 		fxhBoxEClass = createEClass(FXH_BOX);
 		createEAttribute(fxhBoxEClass, FXH_BOX__SPACING);
@@ -910,9 +910,6 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		initEAttribute(getFXNode_MaxHeight(), theEcorePackage.getEDouble(), "maxHeight", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getFXNode_Children(), this.getFXNode(), null, "children", null, 0, -1, FXNode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFXNode_Padding(), this.getFXInsets(), null, "padding", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -936,6 +933,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				IS_ORDERED);
 
 		initEClass(fxLayoutEClass, FXLayout.class, "FXLayout", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFXLayout_Children(), this.getFXNode(), null, "children", null, 0, -1, FXLayout.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxhBoxEClass, FXHBox.class, "FXHBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXHBox_Spacing(), theEcorePackage.getEDouble(), "spacing", null, 0, 1, FXHBox.class,

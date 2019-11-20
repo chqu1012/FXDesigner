@@ -20,8 +20,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMinHeight <em>Min Height</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMaxWidth <em>Max Width</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMaxHeight <em>Max Height</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getPadding <em>Padding</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMargin <em>Margin</em>}</li>
  * </ul>
@@ -343,16 +340,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected double maxHeight = MAX_HEIGHT_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FXNode> children;
 
 	/**
 	 * The cached value of the '{@link #getPadding() <em>Padding</em>}' containment reference.
@@ -738,19 +725,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public EList<FXNode> getChildren() {
-		if (children == null) {
-			children = new EObjectContainmentEList<FXNode>(FXNode.class, this, UIPackage.FX_NODE__CHILDREN);
-		}
-		return children;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public FXInsets getPadding() {
 		return padding;
 	}
@@ -855,8 +829,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case UIPackage.FX_NODE__CHILDREN:
-			return ((InternalEList<?>) getChildren()).basicRemove(otherEnd, msgs);
 		case UIPackage.FX_NODE__PADDING:
 			return basicSetPadding(null, msgs);
 		case UIPackage.FX_NODE__MARGIN:
@@ -903,8 +875,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			return getMaxWidth();
 		case UIPackage.FX_NODE__MAX_HEIGHT:
 			return getMaxHeight();
-		case UIPackage.FX_NODE__CHILDREN:
-			return getChildren();
 		case UIPackage.FX_NODE__PADDING:
 			return getPadding();
 		case UIPackage.FX_NODE__MARGIN:
@@ -967,10 +937,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case UIPackage.FX_NODE__MAX_HEIGHT:
 			setMaxHeight((Double) newValue);
-			return;
-		case UIPackage.FX_NODE__CHILDREN:
-			getChildren().clear();
-			getChildren().addAll((Collection<? extends FXNode>) newValue);
 			return;
 		case UIPackage.FX_NODE__PADDING:
 			setPadding((FXInsets) newValue);
@@ -1035,9 +1001,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		case UIPackage.FX_NODE__MAX_HEIGHT:
 			setMaxHeight(MAX_HEIGHT_EDEFAULT);
 			return;
-		case UIPackage.FX_NODE__CHILDREN:
-			getChildren().clear();
-			return;
 		case UIPackage.FX_NODE__PADDING:
 			setPadding((FXInsets) null);
 			return;
@@ -1086,8 +1049,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			return maxWidth != MAX_WIDTH_EDEFAULT;
 		case UIPackage.FX_NODE__MAX_HEIGHT:
 			return maxHeight != MAX_HEIGHT_EDEFAULT;
-		case UIPackage.FX_NODE__CHILDREN:
-			return children != null && !children.isEmpty();
 		case UIPackage.FX_NODE__PADDING:
 			return padding != null;
 		case UIPackage.FX_NODE__MARGIN:

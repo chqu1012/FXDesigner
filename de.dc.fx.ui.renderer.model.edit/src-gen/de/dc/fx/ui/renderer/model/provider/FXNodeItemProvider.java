@@ -326,7 +326,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UIPackage.Literals.FX_NODE__CHILDREN);
 			childrenFeatures.add(UIPackage.Literals.FX_NODE__PADDING);
 			childrenFeatures.add(UIPackage.Literals.FX_NODE__MARGIN);
 		}
@@ -428,7 +427,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 		case UIPackage.FX_NODE__MAX_HEIGHT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case UIPackage.FX_NODE__CHILDREN:
 		case UIPackage.FX_NODE__PADDING:
 		case UIPackage.FX_NODE__MARGIN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -447,27 +445,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXHBox()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXBorderPane()));
-
-		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXButton()));
-
-		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXLabel()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXCheckButton()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXRadioButton()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_NODE__CHILDREN, UIFactory.eINSTANCE.createFXTableView()));
 
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_NODE__PADDING, UIFactory.eINSTANCE.createFXInsets()));
