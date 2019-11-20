@@ -11,8 +11,8 @@ public class FXRootApplication extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		EmfWorkbench workbench = new EmfWorkbench();
-		workbench.registerEmfView(FXRootDetailedEmfTreeView.class);
+		EmfWorkbench workbench = new EmfWorkbench(); 
+		workbench.registerEmfEditor(FXRootDetailedEmfTreeViewCompact.class);
 		workbench.addViewToLeft(new EmfRecentlyOpenView());
 		workbench.addViewToLeft(new EmfPaletteView());
 		primaryStage.setScene(new Scene(workbench));
