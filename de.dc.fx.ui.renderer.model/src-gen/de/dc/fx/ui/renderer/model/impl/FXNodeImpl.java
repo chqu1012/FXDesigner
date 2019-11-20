@@ -31,13 +31,13 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <ul>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getId <em>Id</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getLayoutX <em>Layout X</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getLayoutY <em>Layout Y</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getOpacity <em>Opacity</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#isVisible <em>Visible</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#isDisable <em>Disable</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getStyle <em>Style</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getStyleClass <em>Style Class</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getLayoutX <em>Layout X</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getLayoutY <em>Layout Y</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getPrefWidth <em>Pref Width</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getPrefHeight <em>Pref Height</em>}</li>
  *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl#getMinWidth <em>Min Width</em>}</li>
@@ -92,46 +92,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutX()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double LAYOUT_X_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutX()
-	 * @generated
-	 * @ordered
-	 */
-	protected double layoutX = LAYOUT_X_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutY()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double LAYOUT_Y_EDEFAULT = 0.0;
-
-	/**
-	 * The cached value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayoutY()
-	 * @generated
-	 * @ordered
-	 */
-	protected double layoutY = LAYOUT_Y_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getOpacity() <em>Opacity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -150,36 +110,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected double opacity = OPACITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected String style = STYLE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<String> styleClass;
 
 	/**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
@@ -220,6 +150,76 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected boolean disable = DISABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String style = STYLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyleClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> styleClass;
+
+	/**
+	 * The default value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutX()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LAYOUT_X_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLayoutX() <em>Layout X</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutX()
+	 * @generated
+	 * @ordered
+	 */
+	protected double layoutX = LAYOUT_X_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutY()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double LAYOUT_Y_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getLayoutY() <em>Layout Y</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLayoutY()
+	 * @generated
+	 * @ordered
+	 */
+	protected double layoutY = LAYOUT_Y_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPrefWidth() <em>Pref Width</em>}' attribute.
@@ -432,52 +432,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public double getLayoutX() {
-		return layoutX;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLayoutX(double newLayoutX) {
-		double oldLayoutX = layoutX;
-		layoutX = newLayoutX;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__LAYOUT_X, oldLayoutX, layoutX));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public double getLayoutY() {
-		return layoutY;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLayoutY(double newLayoutY) {
-		double oldLayoutY = layoutY;
-		layoutY = newLayoutY;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__LAYOUT_Y, oldLayoutY, layoutY));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public double getOpacity() {
 		return opacity;
 	}
@@ -493,42 +447,6 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		opacity = newOpacity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__OPACITY, oldOpacity, opacity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getStyle() {
-		return style;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyle(String newStyle) {
-		String oldStyle = style;
-		style = newStyle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__STYLE, oldStyle, style));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<String> getStyleClass() {
-		if (styleClass == null) {
-			styleClass = new EDataTypeEList<String>(String.class, this, UIPackage.FX_NODE__STYLE_CLASS);
-		}
-		return styleClass;
 	}
 
 	/**
@@ -575,6 +493,88 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		disable = newDisable;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__DISABLE, oldDisable, disable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getStyle() {
+		return style;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStyle(String newStyle) {
+		String oldStyle = style;
+		style = newStyle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__STYLE, oldStyle, style));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<String> getStyleClass() {
+		if (styleClass == null) {
+			styleClass = new EDataTypeEList<String>(String.class, this, UIPackage.FX_NODE__STYLE_CLASS);
+		}
+		return styleClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getLayoutX() {
+		return layoutX;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLayoutX(double newLayoutX) {
+		double oldLayoutX = layoutX;
+		layoutX = newLayoutX;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__LAYOUT_X, oldLayoutX, layoutX));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getLayoutY() {
+		return layoutY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLayoutY(double newLayoutY) {
+		double oldLayoutY = layoutY;
+		layoutY = newLayoutY;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__LAYOUT_Y, oldLayoutY, layoutY));
 	}
 
 	/**
@@ -849,20 +849,20 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			return getId();
 		case UIPackage.FX_NODE__NAME:
 			return getName();
-		case UIPackage.FX_NODE__LAYOUT_X:
-			return getLayoutX();
-		case UIPackage.FX_NODE__LAYOUT_Y:
-			return getLayoutY();
 		case UIPackage.FX_NODE__OPACITY:
 			return getOpacity();
-		case UIPackage.FX_NODE__STYLE:
-			return getStyle();
-		case UIPackage.FX_NODE__STYLE_CLASS:
-			return getStyleClass();
 		case UIPackage.FX_NODE__VISIBLE:
 			return isVisible();
 		case UIPackage.FX_NODE__DISABLE:
 			return isDisable();
+		case UIPackage.FX_NODE__STYLE:
+			return getStyle();
+		case UIPackage.FX_NODE__STYLE_CLASS:
+			return getStyleClass();
+		case UIPackage.FX_NODE__LAYOUT_X:
+			return getLayoutX();
+		case UIPackage.FX_NODE__LAYOUT_Y:
+			return getLayoutY();
 		case UIPackage.FX_NODE__PREF_WIDTH:
 			return getPrefWidth();
 		case UIPackage.FX_NODE__PREF_HEIGHT:
@@ -898,14 +898,14 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		case UIPackage.FX_NODE__NAME:
 			setName((String) newValue);
 			return;
-		case UIPackage.FX_NODE__LAYOUT_X:
-			setLayoutX((Double) newValue);
-			return;
-		case UIPackage.FX_NODE__LAYOUT_Y:
-			setLayoutY((Double) newValue);
-			return;
 		case UIPackage.FX_NODE__OPACITY:
 			setOpacity((Double) newValue);
+			return;
+		case UIPackage.FX_NODE__VISIBLE:
+			setVisible((Boolean) newValue);
+			return;
+		case UIPackage.FX_NODE__DISABLE:
+			setDisable((Boolean) newValue);
 			return;
 		case UIPackage.FX_NODE__STYLE:
 			setStyle((String) newValue);
@@ -914,11 +914,11 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			getStyleClass().clear();
 			getStyleClass().addAll((Collection<? extends String>) newValue);
 			return;
-		case UIPackage.FX_NODE__VISIBLE:
-			setVisible((Boolean) newValue);
+		case UIPackage.FX_NODE__LAYOUT_X:
+			setLayoutX((Double) newValue);
 			return;
-		case UIPackage.FX_NODE__DISABLE:
-			setDisable((Boolean) newValue);
+		case UIPackage.FX_NODE__LAYOUT_Y:
+			setLayoutY((Double) newValue);
 			return;
 		case UIPackage.FX_NODE__PREF_WIDTH:
 			setPrefWidth((Double) newValue);
@@ -962,14 +962,14 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		case UIPackage.FX_NODE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case UIPackage.FX_NODE__LAYOUT_X:
-			setLayoutX(LAYOUT_X_EDEFAULT);
-			return;
-		case UIPackage.FX_NODE__LAYOUT_Y:
-			setLayoutY(LAYOUT_Y_EDEFAULT);
-			return;
 		case UIPackage.FX_NODE__OPACITY:
 			setOpacity(OPACITY_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__VISIBLE:
+			setVisible(VISIBLE_EDEFAULT);
+			return;
+		case UIPackage.FX_NODE__DISABLE:
+			setDisable(DISABLE_EDEFAULT);
 			return;
 		case UIPackage.FX_NODE__STYLE:
 			setStyle(STYLE_EDEFAULT);
@@ -977,11 +977,11 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		case UIPackage.FX_NODE__STYLE_CLASS:
 			getStyleClass().clear();
 			return;
-		case UIPackage.FX_NODE__VISIBLE:
-			setVisible(VISIBLE_EDEFAULT);
+		case UIPackage.FX_NODE__LAYOUT_X:
+			setLayoutX(LAYOUT_X_EDEFAULT);
 			return;
-		case UIPackage.FX_NODE__DISABLE:
-			setDisable(DISABLE_EDEFAULT);
+		case UIPackage.FX_NODE__LAYOUT_Y:
+			setLayoutY(LAYOUT_Y_EDEFAULT);
 			return;
 		case UIPackage.FX_NODE__PREF_WIDTH:
 			setPrefWidth(PREF_WIDTH_EDEFAULT);
@@ -1023,20 +1023,20 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case UIPackage.FX_NODE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case UIPackage.FX_NODE__LAYOUT_X:
-			return layoutX != LAYOUT_X_EDEFAULT;
-		case UIPackage.FX_NODE__LAYOUT_Y:
-			return layoutY != LAYOUT_Y_EDEFAULT;
 		case UIPackage.FX_NODE__OPACITY:
 			return opacity != OPACITY_EDEFAULT;
-		case UIPackage.FX_NODE__STYLE:
-			return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
-		case UIPackage.FX_NODE__STYLE_CLASS:
-			return styleClass != null && !styleClass.isEmpty();
 		case UIPackage.FX_NODE__VISIBLE:
 			return visible != VISIBLE_EDEFAULT;
 		case UIPackage.FX_NODE__DISABLE:
 			return disable != DISABLE_EDEFAULT;
+		case UIPackage.FX_NODE__STYLE:
+			return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
+		case UIPackage.FX_NODE__STYLE_CLASS:
+			return styleClass != null && !styleClass.isEmpty();
+		case UIPackage.FX_NODE__LAYOUT_X:
+			return layoutX != LAYOUT_X_EDEFAULT;
+		case UIPackage.FX_NODE__LAYOUT_Y:
+			return layoutY != LAYOUT_Y_EDEFAULT;
 		case UIPackage.FX_NODE__PREF_WIDTH:
 			return prefWidth != PREF_WIDTH_EDEFAULT;
 		case UIPackage.FX_NODE__PREF_HEIGHT:
@@ -1072,20 +1072,20 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", layoutX: ");
-		result.append(layoutX);
-		result.append(", layoutY: ");
-		result.append(layoutY);
 		result.append(", opacity: ");
 		result.append(opacity);
-		result.append(", style: ");
-		result.append(style);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(", visible: ");
 		result.append(visible);
 		result.append(", disable: ");
 		result.append(disable);
+		result.append(", style: ");
+		result.append(style);
+		result.append(", styleClass: ");
+		result.append(styleClass);
+		result.append(", layoutX: ");
+		result.append(layoutX);
+		result.append(", layoutY: ");
+		result.append(layoutY);
 		result.append(", prefWidth: ");
 		result.append(prefWidth);
 		result.append(", prefHeight: ");

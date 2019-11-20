@@ -186,31 +186,31 @@ public interface UIPackage extends EPackage {
 	int FX_NODE__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_NODE__LAYOUT_X = 2;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_NODE__LAYOUT_Y = 3;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__OPACITY = 4;
+	int FX_NODE__OPACITY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__VISIBLE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__DISABLE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -231,22 +231,22 @@ public interface UIPackage extends EPackage {
 	int FX_NODE__STYLE_CLASS = 6;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__VISIBLE = 7;
+	int FX_NODE__LAYOUT_X = 7;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__DISABLE = 8;
+	int FX_NODE__LAYOUT_Y = 8;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -431,24 +431,6 @@ public interface UIPackage extends EPackage {
 	int FX_LAYOUT__NAME = FX_NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_LAYOUT__LAYOUT_X = FX_NODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_LAYOUT__LAYOUT_Y = FX_NODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -456,6 +438,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_LAYOUT__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -476,22 +476,22 @@ public interface UIPackage extends EPackage {
 	int FX_LAYOUT__STYLE_CLASS = FX_NODE__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_LAYOUT__VISIBLE = FX_NODE__VISIBLE;
+	int FX_LAYOUT__LAYOUT_X = FX_NODE__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_LAYOUT__DISABLE = FX_NODE__DISABLE;
+	int FX_LAYOUT__LAYOUT_Y = FX_NODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -621,24 +621,6 @@ public interface UIPackage extends EPackage {
 	int FXH_BOX__NAME = FX_LAYOUT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FXH_BOX__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FXH_BOX__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -646,6 +628,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FXH_BOX__OPACITY = FX_LAYOUT__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__VISIBLE = FX_LAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__DISABLE = FX_LAYOUT__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -666,22 +666,22 @@ public interface UIPackage extends EPackage {
 	int FXH_BOX__STYLE_CLASS = FX_LAYOUT__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FXH_BOX__VISIBLE = FX_LAYOUT__VISIBLE;
+	int FXH_BOX__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FXH_BOX__DISABLE = FX_LAYOUT__DISABLE;
+	int FXH_BOX__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -820,24 +820,6 @@ public interface UIPackage extends EPackage {
 	int FX_BORDER_PANE__NAME = FX_LAYOUT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_BORDER_PANE__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_BORDER_PANE__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -845,6 +827,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_BORDER_PANE__OPACITY = FX_LAYOUT__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__VISIBLE = FX_LAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__DISABLE = FX_LAYOUT__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -865,22 +865,22 @@ public interface UIPackage extends EPackage {
 	int FX_BORDER_PANE__STYLE_CLASS = FX_LAYOUT__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_BORDER_PANE__VISIBLE = FX_LAYOUT__VISIBLE;
+	int FX_BORDER_PANE__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_BORDER_PANE__DISABLE = FX_LAYOUT__DISABLE;
+	int FX_BORDER_PANE__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1055,24 +1055,6 @@ public interface UIPackage extends EPackage {
 	int FX_BUTTON__NAME = FX_NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1080,6 +1062,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_BUTTON__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1100,22 +1100,22 @@ public interface UIPackage extends EPackage {
 	int FX_BUTTON__STYLE_CLASS = FX_NODE__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+	int FX_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_BUTTON__DISABLE = FX_NODE__DISABLE;
+	int FX_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1236,24 +1236,6 @@ public interface UIPackage extends EPackage {
 	int FX_LABEL__NAME = FX_NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_LABEL__LAYOUT_X = FX_NODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_LABEL__LAYOUT_Y = FX_NODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1261,6 +1243,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_LABEL__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1281,22 +1281,22 @@ public interface UIPackage extends EPackage {
 	int FX_LABEL__STYLE_CLASS = FX_NODE__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_LABEL__VISIBLE = FX_NODE__VISIBLE;
+	int FX_LABEL__LAYOUT_X = FX_NODE__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_LABEL__DISABLE = FX_NODE__DISABLE;
+	int FX_LABEL__LAYOUT_Y = FX_NODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1417,24 +1417,6 @@ public interface UIPackage extends EPackage {
 	int FX_CHECK_BUTTON__NAME = FX_NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_CHECK_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_CHECK_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1442,6 +1424,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_CHECK_BUTTON__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1462,22 +1462,22 @@ public interface UIPackage extends EPackage {
 	int FX_CHECK_BUTTON__STYLE_CLASS = FX_NODE__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHECK_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+	int FX_CHECK_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_CHECK_BUTTON__DISABLE = FX_NODE__DISABLE;
+	int FX_CHECK_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1598,24 +1598,6 @@ public interface UIPackage extends EPackage {
 	int FX_RADIO_BUTTON__NAME = FX_NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_RADIO_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_RADIO_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1623,6 +1605,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_RADIO_BUTTON__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1643,22 +1643,22 @@ public interface UIPackage extends EPackage {
 	int FX_RADIO_BUTTON__STYLE_CLASS = FX_NODE__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_RADIO_BUTTON__VISIBLE = FX_NODE__VISIBLE;
+	int FX_RADIO_BUTTON__LAYOUT_X = FX_NODE__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_RADIO_BUTTON__DISABLE = FX_NODE__DISABLE;
+	int FX_RADIO_BUTTON__LAYOUT_Y = FX_NODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -1779,24 +1779,6 @@ public interface UIPackage extends EPackage {
 	int FX_TABLE_VIEW__NAME = FX_NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_TABLE_VIEW__LAYOUT_X = FX_NODE__LAYOUT_X;
-
-	/**
-	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FX_TABLE_VIEW__LAYOUT_Y = FX_NODE__LAYOUT_Y;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1804,6 +1786,24 @@ public interface UIPackage extends EPackage {
 	 * @ordered
 	 */
 	int FX_TABLE_VIEW__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__DISABLE = FX_NODE__DISABLE;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -1824,22 +1824,22 @@ public interface UIPackage extends EPackage {
 	int FX_TABLE_VIEW__STYLE_CLASS = FX_NODE__STYLE_CLASS;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_VIEW__VISIBLE = FX_NODE__VISIBLE;
+	int FX_TABLE_VIEW__LAYOUT_X = FX_NODE__LAYOUT_X;
 
 	/**
-	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TABLE_VIEW__DISABLE = FX_NODE__DISABLE;
+	int FX_TABLE_VIEW__LAYOUT_Y = FX_NODE__LAYOUT_Y;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -2121,28 +2121,6 @@ public interface UIPackage extends EPackage {
 	EAttribute getFXNode_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getLayoutX <em>Layout X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Layout X</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#getLayoutX()
-	 * @see #getFXNode()
-	 * @generated
-	 */
-	EAttribute getFXNode_LayoutX();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getLayoutY <em>Layout Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Layout Y</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#getLayoutY()
-	 * @see #getFXNode()
-	 * @generated
-	 */
-	EAttribute getFXNode_LayoutY();
-
-	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getOpacity <em>Opacity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2152,6 +2130,28 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFXNode_Opacity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#isVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visible</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#isVisible()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Visible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#isDisable <em>Disable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Disable</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#isDisable()
+	 * @see #getFXNode()
+	 * @generated
+	 */
+	EAttribute getFXNode_Disable();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getStyle <em>Style</em>}'.
@@ -2176,26 +2176,26 @@ public interface UIPackage extends EPackage {
 	EAttribute getFXNode_StyleClass();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getLayoutX <em>Layout X</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#isVisible()
+	 * @return the meta object for the attribute '<em>Layout X</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getLayoutX()
 	 * @see #getFXNode()
 	 * @generated
 	 */
-	EAttribute getFXNode_Visible();
+	EAttribute getFXNode_LayoutX();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#isDisable <em>Disable</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getLayoutY <em>Layout Y</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Disable</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#isDisable()
+	 * @return the meta object for the attribute '<em>Layout Y</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNode#getLayoutY()
 	 * @see #getFXNode()
 	 * @generated
 	 */
-	EAttribute getFXNode_Disable();
+	EAttribute getFXNode_LayoutY();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getPrefWidth <em>Pref Width</em>}'.
@@ -2682,28 +2682,28 @@ public interface UIPackage extends EPackage {
 		EAttribute FX_NODE__NAME = eINSTANCE.getFXNode_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Layout X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FX_NODE__LAYOUT_X = eINSTANCE.getFXNode_LayoutX();
-
-		/**
-		 * The meta object literal for the '<em><b>Layout Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FX_NODE__LAYOUT_Y = eINSTANCE.getFXNode_LayoutY();
-
-		/**
 		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute FX_NODE__OPACITY = eINSTANCE.getFXNode_Opacity();
+
+		/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__VISIBLE = eINSTANCE.getFXNode_Visible();
+
+		/**
+		 * The meta object literal for the '<em><b>Disable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NODE__DISABLE = eINSTANCE.getFXNode_Disable();
 
 		/**
 		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
@@ -2722,20 +2722,20 @@ public interface UIPackage extends EPackage {
 		EAttribute FX_NODE__STYLE_CLASS = eINSTANCE.getFXNode_StyleClass();
 
 		/**
-		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Layout X</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FX_NODE__VISIBLE = eINSTANCE.getFXNode_Visible();
+		EAttribute FX_NODE__LAYOUT_X = eINSTANCE.getFXNode_LayoutX();
 
 		/**
-		 * The meta object literal for the '<em><b>Disable</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Layout Y</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FX_NODE__DISABLE = eINSTANCE.getFXNode_Disable();
+		EAttribute FX_NODE__LAYOUT_Y = eINSTANCE.getFXNode_LayoutY();
 
 		/**
 		 * The meta object literal for the '<em><b>Pref Width</b></em>' attribute feature.

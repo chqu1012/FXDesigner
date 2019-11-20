@@ -296,7 +296,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_LayoutX() {
+	public EAttribute getFXNode_Opacity() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -306,7 +306,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_LayoutY() {
+	public EAttribute getFXNode_Visible() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -316,7 +316,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Opacity() {
+	public EAttribute getFXNode_Disable() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -346,7 +346,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Visible() {
+	public EAttribute getFXNode_LayoutX() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -356,7 +356,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Disable() {
+	public EAttribute getFXNode_LayoutY() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -752,13 +752,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxNodeEClass = createEClass(FX_NODE);
 		createEAttribute(fxNodeEClass, FX_NODE__ID);
 		createEAttribute(fxNodeEClass, FX_NODE__NAME);
-		createEAttribute(fxNodeEClass, FX_NODE__LAYOUT_X);
-		createEAttribute(fxNodeEClass, FX_NODE__LAYOUT_Y);
 		createEAttribute(fxNodeEClass, FX_NODE__OPACITY);
-		createEAttribute(fxNodeEClass, FX_NODE__STYLE);
-		createEAttribute(fxNodeEClass, FX_NODE__STYLE_CLASS);
 		createEAttribute(fxNodeEClass, FX_NODE__VISIBLE);
 		createEAttribute(fxNodeEClass, FX_NODE__DISABLE);
+		createEAttribute(fxNodeEClass, FX_NODE__STYLE);
+		createEAttribute(fxNodeEClass, FX_NODE__STYLE_CLASS);
+		createEAttribute(fxNodeEClass, FX_NODE__LAYOUT_X);
+		createEAttribute(fxNodeEClass, FX_NODE__LAYOUT_Y);
 		createEAttribute(fxNodeEClass, FX_NODE__PREF_WIDTH);
 		createEAttribute(fxNodeEClass, FX_NODE__PREF_HEIGHT);
 		createEAttribute(fxNodeEClass, FX_NODE__MIN_WIDTH);
@@ -871,13 +871,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXNode_Name(), theEcorePackage.getEString(), "name", null, 0, 1, FXNode.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFXNode_LayoutX(), theEcorePackage.getEDouble(), "layoutX", null, 0, 1, FXNode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getFXNode_LayoutY(), theEcorePackage.getEDouble(), "layoutY", null, 0, 1, FXNode.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEAttribute(getFXNode_Opacity(), theEcorePackage.getEDouble(), "opacity", null, 0, 1, FXNode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getFXNode_Visible(), theEcorePackage.getEBoolean(), "visible", null, 0, 1, FXNode.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getFXNode_Disable(), theEcorePackage.getEBoolean(), "disable", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEAttribute(getFXNode_Style(), theEcorePackage.getEString(), "style", null, 0, 1, FXNode.class,
@@ -886,10 +886,10 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		initEAttribute(getFXNode_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, -1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getFXNode_Visible(), theEcorePackage.getEBoolean(), "visible", null, 0, 1, FXNode.class,
+		initEAttribute(getFXNode_LayoutX(), theEcorePackage.getEDouble(), "layoutX", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getFXNode_Disable(), theEcorePackage.getEBoolean(), "disable", null, 0, 1, FXNode.class,
+		initEAttribute(getFXNode_LayoutY(), theEcorePackage.getEDouble(), "layoutY", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEAttribute(getFXNode_PrefWidth(), theEcorePackage.getEDouble(), "prefWidth", null, 0, 1, FXNode.class,

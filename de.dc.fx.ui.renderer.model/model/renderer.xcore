@@ -27,19 +27,30 @@ class FXEvent{
 abstract class FXNode{
 	String ^id
 	String name
-	double layoutX
-	double layoutY
 	double opacity
-	String style
-	String[0..*] styleClass
 	boolean visible
 	boolean disable
+ @GenModel(propertyCategory="Style")
+	String style
+ @GenModel(propertyCategory="Style")
+	String[0..*] styleClass
+ @GenModel(propertyCategory="Layout")
+	double layoutX
+ @GenModel(propertyCategory="Layout")
+	double layoutY
+ @GenModel(propertyCategory="Layout")
 	double prefWidth
+ @GenModel(propertyCategory="Layout")
 	double prefHeight
+ @GenModel(propertyCategory="Layout")
 	double minWidth
+ @GenModel(propertyCategory="Layout")
 	double minHeight
+ @GenModel(propertyCategory="Layout")
 	double maxWidth
+ @GenModel(propertyCategory="Layout")
 	double maxHeight
+
 	contains FXInsets padding
 	contains FXInsets margin
 }

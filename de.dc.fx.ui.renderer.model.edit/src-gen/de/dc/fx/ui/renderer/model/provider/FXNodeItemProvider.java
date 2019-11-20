@@ -60,13 +60,13 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 
 			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
-			addLayoutXPropertyDescriptor(object);
-			addLayoutYPropertyDescriptor(object);
 			addOpacityPropertyDescriptor(object);
-			addStylePropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
 			addVisiblePropertyDescriptor(object);
 			addDisablePropertyDescriptor(object);
+			addStylePropertyDescriptor(object);
+			addStyleClassPropertyDescriptor(object);
+			addLayoutXPropertyDescriptor(object);
+			addLayoutYPropertyDescriptor(object);
 			addPrefWidthPropertyDescriptor(object);
 			addPrefHeightPropertyDescriptor(object);
 			addMinWidthPropertyDescriptor(object);
@@ -108,38 +108,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 	}
 
 	/**
-	 * This adds a property descriptor for the Layout X feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLayoutXPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXNode_layoutX_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_layoutX_feature",
-								"_UI_FXNode_type"),
-						UIPackage.Literals.FX_NODE__LAYOUT_X, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Layout Y feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLayoutYPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXNode_layoutY_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_layoutY_feature",
-								"_UI_FXNode_type"),
-						UIPackage.Literals.FX_NODE__LAYOUT_Y, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Opacity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -167,7 +135,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getResourceLocator(), getString("_UI_FXNode_style_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_style_feature", "_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__STYLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_StylePropertyCategory"), null));
 	}
 
 	/**
@@ -183,7 +151,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_styleClass_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__STYLE_CLASS, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_StylePropertyCategory"), null));
 	}
 
 	/**
@@ -219,6 +187,38 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 	}
 
 	/**
+	 * This adds a property descriptor for the Layout X feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLayoutXPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXNode_layoutX_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_layoutX_feature",
+								"_UI_FXNode_type"),
+						UIPackage.Literals.FX_NODE__LAYOUT_X, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Layout Y feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLayoutYPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXNode_layoutY_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_layoutY_feature",
+								"_UI_FXNode_type"),
+						UIPackage.Literals.FX_NODE__LAYOUT_Y, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Pref Width feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -231,7 +231,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_prefWidth_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__PREF_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -247,7 +247,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_prefHeight_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__PREF_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -263,7 +263,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_minWidth_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__MIN_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -279,7 +279,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_minHeight_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__MIN_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -295,7 +295,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_maxWidth_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__MAX_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -311,7 +311,7 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_maxHeight_feature",
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__MAX_HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_LayoutPropertyCategory"), null));
 	}
 
 	/**
@@ -412,13 +412,13 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 		switch (notification.getFeatureID(FXNode.class)) {
 		case UIPackage.FX_NODE__ID:
 		case UIPackage.FX_NODE__NAME:
-		case UIPackage.FX_NODE__LAYOUT_X:
-		case UIPackage.FX_NODE__LAYOUT_Y:
 		case UIPackage.FX_NODE__OPACITY:
-		case UIPackage.FX_NODE__STYLE:
-		case UIPackage.FX_NODE__STYLE_CLASS:
 		case UIPackage.FX_NODE__VISIBLE:
 		case UIPackage.FX_NODE__DISABLE:
+		case UIPackage.FX_NODE__STYLE:
+		case UIPackage.FX_NODE__STYLE_CLASS:
+		case UIPackage.FX_NODE__LAYOUT_X:
+		case UIPackage.FX_NODE__LAYOUT_Y:
 		case UIPackage.FX_NODE__PREF_WIDTH:
 		case UIPackage.FX_NODE__PREF_HEIGHT:
 		case UIPackage.FX_NODE__MIN_WIDTH:
