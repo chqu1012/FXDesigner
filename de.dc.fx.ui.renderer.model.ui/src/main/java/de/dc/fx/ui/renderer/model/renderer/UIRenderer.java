@@ -11,9 +11,11 @@ import de.dc.fx.ui.renderer.model.FXHBox;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
+import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
+import de.dc.fx.ui.renderer.model.control.FXSortFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
@@ -33,9 +35,10 @@ public class UIRenderer extends UISwitch<Node> {
 		return (T) controlRegistry.get(id);
 	}
 
-	private void init(FXNode object, Region node) {
+	private Region init(FXNode object, Region node) {
 		controlRegistry.put(object.getId(), node);
 		initSize(object, node);
+		return node;
 	}
 	
 	private void initSize(FXNode object, Region node) {
@@ -59,32 +62,34 @@ public class UIRenderer extends UISwitch<Node> {
 	}
 
 	@Override
+	public Node caseFXSortFilteredTableView(FXSortFilteredTableView object) {
+		FXSortFilteredTableViewControl<Object> node = new FXSortFilteredTableViewControl<>(object);
+		return init(object, node);
+	}
+	
+	@Override
 	public Node caseFXFilteredTableView(FXFilteredTableView object) {
 		FXFilteredTableViewControl<Object> node = new FXFilteredTableViewControl<>(object);
-		init(object, node);
-		return node;
+		return init(object, node);
 	}
 	
 	@Override
 	public Node caseFXTableView(FXTableView object) {
 		FXTableViewControl<Object> node = new FXTableViewControl<>(object);
-		init(object, node);
-		return node;
+		return init(object, node);
 	}
 	
 	@Override
 	public Node caseFXButton(FXButton object) {
 		Button node = new Button(object.getName());
-		init(object, node);
-		return node;
+		return init(object, node);
 	}
 	
 	@Override
 	public Node caseFXHBox(FXHBox object) {
 		HBox node = new HBox(object.getSpacing());
 		object.getChildren().forEach(e->addChild(node, object));
-		init(object, node);
-		return node;
+		return init(object, node);
 	}
 	
 	@Override
@@ -99,8 +104,7 @@ public class UIRenderer extends UISwitch<Node> {
 		createBorderPaneItem(object.getBottom()).ifPresent(e -> node.setBottom(e));
 		createBorderPaneItem(object.getCenter()).ifPresent(e -> node.setCenter(e));
 
-		init(object, node);
-		return node;
+		return init(object, node);
 	}
 	
 	private Optional<Node> createBorderPaneItem(FXNode mNode) {

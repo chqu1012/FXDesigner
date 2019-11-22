@@ -79,6 +79,8 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXTableView();
 		case UIPackage.FX_FILTERED_TABLE_VIEW:
 			return createFXFilteredTableView();
+		case UIPackage.FX_SORT_FILTERED_TABLE_VIEW:
+			return createFXSortFilteredTableView();
 		case UIPackage.FX_TABLE_COLUMN:
 			return createFXTableColumn();
 		default:
@@ -216,6 +218,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXFilteredTableView createFXFilteredTableView() {
 		FXFilteredTableViewImpl fxFilteredTableView = new FXFilteredTableViewImpl();
 		return fxFilteredTableView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXSortFilteredTableView createFXSortFilteredTableView() {
+		FXSortFilteredTableViewImpl fxSortFilteredTableView = new FXSortFilteredTableViewImpl();
+		return fxSortFilteredTableView;
 	}
 
 	/**

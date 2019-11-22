@@ -351,6 +351,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXSortFilteredTableView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXSortFilteredTableViewItemProvider fxSortFilteredTableViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXSortFilteredTableView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXSortFilteredTableViewAdapter() {
+		if (fxSortFilteredTableViewItemProvider == null) {
+			fxSortFilteredTableViewItemProvider = new FXSortFilteredTableViewItemProvider(this);
+		}
+
+		return fxSortFilteredTableViewItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTableColumn} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -502,6 +525,8 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxTableViewItemProvider.dispose();
 		if (fxFilteredTableViewItemProvider != null)
 			fxFilteredTableViewItemProvider.dispose();
+		if (fxSortFilteredTableViewItemProvider != null)
+			fxSortFilteredTableViewItemProvider.dispose();
 		if (fxTableColumnItemProvider != null)
 			fxTableColumnItemProvider.dispose();
 	}

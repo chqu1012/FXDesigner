@@ -15,6 +15,7 @@ import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRadioButton;
 import de.dc.fx.ui.renderer.model.FXRoot;
+import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.UIFactory;
@@ -132,6 +133,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	private EClass fxFilteredTableViewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxSortFilteredTableViewEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -732,6 +740,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFXSortFilteredTableView() {
+		return fxSortFilteredTableViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXTableColumn() {
 		return fxTableColumnEClass;
 	}
@@ -882,6 +900,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		fxFilteredTableViewEClass = createEClass(FX_FILTERED_TABLE_VIEW);
 
+		fxSortFilteredTableViewEClass = createEClass(FX_SORT_FILTERED_TABLE_VIEW);
+
 		fxTableColumnEClass = createEClass(FX_TABLE_COLUMN);
 		createEAttribute(fxTableColumnEClass, FX_TABLE_COLUMN__ID);
 		createEAttribute(fxTableColumnEClass, FX_TABLE_COLUMN__NAME);
@@ -931,6 +951,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxRadioButtonEClass.getESuperTypes().add(this.getFXNode());
 		fxTableViewEClass.getESuperTypes().add(this.getFXNode());
 		fxFilteredTableViewEClass.getESuperTypes().add(this.getFXTableView());
+		fxSortFilteredTableViewEClass.getESuperTypes().add(this.getFXFilteredTableView());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fxRootEClass, FXRoot.class, "FXRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1079,6 +1100,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		initEClass(fxFilteredTableViewEClass, FXFilteredTableView.class, "FXFilteredTableView", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxSortFilteredTableViewEClass, FXSortFilteredTableView.class, "FXSortFilteredTableView",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fxTableColumnEClass, FXTableColumn.class, "FXTableColumn", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

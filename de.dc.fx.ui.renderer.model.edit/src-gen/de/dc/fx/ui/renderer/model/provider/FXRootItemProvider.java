@@ -282,6 +282,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN,
 				UIFactory.eINSTANCE.createFXFilteredTableView()));
+
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN,
+				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
 	}
 
 	/**

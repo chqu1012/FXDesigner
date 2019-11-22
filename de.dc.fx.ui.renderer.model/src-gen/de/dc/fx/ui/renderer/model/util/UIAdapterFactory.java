@@ -137,6 +137,11 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXSortFilteredTableView(FXSortFilteredTableView object) {
+			return createFXSortFilteredTableViewAdapter();
+		}
+
+		@Override
 		public Adapter caseFXTableColumn(FXTableColumn object) {
 			return createFXTableColumnAdapter();
 		}
@@ -353,6 +358,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXFilteredTableViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXSortFilteredTableView <em>FX Sort Filtered Table View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXSortFilteredTableView
+	 * @generated
+	 */
+	public Adapter createFXSortFilteredTableViewAdapter() {
 		return null;
 	}
 

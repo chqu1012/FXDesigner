@@ -154,6 +154,9 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
 				UIFactory.eINSTANCE.createFXFilteredTableView()));
+
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
+				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
 	}
 
 }

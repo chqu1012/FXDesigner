@@ -2195,6 +2195,196 @@ public interface UIPackage extends EPackage {
 	int FX_FILTERED_TABLE_VIEW_OPERATION_COUNT = FX_TABLE_VIEW_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXSortFilteredTableViewImpl <em>FX Sort Filtered Table View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXSortFilteredTableViewImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXSortFilteredTableView()
+	 * @generated
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW = 14;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__ID = FX_FILTERED_TABLE_VIEW__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__NAME = FX_FILTERED_TABLE_VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__OPACITY = FX_FILTERED_TABLE_VIEW__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__VISIBLE = FX_FILTERED_TABLE_VIEW__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__DISABLE = FX_FILTERED_TABLE_VIEW__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__STYLE = FX_FILTERED_TABLE_VIEW__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__STYLE_CLASS = FX_FILTERED_TABLE_VIEW__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__LAYOUT_X = FX_FILTERED_TABLE_VIEW__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__LAYOUT_Y = FX_FILTERED_TABLE_VIEW__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__PREF_WIDTH = FX_FILTERED_TABLE_VIEW__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__PREF_HEIGHT = FX_FILTERED_TABLE_VIEW__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__MIN_WIDTH = FX_FILTERED_TABLE_VIEW__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__MIN_HEIGHT = FX_FILTERED_TABLE_VIEW__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__MAX_WIDTH = FX_FILTERED_TABLE_VIEW__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__MAX_HEIGHT = FX_FILTERED_TABLE_VIEW__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__PADDING = FX_FILTERED_TABLE_VIEW__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__MARGIN = FX_FILTERED_TABLE_VIEW__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Columns</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__COLUMNS = FX_FILTERED_TABLE_VIEW__COLUMNS;
+
+	/**
+	 * The number of structural features of the '<em>FX Sort Filtered Table View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW_FEATURE_COUNT = FX_FILTERED_TABLE_VIEW_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX Sort Filtered Table View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW_OPERATION_COUNT = FX_FILTERED_TABLE_VIEW_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl <em>FX Table Column</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2202,7 +2392,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 14;
+	int FX_TABLE_COLUMN = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2826,6 +3016,16 @@ public interface UIPackage extends EPackage {
 	EClass getFXFilteredTableView();
 
 	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXSortFilteredTableView <em>FX Sort Filtered Table View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Sort Filtered Table View</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXSortFilteredTableView
+	 * @generated
+	 */
+	EClass getFXSortFilteredTableView();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXTableColumn <em>FX Table Column</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3356,6 +3556,16 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FX_FILTERED_TABLE_VIEW = eINSTANCE.getFXFilteredTableView();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXSortFilteredTableViewImpl <em>FX Sort Filtered Table View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXSortFilteredTableViewImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXSortFilteredTableView()
+		 * @generated
+		 */
+		EClass FX_SORT_FILTERED_TABLE_VIEW = eINSTANCE.getFXSortFilteredTableView();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXTableColumnImpl <em>FX Table Column</em>}' class.
