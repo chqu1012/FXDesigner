@@ -21,6 +21,7 @@ import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
 import de.dc.fx.ui.renderer.model.control.FXSortFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
+import de.dc.fx.ui.renderer.model.control.UI;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -172,13 +173,15 @@ public class UIRenderer extends UISwitch<Node> {
 		root.getController().ifPresent(e->{
 			Field[] declaredFields = e.getClass().getDeclaredFields();
 			for (Field field : declaredFields) {
-				Region control = controlRegistry.get(field.getName());
-				if (control!=null) {
-					try {
-						field.setAccessible(true);
-						field.set(e, control);
-					} catch (IllegalArgumentException | IllegalAccessException e1) {
-						e1.printStackTrace();
+				if (field.isAnnotationPresent(UI.class)) {
+					Region control = controlRegistry.get(field.getName());
+					if (control!=null) {
+						try {
+							field.setAccessible(true);
+							field.set(e, control);
+						} catch (IllegalArgumentException | IllegalAccessException e1) {
+							e1.printStackTrace();
+						}
 					}
 				}
 			}
