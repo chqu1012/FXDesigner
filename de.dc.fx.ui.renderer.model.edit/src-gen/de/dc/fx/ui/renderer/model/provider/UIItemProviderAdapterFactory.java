@@ -167,6 +167,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTabPane} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXTabPaneItemProvider fxTabPaneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXTabPane}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXTabPaneAdapter() {
+		if (fxTabPaneItemProvider == null) {
+			fxTabPaneItemProvider = new FXTabPaneItemProvider(this);
+		}
+
+		return fxTabPaneItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXHBox} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -233,6 +256,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 		}
 
 		return fxBorderPaneItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTab} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXTabItemProvider fxTabItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXTab}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXTabAdapter() {
+		if (fxTabItemProvider == null) {
+			fxTabItemProvider = new FXTabItemProvider(this);
+		}
+
+		return fxTabItemProvider;
 	}
 
 	/**
@@ -555,12 +601,16 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxMarginItemProvider.dispose();
 		if (fxPaddingItemProvider != null)
 			fxPaddingItemProvider.dispose();
+		if (fxTabPaneItemProvider != null)
+			fxTabPaneItemProvider.dispose();
 		if (fxhBoxItemProvider != null)
 			fxhBoxItemProvider.dispose();
 		if (fxvBoxItemProvider != null)
 			fxvBoxItemProvider.dispose();
 		if (fxBorderPaneItemProvider != null)
 			fxBorderPaneItemProvider.dispose();
+		if (fxTabItemProvider != null)
+			fxTabItemProvider.dispose();
 		if (fxButtonItemProvider != null)
 			fxButtonItemProvider.dispose();
 		if (fxLabelItemProvider != null)

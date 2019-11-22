@@ -97,6 +97,11 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXTabPane(FXTabPane object) {
+			return createFXTabPaneAdapter();
+		}
+
+		@Override
 		public Adapter caseFXHBox(FXHBox object) {
 			return createFXHBoxAdapter();
 		}
@@ -109,6 +114,11 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseFXBorderPane(FXBorderPane object) {
 			return createFXBorderPaneAdapter();
+		}
+
+		@Override
+		public Adapter caseFXTab(FXTab object) {
+			return createFXTabAdapter();
 		}
 
 		@Override
@@ -260,6 +270,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXTabPane <em>FX Tab Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXTabPane
+	 * @generated
+	 */
+	public Adapter createFXTabPaneAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXHBox <em>FXH Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -298,6 +322,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXBorderPaneAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXTab <em>FX Tab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXTab
+	 * @generated
+	 */
+	public Adapter createFXTabAdapter() {
 		return null;
 	}
 

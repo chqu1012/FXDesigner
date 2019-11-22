@@ -260,6 +260,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXTabPane()));
+
+		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXHBox()));
 
 		newChildDescriptors
@@ -267,6 +270,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXBorderPane()));
+
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXTab()));
 
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXButton()));

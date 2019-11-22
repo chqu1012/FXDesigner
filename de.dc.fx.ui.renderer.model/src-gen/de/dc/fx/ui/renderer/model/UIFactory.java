@@ -58,6 +58,15 @@ public interface UIFactory extends EFactory {
 	FXPadding createFXPadding();
 
 	/**
+	 * Returns a new object of class '<em>FX Tab Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Tab Pane</em>'.
+	 * @generated
+	 */
+	FXTabPane createFXTabPane();
+
+	/**
 	 * Returns a new object of class '<em>FXH Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +92,15 @@ public interface UIFactory extends EFactory {
 	 * @generated
 	 */
 	FXBorderPane createFXBorderPane();
+
+	/**
+	 * Returns a new object of class '<em>FX Tab</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Tab</em>'.
+	 * @generated
+	 */
+	FXTab createFXTab();
 
 	/**
 	 * Returns a new object of class '<em>FX Button</em>'.

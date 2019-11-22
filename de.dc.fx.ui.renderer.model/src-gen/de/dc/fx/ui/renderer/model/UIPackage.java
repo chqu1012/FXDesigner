@@ -684,6 +684,214 @@ public interface UIPackage extends EPackage {
 	int FX_LAYOUT_OPERATION_COUNT = FX_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXTabPaneImpl <em>FX Tab Pane</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXTabPaneImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTabPane()
+	 * @generated
+	 */
+	int FX_TAB_PANE = 6;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__ON_MOUSE_CLICKED = FX_LAYOUT__ON_MOUSE_CLICKED;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__ID = FX_LAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__NAME = FX_LAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__OPACITY = FX_LAYOUT__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__VISIBLE = FX_LAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__DISABLE = FX_LAYOUT__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__STYLE = FX_LAYOUT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__STYLE_CLASS = FX_LAYOUT__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__PREF_WIDTH = FX_LAYOUT__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__PREF_HEIGHT = FX_LAYOUT__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__MIN_WIDTH = FX_LAYOUT__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__MIN_HEIGHT = FX_LAYOUT__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__MAX_WIDTH = FX_LAYOUT__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__MAX_HEIGHT = FX_LAYOUT__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__PADDING = FX_LAYOUT__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__MARGIN = FX_LAYOUT__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__CHILDREN = FX_LAYOUT__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Tabs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__TABS = FX_LAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FX Tab Pane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE_FEATURE_COUNT = FX_LAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>FX Tab Pane</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE_OPERATION_COUNT = FX_LAYOUT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXHBoxImpl <em>FXH Box</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -691,7 +899,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXHBox()
 	 * @generated
 	 */
-	int FXH_BOX = 6;
+	int FXH_BOX = 7;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -899,7 +1107,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXVBox()
 	 * @generated
 	 */
-	int FXV_BOX = 7;
+	int FXV_BOX = 8;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1107,7 +1315,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXBorderPane()
 	 * @generated
 	 */
-	int FX_BORDER_PANE = 8;
+	int FX_BORDER_PANE = 9;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1344,6 +1552,205 @@ public interface UIPackage extends EPackage {
 	int FX_BORDER_PANE_OPERATION_COUNT = FX_LAYOUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXTabImpl <em>FX Tab</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXTabImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTab()
+	 * @generated
+	 */
+	int FX_TAB = 10;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__ID = FX_NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__DISABLE = FX_NODE__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__PREF_WIDTH = FX_NODE__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__PREF_HEIGHT = FX_NODE__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__MIN_WIDTH = FX_NODE__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__MIN_HEIGHT = FX_NODE__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__MAX_WIDTH = FX_NODE__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__MARGIN = FX_NODE__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB__CONTENT = FX_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FX Tab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_FEATURE_COUNT = FX_NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>FX Tab</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_OPERATION_COUNT = FX_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXButtonImpl <em>FX Button</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1351,7 +1758,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXButton()
 	 * @generated
 	 */
-	int FX_BUTTON = 9;
+	int FX_BUTTON = 11;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1541,7 +1948,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLabel()
 	 * @generated
 	 */
-	int FX_LABEL = 10;
+	int FX_LABEL = 12;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1731,7 +2138,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXCheckButton()
 	 * @generated
 	 */
-	int FX_CHECK_BUTTON = 11;
+	int FX_CHECK_BUTTON = 13;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1921,7 +2328,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXRadioButton()
 	 * @generated
 	 */
-	int FX_RADIO_BUTTON = 12;
+	int FX_RADIO_BUTTON = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2111,7 +2518,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXListView()
 	 * @generated
 	 */
-	int FX_LIST_VIEW = 13;
+	int FX_LIST_VIEW = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2301,7 +2708,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableView()
 	 * @generated
 	 */
-	int FX_TABLE_VIEW = 14;
+	int FX_TABLE_VIEW = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2500,7 +2907,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXFilteredTableView()
 	 * @generated
 	 */
-	int FX_FILTERED_TABLE_VIEW = 15;
+	int FX_FILTERED_TABLE_VIEW = 17;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2699,7 +3106,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXSortFilteredTableView()
 	 * @generated
 	 */
-	int FX_SORT_FILTERED_TABLE_VIEW = 16;
+	int FX_SORT_FILTERED_TABLE_VIEW = 18;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2898,7 +3305,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 17;
+	int FX_TABLE_COLUMN = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3376,6 +3783,27 @@ public interface UIPackage extends EPackage {
 	EReference getFXLayout_Children();
 
 	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXTabPane <em>FX Tab Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Tab Pane</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTabPane
+	 * @generated
+	 */
+	EClass getFXTabPane();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link de.dc.fx.ui.renderer.model.FXTabPane#getTabs <em>Tabs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tabs</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTabPane#getTabs()
+	 * @see #getFXTabPane()
+	 * @generated
+	 */
+	EReference getFXTabPane_Tabs();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXHBox <em>FXH Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3481,6 +3909,27 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFXBorderPane_Top();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXTab <em>FX Tab</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Tab</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTab
+	 * @generated
+	 */
+	EClass getFXTab();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link de.dc.fx.ui.renderer.model.FXTab#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Content</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTab#getContent()
+	 * @see #getFXTab()
+	 * @generated
+	 */
+	EReference getFXTab_Content();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXButton <em>FX Button</em>}'.
@@ -3978,6 +4427,24 @@ public interface UIPackage extends EPackage {
 		EReference FX_LAYOUT__CHILDREN = eINSTANCE.getFXLayout_Children();
 
 		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXTabPaneImpl <em>FX Tab Pane</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXTabPaneImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTabPane()
+		 * @generated
+		 */
+		EClass FX_TAB_PANE = eINSTANCE.getFXTabPane();
+
+		/**
+		 * The meta object literal for the '<em><b>Tabs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_TAB_PANE__TABS = eINSTANCE.getFXTabPane_Tabs();
+
+		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXHBoxImpl <em>FXH Box</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4062,6 +4529,24 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FX_BORDER_PANE__TOP = eINSTANCE.getFXBorderPane_Top();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXTabImpl <em>FX Tab</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXTabImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTab()
+		 * @generated
+		 */
+		EClass FX_TAB = eINSTANCE.getFXTab();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FX_TAB__CONTENT = eINSTANCE.getFXTab_Content();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXButtonImpl <em>FX Button</em>}' class.

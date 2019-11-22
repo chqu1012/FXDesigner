@@ -114,6 +114,19 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case UIPackage.FX_TAB_PANE: {
+			FXTabPane fxTabPane = (FXTabPane) theEObject;
+			T result = caseFXTabPane(fxTabPane);
+			if (result == null)
+				result = caseFXLayout(fxTabPane);
+			if (result == null)
+				result = caseFXNode(fxTabPane);
+			if (result == null)
+				result = caseFXEvent(fxTabPane);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FXH_BOX: {
 			FXHBox fxhBox = (FXHBox) theEObject;
 			T result = caseFXHBox(fxhBox);
@@ -149,6 +162,17 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxBorderPane);
 			if (result == null)
 				result = caseFXEvent(fxBorderPane);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UIPackage.FX_TAB: {
+			FXTab fxTab = (FXTab) theEObject;
+			T result = caseFXTab(fxTab);
+			if (result == null)
+				result = caseFXNode(fxTab);
+			if (result == null)
+				result = caseFXEvent(fxTab);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -350,6 +374,21 @@ public class UISwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Tab Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Tab Pane</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXTabPane(FXTabPane object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>FXH Box</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -391,6 +430,21 @@ public class UISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXBorderPane(FXBorderPane object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Tab</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Tab</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXTab(FXTab object) {
 		return null;
 	}
 

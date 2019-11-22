@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:FXRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:model="http://www.frateranatis.org/ui" basePackage="de.dc.fx.ui.renderer.model.ui" 
+controller="de.dc.fx.ui.renderer.model.ui.controller.TabPaneController">
+  <children xsi:type="model:FXVBox">
+    <children xsi:type="model:FXTabPane">
+      <tabs xsi:type="model:FXTab" name="Customer"/>
+      <tabs xsi:type="model:FXTab" name="Employees"/>
+      <tabs xsi:type="model:FXTab" name="Product"/>
+    </children>
+  </children>
+</model:FXRoot>

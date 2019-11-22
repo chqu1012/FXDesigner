@@ -74,6 +74,10 @@ abstract class FXLayout extends FXNode{
 	contains FXNode[0..*] children
 }
 
+class FXTabPane extends FXLayout{
+	contains FXTab[0..*] tabs
+}
+
 class FXHBox extends FXLayout{
 	double spacing
 }
@@ -88,6 +92,10 @@ class FXBorderPane extends FXLayout{
 	contains FXNode center
 	contains FXNode bottom
 	contains FXNode top
+}
+
+class FXTab extends FXNode{
+	contains FXNode content
 }
 
 class FXButton extends FXNode{}

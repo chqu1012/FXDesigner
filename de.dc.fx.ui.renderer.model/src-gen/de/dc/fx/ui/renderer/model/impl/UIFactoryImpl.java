@@ -63,12 +63,16 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXMargin();
 		case UIPackage.FX_PADDING:
 			return createFXPadding();
+		case UIPackage.FX_TAB_PANE:
+			return createFXTabPane();
 		case UIPackage.FXH_BOX:
 			return createFXHBox();
 		case UIPackage.FXV_BOX:
 			return createFXVBox();
 		case UIPackage.FX_BORDER_PANE:
 			return createFXBorderPane();
+		case UIPackage.FX_TAB:
+			return createFXTab();
 		case UIPackage.FX_BUTTON:
 			return createFXButton();
 		case UIPackage.FX_LABEL:
@@ -142,6 +146,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	 * @generated
 	 */
 	@Override
+	public FXTabPane createFXTabPane() {
+		FXTabPaneImpl fxTabPane = new FXTabPaneImpl();
+		return fxTabPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public FXHBox createFXHBox() {
 		FXHBoxImpl fxhBox = new FXHBoxImpl();
 		return fxhBox;
@@ -167,6 +182,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXBorderPane createFXBorderPane() {
 		FXBorderPaneImpl fxBorderPane = new FXBorderPaneImpl();
 		return fxBorderPane;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXTab createFXTab() {
+		FXTabImpl fxTab = new FXTabImpl();
+		return fxTab;
 	}
 
 	/**

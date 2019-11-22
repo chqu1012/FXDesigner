@@ -2,10 +2,10 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
-import de.dc.fx.ui.renderer.model.FXLayout;
-
+import de.dc.fx.ui.renderer.model.FXTabPane;
 import de.dc.fx.ui.renderer.model.UIFactory;
 import de.dc.fx.ui.renderer.model.UIPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -13,23 +13,24 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXLayout} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXTabPane} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXLayoutItemProvider extends FXNodeItemProvider {
+public class FXTabPaneItemProvider extends FXLayoutItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXLayoutItemProvider(AdapterFactory adapterFactory) {
+	public FXTabPaneItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,7 +61,7 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UIPackage.Literals.FX_LAYOUT__CHILDREN);
+			childrenFeatures.add(UIPackage.Literals.FX_TAB_PANE__TABS);
 		}
 		return childrenFeatures;
 	}
@@ -76,6 +77,17 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
+	}
+
+	/**
+	 * This returns FXTabPane.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXTabPane"));
 	}
 
 	/**
@@ -96,9 +108,9 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXLayout) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXLayout_type")
-				: getString("_UI_FXLayout_type") + " " + label;
+		String label = ((FXTabPane) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_FXTabPane_type")
+				: getString("_UI_FXTabPane_type") + " " + label;
 	}
 
 	/**
@@ -112,8 +124,8 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FXLayout.class)) {
-		case UIPackage.FX_LAYOUT__CHILDREN:
+		switch (notification.getFeatureID(FXTabPane.class)) {
+		case UIPackage.FX_TAB_PANE__TABS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -131,44 +143,29 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTabPane()));
-
 		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXHBox()));
+				.add(createChildParameter(UIPackage.Literals.FX_TAB_PANE__TABS, UIFactory.eINSTANCE.createFXTab()));
+	}
 
-		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXVBox()));
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
 
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXBorderPane()));
+		boolean qualify = childFeature == UIPackage.Literals.FX_LAYOUT__CHILDREN
+				|| childFeature == UIPackage.Literals.FX_TAB_PANE__TABS;
 
-		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTab()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXButton()));
-
-		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXLabel()));
-
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
-				UIFactory.eINSTANCE.createFXCheckButton()));
-
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
-				UIFactory.eINSTANCE.createFXRadioButton()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXListView()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTableView()));
-
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
-				UIFactory.eINSTANCE.createFXFilteredTableView()));
-
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
-				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

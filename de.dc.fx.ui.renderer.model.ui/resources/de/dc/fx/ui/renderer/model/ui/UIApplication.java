@@ -16,7 +16,7 @@ public abstract class UIApplication extends Application{
 		FXRootFile file = new FXRootFile();
 		FXRoot fxRoot = file.load("./resources/"+ui());
 		Parent root = (Parent) renderer.doSwitch(fxRoot);
-		primaryStage.setScene(new Scene(root));
+		primaryStage.setScene(new Scene(root, 800, 600));
 		primaryStage.show();
 	}
 	

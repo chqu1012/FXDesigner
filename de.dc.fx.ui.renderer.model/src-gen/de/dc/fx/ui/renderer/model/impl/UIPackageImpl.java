@@ -17,6 +17,8 @@ import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRadioButton;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
+import de.dc.fx.ui.renderer.model.FXTab;
+import de.dc.fx.ui.renderer.model.FXTabPane;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.FXVBox;
@@ -85,6 +87,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass fxTabPaneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass fxhBoxEClass = null;
 
 	/**
@@ -100,6 +109,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	private EClass fxBorderPaneEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxTabEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -616,6 +632,26 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFXTabPane() {
+		return fxTabPaneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFXTabPane_Tabs() {
+		return (EReference) fxTabPaneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXHBox() {
 		return fxhBoxEClass;
 	}
@@ -708,6 +744,26 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	@Override
 	public EReference getFXBorderPane_Top() {
 		return (EReference) fxBorderPaneEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFXTab() {
+		return fxTabEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getFXTab_Content() {
+		return (EReference) fxTabEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -934,6 +990,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxLayoutEClass = createEClass(FX_LAYOUT);
 		createEReference(fxLayoutEClass, FX_LAYOUT__CHILDREN);
 
+		fxTabPaneEClass = createEClass(FX_TAB_PANE);
+		createEReference(fxTabPaneEClass, FX_TAB_PANE__TABS);
+
 		fxhBoxEClass = createEClass(FXH_BOX);
 		createEAttribute(fxhBoxEClass, FXH_BOX__SPACING);
 
@@ -946,6 +1005,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEReference(fxBorderPaneEClass, FX_BORDER_PANE__CENTER);
 		createEReference(fxBorderPaneEClass, FX_BORDER_PANE__BOTTOM);
 		createEReference(fxBorderPaneEClass, FX_BORDER_PANE__TOP);
+
+		fxTabEClass = createEClass(FX_TAB);
+		createEReference(fxTabEClass, FX_TAB__CONTENT);
 
 		fxButtonEClass = createEClass(FX_BUTTON);
 
@@ -1006,9 +1068,11 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		// Add supertypes to classes
 		fxNodeEClass.getESuperTypes().add(this.getFXEvent());
 		fxLayoutEClass.getESuperTypes().add(this.getFXNode());
+		fxTabPaneEClass.getESuperTypes().add(this.getFXLayout());
 		fxhBoxEClass.getESuperTypes().add(this.getFXLayout());
 		fxvBoxEClass.getESuperTypes().add(this.getFXLayout());
 		fxBorderPaneEClass.getESuperTypes().add(this.getFXLayout());
+		fxTabEClass.getESuperTypes().add(this.getFXNode());
 		fxButtonEClass.getESuperTypes().add(this.getFXNode());
 		fxLabelEClass.getESuperTypes().add(this.getFXNode());
 		fxCheckButtonEClass.getESuperTypes().add(this.getFXNode());
@@ -1126,6 +1190,12 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(fxTabPaneEClass, FXTabPane.class, "FXTabPane", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFXTabPane_Tabs(), this.getFXTab(), null, "tabs", null, 0, -1, FXTabPane.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
 		initEClass(fxhBoxEClass, FXHBox.class, "FXHBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXHBox_Spacing(), theEcorePackage.getEDouble(), "spacing", null, 0, 1, FXHBox.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
@@ -1153,6 +1223,11 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		initEReference(getFXBorderPane_Top(), this.getFXNode(), null, "top", null, 0, 1, FXBorderPane.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fxTabEClass, FXTab.class, "FXTab", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFXTab_Content(), this.getFXNode(), null, "content", null, 0, 1, FXTab.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(fxButtonEClass, FXButton.class, "FXButton", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -2,7 +2,7 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
-import de.dc.fx.ui.renderer.model.FXLayout;
+import de.dc.fx.ui.renderer.model.FXTab;
 
 import de.dc.fx.ui.renderer.model.UIFactory;
 import de.dc.fx.ui.renderer.model.UIPackage;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXLayout} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXTab} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXLayoutItemProvider extends FXNodeItemProvider {
+public class FXTabItemProvider extends FXNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXLayoutItemProvider(AdapterFactory adapterFactory) {
+	public FXTabItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,7 +60,7 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UIPackage.Literals.FX_LAYOUT__CHILDREN);
+			childrenFeatures.add(UIPackage.Literals.FX_TAB__CONTENT);
 		}
 		return childrenFeatures;
 	}
@@ -76,6 +76,17 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
+	}
+
+	/**
+	 * This returns FXTab.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXTab"));
 	}
 
 	/**
@@ -96,9 +107,9 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXLayout) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXLayout_type")
-				: getString("_UI_FXLayout_type") + " " + label;
+		String label = ((FXTab) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_FXTab_type")
+				: getString("_UI_FXTab_type") + " " + label;
 	}
 
 	/**
@@ -112,8 +123,8 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FXLayout.class)) {
-		case UIPackage.FX_LAYOUT__CHILDREN:
+		switch (notification.getFeatureID(FXTab.class)) {
+		case UIPackage.FX_TAB__CONTENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -131,43 +142,43 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTabPane()));
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXTabPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXHBox()));
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXHBox()));
 
 		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXVBox()));
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXVBox()));
 
 		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXBorderPane()));
+				createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXBorderPane()));
 
 		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTab()));
-
-		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXButton()));
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXTab()));
 
 		newChildDescriptors
-				.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXLabel()));
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXButton()));
 
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
-				UIFactory.eINSTANCE.createFXCheckButton()));
-
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
-				UIFactory.eINSTANCE.createFXRadioButton()));
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXLabel()));
 
 		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXListView()));
+				createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXCheckButton()));
 
 		newChildDescriptors.add(
-				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTableView()));
+				createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXRadioButton()));
 
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXListView()));
+
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXTableView()));
+
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT,
 				UIFactory.eINSTANCE.createFXFilteredTableView()));
 
-		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT,
 				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
 	}
 

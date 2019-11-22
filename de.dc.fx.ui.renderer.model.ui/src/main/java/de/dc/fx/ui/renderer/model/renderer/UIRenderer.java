@@ -16,6 +16,7 @@ import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
+import de.dc.fx.ui.renderer.model.FXTabPane;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.FXVBox;
 import de.dc.fx.ui.renderer.model.control.FXBaseView;
@@ -26,12 +27,12 @@ import de.dc.fx.ui.renderer.model.control.FXSortFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.control.UI;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -41,6 +42,8 @@ import javafx.scene.layout.VBox;
 public class UIRenderer extends UISwitch<Node> {
 
 	private Map<String, Region> controlRegistry = new HashMap<>();
+	private Map<String, Tab> tabRegistry = new HashMap<>();
+	
 	private FXRootControl root;
 	
 	@SuppressWarnings("unchecked")
@@ -66,6 +69,20 @@ public class UIRenderer extends UISwitch<Node> {
 		if (object.getPrefWidth() > 0) {
 			node.setPrefWidth(object.getPrefWidth());
 		}
+	}
+
+	@Override
+	public Node caseFXTabPane(FXTabPane object) {
+		TabPane node = new TabPane();
+		object.getTabs().forEach(e-> {
+			Tab tab = new Tab(e.getName()==null? "": e.getName());
+			if (e.getContent()!=null) {
+				tab.setContent(doSwitch(e.getContent()));
+			}
+			node.getTabs().add(tab);
+			tabRegistry.put(e.getId(), tab);
+		});
+		return init(object, node);
 	}
 	
 	@Override
