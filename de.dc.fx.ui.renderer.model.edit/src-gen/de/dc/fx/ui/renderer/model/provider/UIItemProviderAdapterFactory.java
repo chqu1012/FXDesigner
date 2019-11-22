@@ -167,6 +167,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXAccordion} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXAccordionItemProvider fxAccordionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXAccordion}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXAccordionAdapter() {
+		if (fxAccordionItemProvider == null) {
+			fxAccordionItemProvider = new FXAccordionItemProvider(this);
+		}
+
+		return fxAccordionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTabPane} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -601,6 +624,8 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxMarginItemProvider.dispose();
 		if (fxPaddingItemProvider != null)
 			fxPaddingItemProvider.dispose();
+		if (fxAccordionItemProvider != null)
+			fxAccordionItemProvider.dispose();
 		if (fxTabPaneItemProvider != null)
 			fxTabPaneItemProvider.dispose();
 		if (fxhBoxItemProvider != null)

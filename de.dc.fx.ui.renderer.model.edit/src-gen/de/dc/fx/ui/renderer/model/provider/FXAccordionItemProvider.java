@@ -2,28 +2,30 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
-import de.dc.fx.ui.renderer.model.FXTabPane;
+import de.dc.fx.ui.renderer.model.FXAccordion;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXTabPane} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXAccordion} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXTabPaneItemProvider extends FXLayoutItemProvider {
+public class FXAccordionItemProvider extends FXLayoutItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXTabPaneItemProvider(AdapterFactory adapterFactory) {
+	public FXAccordionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +45,14 @@ public class FXTabPaneItemProvider extends FXLayoutItemProvider {
 	}
 
 	/**
-	 * This returns FXTabPane.gif.
+	 * This returns FXAccordion.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXTabPane"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXAccordion"));
 	}
 
 	/**
@@ -71,9 +73,9 @@ public class FXTabPaneItemProvider extends FXLayoutItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((FXTabPane) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_FXTabPane_type")
-				: getString("_UI_FXTabPane_type") + " " + label;
+		String label = ((FXAccordion) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_FXAccordion_type")
+				: getString("_UI_FXAccordion_type") + " " + label;
 	}
 
 	/**

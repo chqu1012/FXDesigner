@@ -259,6 +259,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXAccordion()));
+
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXTabPane()));
 

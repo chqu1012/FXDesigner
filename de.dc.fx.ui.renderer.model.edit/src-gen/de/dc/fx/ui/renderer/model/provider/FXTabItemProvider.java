@@ -143,6 +143,9 @@ public class FXTabItemProvider extends FXNodeItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXAccordion()));
+
+		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_TAB__CONTENT, UIFactory.eINSTANCE.createFXTabPane()));
 
 		newChildDescriptors

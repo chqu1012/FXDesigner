@@ -2,25 +2,25 @@
  */
 package de.dc.fx.ui.renderer.model.impl;
 
-import de.dc.fx.ui.renderer.model.FXTabPane;
+import de.dc.fx.ui.renderer.model.FXAccordion;
 import de.dc.fx.ui.renderer.model.UIPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>FX Tab Pane</b></em>'.
+ * An implementation of the model object '<em><b>FX Accordion</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class FXTabPaneImpl extends FXLayoutImpl implements FXTabPane {
+public class FXAccordionImpl extends FXLayoutImpl implements FXAccordion {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FXTabPaneImpl() {
+	protected FXAccordionImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class FXTabPaneImpl extends FXLayoutImpl implements FXTabPane {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UIPackage.Literals.FX_TAB_PANE;
+		return UIPackage.Literals.FX_ACCORDION;
 	}
 
-} //FXTabPaneImpl
+} //FXAccordionImpl

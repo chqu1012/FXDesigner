@@ -63,6 +63,8 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXMargin();
 		case UIPackage.FX_PADDING:
 			return createFXPadding();
+		case UIPackage.FX_ACCORDION:
+			return createFXAccordion();
 		case UIPackage.FX_TAB_PANE:
 			return createFXTabPane();
 		case UIPackage.FXH_BOX:
@@ -138,6 +140,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXPadding createFXPadding() {
 		FXPaddingImpl fxPadding = new FXPaddingImpl();
 		return fxPadding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXAccordion createFXAccordion() {
+		FXAccordionImpl fxAccordion = new FXAccordionImpl();
+		return fxAccordion;
 	}
 
 	/**

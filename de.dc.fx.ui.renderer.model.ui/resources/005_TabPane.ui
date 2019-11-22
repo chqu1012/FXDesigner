@@ -4,9 +4,9 @@ xmlns:model="http://www.frateranatis.org/ui" basePackage="de.dc.fx.ui.renderer.m
 controller="de.dc.fx.ui.renderer.model.ui.controller.TabPaneController">
   <children xsi:type="model:FXVBox">
     <children xsi:type="model:FXTabPane">
-      <tabs xsi:type="model:FXTab" name="Customer"/>
-      <tabs xsi:type="model:FXTab" name="Employees"/>
-      <tabs xsi:type="model:FXTab" name="Product"/>
+      <children xsi:type="model:FXTab" name="Customer"/>
+      <children xsi:type="model:FXTab" name="Employees"/>
+      <children xsi:type="model:FXTab" name="Product"/>
     </children>
   </children>
 </model:FXRoot>

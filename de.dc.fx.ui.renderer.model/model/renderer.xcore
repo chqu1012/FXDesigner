@@ -74,8 +74,11 @@ abstract class FXLayout extends FXNode{
 	contains FXNode[0..*] children
 }
 
+class FXAccordion extends FXLayout{
+	
+}
+
 class FXTabPane extends FXLayout{
-	contains FXTab[0..*] tabs
 }
 
 class FXHBox extends FXLayout{

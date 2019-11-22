@@ -152,6 +152,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT, UIFactory.eINSTANCE.createFXAccordion()));
+
+		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT, UIFactory.eINSTANCE.createFXTabPane()));
 
 		newChildDescriptors
@@ -189,6 +192,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT,
 				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
+
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT,
+				UIFactory.eINSTANCE.createFXAccordion()));
 
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT, UIFactory.eINSTANCE.createFXTabPane()));
@@ -229,6 +235,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT,
 				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
 
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER,
+				UIFactory.eINSTANCE.createFXAccordion()));
+
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER, UIFactory.eINSTANCE.createFXTabPane()));
 
@@ -268,6 +277,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER,
 				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
 
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM,
+				UIFactory.eINSTANCE.createFXAccordion()));
+
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM, UIFactory.eINSTANCE.createFXTabPane()));
 
@@ -306,6 +318,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM,
 				UIFactory.eINSTANCE.createFXSortFilteredTableView()));
+
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXAccordion()));
 
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXTabPane()));

@@ -97,6 +97,11 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXAccordion(FXAccordion object) {
+			return createFXAccordionAdapter();
+		}
+
+		@Override
 		public Adapter caseFXTabPane(FXTabPane object) {
 			return createFXTabPaneAdapter();
 		}
@@ -266,6 +271,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXLayoutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXAccordion <em>FX Accordion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXAccordion
+	 * @generated
+	 */
+	public Adapter createFXAccordionAdapter() {
 		return null;
 	}
 
