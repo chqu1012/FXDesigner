@@ -121,6 +121,15 @@ public interface UIFactory extends EFactory {
 	FXRadioButton createFXRadioButton();
 
 	/**
+	 * Returns a new object of class '<em>FX List View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX List View</em>'.
+	 * @generated
+	 */
+	FXListView createFXListView();
+
+	/**
 	 * Returns a new object of class '<em>FX Table View</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

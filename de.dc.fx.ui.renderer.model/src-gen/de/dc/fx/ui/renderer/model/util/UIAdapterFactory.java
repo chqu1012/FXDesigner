@@ -132,6 +132,11 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXListView(FXListView object) {
+			return createFXListViewAdapter();
+		}
+
+		@Override
 		public Adapter caseFXTableView(FXTableView object) {
 			return createFXTableViewAdapter();
 		}
@@ -349,6 +354,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXRadioButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXListView <em>FX List View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXListView
+	 * @generated
+	 */
+	public Adapter createFXListViewAdapter() {
 		return null;
 	}
 

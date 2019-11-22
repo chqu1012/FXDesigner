@@ -281,6 +281,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 				createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXRadioButton()));
 
 		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXListView()));
+
+		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXTableView()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN,

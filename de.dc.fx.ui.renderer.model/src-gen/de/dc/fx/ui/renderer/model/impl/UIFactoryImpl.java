@@ -77,6 +77,8 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXCheckButton();
 		case UIPackage.FX_RADIO_BUTTON:
 			return createFXRadioButton();
+		case UIPackage.FX_LIST_VIEW:
+			return createFXListView();
 		case UIPackage.FX_TABLE_VIEW:
 			return createFXTableView();
 		case UIPackage.FX_FILTERED_TABLE_VIEW:
@@ -209,6 +211,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXRadioButton createFXRadioButton() {
 		FXRadioButtonImpl fxRadioButton = new FXRadioButtonImpl();
 		return fxRadioButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXListView createFXListView() {
+		FXListViewImpl fxListView = new FXListViewImpl();
+		return fxListView;
 	}
 
 	/**

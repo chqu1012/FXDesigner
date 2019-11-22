@@ -197,6 +197,17 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case UIPackage.FX_LIST_VIEW: {
+			FXListView fxListView = (FXListView) theEObject;
+			T result = caseFXListView(fxListView);
+			if (result == null)
+				result = caseFXNode(fxListView);
+			if (result == null)
+				result = caseFXEvent(fxListView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FX_TABLE_VIEW: {
 			FXTableView fxTableView = (FXTableView) theEObject;
 			T result = caseFXTableView(fxTableView);
@@ -440,6 +451,21 @@ public class UISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXRadioButton(FXRadioButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX List View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX List View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXListView(FXListView object) {
 		return null;
 	}
 

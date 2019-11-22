@@ -2104,6 +2104,196 @@ public interface UIPackage extends EPackage {
 	int FX_RADIO_BUTTON_OPERATION_COUNT = FX_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXListViewImpl <em>FX List View</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXListViewImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXListView()
+	 * @generated
+	 */
+	int FX_LIST_VIEW = 13;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__ID = FX_NODE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__NAME = FX_NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__OPACITY = FX_NODE__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__VISIBLE = FX_NODE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__DISABLE = FX_NODE__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__STYLE = FX_NODE__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__STYLE_CLASS = FX_NODE__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__LAYOUT_X = FX_NODE__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__LAYOUT_Y = FX_NODE__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__PREF_WIDTH = FX_NODE__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__PREF_HEIGHT = FX_NODE__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__MIN_WIDTH = FX_NODE__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__MIN_HEIGHT = FX_NODE__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__MAX_WIDTH = FX_NODE__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__MAX_HEIGHT = FX_NODE__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__PADDING = FX_NODE__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW__MARGIN = FX_NODE__MARGIN;
+
+	/**
+	 * The number of structural features of the '<em>FX List View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW_FEATURE_COUNT = FX_NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>FX List View</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LIST_VIEW_OPERATION_COUNT = FX_NODE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXTableViewImpl <em>FX Table View</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2111,7 +2301,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableView()
 	 * @generated
 	 */
-	int FX_TABLE_VIEW = 13;
+	int FX_TABLE_VIEW = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2310,7 +2500,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXFilteredTableView()
 	 * @generated
 	 */
-	int FX_FILTERED_TABLE_VIEW = 14;
+	int FX_FILTERED_TABLE_VIEW = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2509,7 +2699,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXSortFilteredTableView()
 	 * @generated
 	 */
-	int FX_SORT_FILTERED_TABLE_VIEW = 15;
+	int FX_SORT_FILTERED_TABLE_VIEW = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2708,7 +2898,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 16;
+	int FX_TABLE_COLUMN = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3333,6 +3523,16 @@ public interface UIPackage extends EPackage {
 	EClass getFXRadioButton();
 
 	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXListView <em>FX List View</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX List View</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXListView
+	 * @generated
+	 */
+	EClass getFXListView();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXTableView <em>FX Table View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3902,6 +4102,16 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FX_RADIO_BUTTON = eINSTANCE.getFXRadioButton();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXListViewImpl <em>FX List View</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXListViewImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXListView()
+		 * @generated
+		 */
+		EClass FX_LIST_VIEW = eINSTANCE.getFXListView();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXTableViewImpl <em>FX Table View</em>}' class.

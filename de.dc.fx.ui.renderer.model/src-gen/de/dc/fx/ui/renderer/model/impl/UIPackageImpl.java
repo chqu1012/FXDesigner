@@ -10,6 +10,7 @@ import de.dc.fx.ui.renderer.model.FXFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXHBox;
 import de.dc.fx.ui.renderer.model.FXLabel;
 import de.dc.fx.ui.renderer.model.FXLayout;
+import de.dc.fx.ui.renderer.model.FXListView;
 import de.dc.fx.ui.renderer.model.FXMargin;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
@@ -127,6 +128,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	private EClass fxRadioButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxListViewEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -748,6 +756,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFXListView() {
+		return fxListViewEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXTableView() {
 		return fxTableViewEClass;
 	}
@@ -937,6 +955,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		fxRadioButtonEClass = createEClass(FX_RADIO_BUTTON);
 
+		fxListViewEClass = createEClass(FX_LIST_VIEW);
+
 		fxTableViewEClass = createEClass(FX_TABLE_VIEW);
 		createEReference(fxTableViewEClass, FX_TABLE_VIEW__COLUMNS);
 
@@ -993,6 +1013,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxLabelEClass.getESuperTypes().add(this.getFXNode());
 		fxCheckButtonEClass.getESuperTypes().add(this.getFXNode());
 		fxRadioButtonEClass.getESuperTypes().add(this.getFXNode());
+		fxListViewEClass.getESuperTypes().add(this.getFXNode());
 		fxTableViewEClass.getESuperTypes().add(this.getFXNode());
 		fxFilteredTableViewEClass.getESuperTypes().add(this.getFXTableView());
 		fxSortFilteredTableViewEClass.getESuperTypes().add(this.getFXFilteredTableView());
@@ -1142,6 +1163,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fxRadioButtonEClass, FXRadioButton.class, "FXRadioButton", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxListViewEClass, FXListView.class, "FXListView", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fxTableViewEClass, FXTableView.class, "FXTableView", !IS_ABSTRACT, !IS_INTERFACE,

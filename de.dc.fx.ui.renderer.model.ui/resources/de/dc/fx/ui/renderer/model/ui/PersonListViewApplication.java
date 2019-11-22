@@ -1,6 +1,6 @@
 package de.dc.fx.ui.renderer.model.ui;
 
-public class NodeEventsApplication extends UIApplication{
+public class PersonListViewApplication extends UIApplication{
 
 	public static void main(String[] args) {
 		launch(args);
@@ -8,6 +8,6 @@ public class NodeEventsApplication extends UIApplication{
 
 	@Override
 	protected String ui() {
-		return "003_NodeEvents.ui";
+		return "004_PersonListView.ui";
 	}
 }

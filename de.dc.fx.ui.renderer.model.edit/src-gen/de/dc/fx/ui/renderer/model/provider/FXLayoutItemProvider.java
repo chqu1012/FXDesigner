@@ -153,6 +153,9 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 				UIFactory.eINSTANCE.createFXRadioButton()));
 
 		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXListView()));
+
+		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTableView()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN,

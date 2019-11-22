@@ -11,22 +11,27 @@ import de.dc.fx.ui.renderer.model.FXEvent;
 import de.dc.fx.ui.renderer.model.FXFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXHBox;
 import de.dc.fx.ui.renderer.model.FXLabel;
+import de.dc.fx.ui.renderer.model.FXListView;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.FXVBox;
+import de.dc.fx.ui.renderer.model.control.FXBaseView;
 import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
+import de.dc.fx.ui.renderer.model.control.FXListViewControl;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
 import de.dc.fx.ui.renderer.model.control.FXSortFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.control.UI;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -70,7 +75,12 @@ public class UIRenderer extends UISwitch<Node> {
 		Region control = controlRegistry.get(id);
 		if (control != null) {
 			if (object.getOnMouseClicked()!=null) {
-				control.setOnMouseClicked(e-> root.invokeMethodBy(object.getOnMouseClicked(), e));
+				// Used for viewers
+				if (control instanceof FXBaseView) {
+					((FXBaseView)control).getControl().setOnMouseClicked(e-> root.invokeMethodBy(object.getOnMouseClicked(), e));
+				}else {
+					control.setOnMouseClicked(e-> root.invokeMethodBy(object.getOnMouseClicked(), e));
+				}
 			}
 		}
 		return super.caseFXEvent(object);
@@ -105,6 +115,12 @@ public class UIRenderer extends UISwitch<Node> {
 	@Override
 	public Node caseFXTableView(FXTableView object) {
 		FXTableViewControl<Object> node = new FXTableViewControl<>(object);
+		return init(object, node);
+	}
+	
+	@Override
+	public Node caseFXListView(FXListView object) {
+		FXListViewControl<Object> node = new FXListViewControl<>(object);
 		return init(object, node);
 	}
 	
@@ -170,6 +186,9 @@ public class UIRenderer extends UISwitch<Node> {
 	}
 
 	public void initialize() {
+		if (root==null && root.getController()==null) {
+			return;
+		}
 		root.getController().ifPresent(e->{
 			Field[] declaredFields = e.getClass().getDeclaredFields();
 			for (Field field : declaredFields) {

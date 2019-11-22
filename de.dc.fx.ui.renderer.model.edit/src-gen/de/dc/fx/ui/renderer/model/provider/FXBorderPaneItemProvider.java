@@ -173,6 +173,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 				UIFactory.eINSTANCE.createFXRadioButton()));
 
 		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT, UIFactory.eINSTANCE.createFXListView()));
+
+		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT, UIFactory.eINSTANCE.createFXTableView()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT,
@@ -201,6 +204,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT,
 				UIFactory.eINSTANCE.createFXRadioButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT, UIFactory.eINSTANCE.createFXListView()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT,
 				UIFactory.eINSTANCE.createFXTableView()));
@@ -233,6 +239,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 				UIFactory.eINSTANCE.createFXRadioButton()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER,
+				UIFactory.eINSTANCE.createFXListView()));
+
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER,
 				UIFactory.eINSTANCE.createFXTableView()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER,
@@ -263,6 +272,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 				UIFactory.eINSTANCE.createFXRadioButton()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM,
+				UIFactory.eINSTANCE.createFXListView()));
+
+		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM,
 				UIFactory.eINSTANCE.createFXTableView()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM,
@@ -291,6 +303,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP,
 				UIFactory.eINSTANCE.createFXRadioButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXListView()));
 
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXTableView()));

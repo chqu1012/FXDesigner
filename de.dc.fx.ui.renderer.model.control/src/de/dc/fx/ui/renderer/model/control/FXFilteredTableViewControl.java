@@ -2,6 +2,7 @@ package de.dc.fx.ui.renderer.model.control;
 
 import de.dc.fx.ui.renderer.model.FXFilteredTableView;
 import javafx.collections.transformation.FilteredList;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class FXFilteredTableViewControl<T> extends FXTableViewControl<T>{
@@ -14,7 +15,7 @@ public class FXFilteredTableViewControl<T> extends FXTableViewControl<T>{
 		super(model);
 		textSearch.setPromptText("Search for entries");
 		getChildren().add(0, textSearch);
-		tableView.setItems(filteredData);
+		((TableView<T>)view).setItems(filteredData);
 	}
 
 }

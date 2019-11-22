@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:FXRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://www.frateranatis.org/ui" basePackage="de.dc.fx.ui.renderer.model.ui" controller="de.dc.fx.ui.renderer.model.ui.controller.PersonListViewController">
+  <children xsi:type="model:FXListView" onMouseClicked="onListViewPersonClicked" id="listViewPerson"/>
+</model:FXRoot>

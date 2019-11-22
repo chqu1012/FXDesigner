@@ -328,6 +328,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXListView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXListViewItemProvider fxListViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXListView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXListViewAdapter() {
+		if (fxListViewItemProvider == null) {
+			fxListViewItemProvider = new FXListViewItemProvider(this);
+		}
+
+		return fxListViewItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTableView} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -546,6 +569,8 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxCheckButtonItemProvider.dispose();
 		if (fxRadioButtonItemProvider != null)
 			fxRadioButtonItemProvider.dispose();
+		if (fxListViewItemProvider != null)
+			fxListViewItemProvider.dispose();
 		if (fxTableViewItemProvider != null)
 			fxTableViewItemProvider.dispose();
 		if (fxFilteredTableViewItemProvider != null)

@@ -95,6 +95,9 @@ class FXLabel extends FXNode{}
 class FXCheckButton extends FXNode{}
 class FXRadioButton extends FXNode{}
 
+class FXListView extends FXNode{
+}
+
 class FXTableView extends FXNode{
 //	refers FXBinding binding
 	contains FXTableColumn[0..*] columns

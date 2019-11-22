@@ -8,13 +8,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class TableView001 extends Application{
+public abstract class UIApplication extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		UIRenderer renderer = new UIRenderer();
 		FXRootFile file = new FXRootFile();
-		FXRoot fxRoot = file.load("./resources/001_TableView.ui");
+		FXRoot fxRoot = file.load("./resources/"+ui());
 		Parent root = (Parent) renderer.doSwitch(fxRoot);
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
@@ -23,4 +23,6 @@ public class TableView001 extends Application{
 	public static void main(String[] args) {
 		launch(args);
 	}
+	
+	protected abstract String ui();
 }
