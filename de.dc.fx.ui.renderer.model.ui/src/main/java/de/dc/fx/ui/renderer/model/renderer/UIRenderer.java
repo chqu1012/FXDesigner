@@ -16,6 +16,7 @@ import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -95,34 +96,9 @@ public class UIRenderer extends UISwitch<Node> {
 
 	@Override
 	public Node caseFXTableView(FXTableView object) {
-		TableView<Object> node = new TableView<>();
-		object.getColumns().forEach(c->{
-			TableColumn<Object, ?> column = new TableColumn<>(c.getName());
-			node.getColumns().add(column );
-		});
+		FXTableViewControl<Object> node = new FXTableViewControl<>(object);
 		init(object, node);
 		return node;
-	}
-	
-	private void addColumn(TableView<Object> view, FXTableColumn e) {
-		TableColumn column = new TableColumn(e.getName());
-		if (null!=e.getCellFactory()) {
-			try {
-				Class<?> c = Class.forName(e.getCellFactory());
-				Object instance = c.newInstance();
-				if (instance instanceof Callback) {
-					Callback feature = (Callback) instance;
-					column.setCellFactory(feature);
-				}
-			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e1) {
-				e1.printStackTrace();
-			}
-		}
-		
-		String id = e.getId() == null? e.getName() : e.getId();
-		columnsRegistry.put(id , column);
-		
-		view.getColumns().add(column);
 	}
 	
 	@Override
