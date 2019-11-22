@@ -5,7 +5,6 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import java.util.logging.Logger;
 
 import de.dc.fx.ui.renderer.model.FXBorderPane;
 import de.dc.fx.ui.renderer.model.FXButton;
@@ -14,25 +13,20 @@ import de.dc.fx.ui.renderer.model.FXHBox;
 import de.dc.fx.ui.renderer.model.FXInsets;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXRoot;
-import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
-import javafx.util.Callback;
 
 public class UIRenderer extends UISwitch<Node> {
 
 	private Map<String, Node> controlRegistry = new HashMap<>();
-	private Map<String, TableColumn> columnsRegistry = new HashMap<>();
 	
 	private Class<?> controller;
 	private Object controllerInstance;
@@ -42,10 +36,6 @@ public class UIRenderer extends UISwitch<Node> {
 		return (T) controlRegistry.get(id);
 	}
 
-	public TableColumn findColumnBy(String id) {
-		return columnsRegistry.get(id);
-	}
-	
 	private void init(FXNode object, Region node) {
 		controlRegistry.put(object.getId(), node);
 		initSize(object, node);
