@@ -85,6 +85,7 @@ public class UIRenderer extends UISwitch<Node> {
 	public Node caseFXRoot(FXRoot object) {
 		root = new FXRootControl(object);
 		object.getChildren().forEach(e->root.setCenter(doSwitch(e)));
+		initialize();
 		return root;
 	}
 

@@ -16,7 +16,6 @@ public class NodeEventsApplication extends Application{
 		FXRootFile file = new FXRootFile();
 		FXRoot fxRoot = file.load("./resources/003_NodeEvents.ui");
 		Parent root = (Parent) renderer.doSwitch(fxRoot);
-		renderer.initialize();
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
 	}
