@@ -13,6 +13,7 @@ import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.FXVBox;
 import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
 import de.dc.fx.ui.renderer.model.control.FXSortFilteredTableViewControl;
@@ -25,6 +26,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 
 public class UIRenderer extends UISwitch<Node> {
 
@@ -88,6 +90,13 @@ public class UIRenderer extends UISwitch<Node> {
 	@Override
 	public Node caseFXHBox(FXHBox object) {
 		HBox node = new HBox(object.getSpacing());
+		object.getChildren().forEach(e->addChild(node, object));
+		return init(object, node);
+	}
+	
+	@Override
+	public Node caseFXVBox(FXVBox object) {
+		VBox node = new VBox(object.getSpacing());
 		object.getChildren().forEach(e->addChild(node, object));
 		return init(object, node);
 	}
