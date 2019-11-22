@@ -77,6 +77,10 @@ class FXHBox extends FXLayout{
 	double spacing
 }
 
+class FXVBox extends FXLayout{
+	double spacing
+}
+
 class FXBorderPane extends FXLayout{
 	contains FXNode left
 	contains FXNode right

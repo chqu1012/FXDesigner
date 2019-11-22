@@ -262,6 +262,9 @@ public class FXRootItemProvider extends ItemProviderAdapter
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXHBox()));
 
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXVBox()));
+
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_ROOT__CHILDREN, UIFactory.eINSTANCE.createFXBorderPane()));
 

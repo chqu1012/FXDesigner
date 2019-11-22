@@ -121,6 +121,17 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case UIPackage.FXV_BOX: {
+			FXVBox fxvBox = (FXVBox) theEObject;
+			T result = caseFXVBox(fxvBox);
+			if (result == null)
+				result = caseFXLayout(fxvBox);
+			if (result == null)
+				result = caseFXNode(fxvBox);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FX_BORDER_PANE: {
 			FXBorderPane fxBorderPane = (FXBorderPane) theEObject;
 			T result = caseFXBorderPane(fxBorderPane);
@@ -315,6 +326,21 @@ public class UISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXHBox(FXHBox object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FXV Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FXV Box</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXVBox(FXVBox object) {
 		return null;
 	}
 

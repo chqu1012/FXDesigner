@@ -65,6 +65,8 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXPadding();
 		case UIPackage.FXH_BOX:
 			return createFXHBox();
+		case UIPackage.FXV_BOX:
+			return createFXVBox();
 		case UIPackage.FX_BORDER_PANE:
 			return createFXBorderPane();
 		case UIPackage.FX_BUTTON:
@@ -141,6 +143,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXHBox createFXHBox() {
 		FXHBoxImpl fxhBox = new FXHBoxImpl();
 		return fxhBox;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXVBox createFXVBox() {
+		FXVBoxImpl fxvBox = new FXVBoxImpl();
+		return fxvBox;
 	}
 
 	/**

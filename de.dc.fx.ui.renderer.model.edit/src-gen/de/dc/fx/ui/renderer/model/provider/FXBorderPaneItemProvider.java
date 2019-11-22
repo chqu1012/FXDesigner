@@ -154,6 +154,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT, UIFactory.eINSTANCE.createFXHBox()));
 
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT, UIFactory.eINSTANCE.createFXVBox()));
+
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__LEFT,
 				UIFactory.eINSTANCE.createFXBorderPane()));
 
@@ -180,6 +183,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT, UIFactory.eINSTANCE.createFXHBox()));
+
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT, UIFactory.eINSTANCE.createFXVBox()));
 
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__RIGHT,
 				UIFactory.eINSTANCE.createFXBorderPane()));
@@ -208,6 +214,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER, UIFactory.eINSTANCE.createFXHBox()));
 
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER, UIFactory.eINSTANCE.createFXVBox()));
+
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__CENTER,
 				UIFactory.eINSTANCE.createFXBorderPane()));
 
@@ -235,6 +244,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM, UIFactory.eINSTANCE.createFXHBox()));
 
+		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM, UIFactory.eINSTANCE.createFXVBox()));
+
 		newChildDescriptors.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__BOTTOM,
 				UIFactory.eINSTANCE.createFXBorderPane()));
 
@@ -261,6 +273,9 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXHBox()));
+
+		newChildDescriptors
+				.add(createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXVBox()));
 
 		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_BORDER_PANE__TOP, UIFactory.eINSTANCE.createFXBorderPane()));

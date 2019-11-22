@@ -190,6 +190,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXVBox} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXVBoxItemProvider fxvBoxItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXVBox}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXVBoxAdapter() {
+		if (fxvBoxItemProvider == null) {
+			fxvBoxItemProvider = new FXVBoxItemProvider(this);
+		}
+
+		return fxvBoxItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXBorderPane} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -511,6 +534,8 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxPaddingItemProvider.dispose();
 		if (fxhBoxItemProvider != null)
 			fxhBoxItemProvider.dispose();
+		if (fxvBoxItemProvider != null)
+			fxvBoxItemProvider.dispose();
 		if (fxBorderPaneItemProvider != null)
 			fxBorderPaneItemProvider.dispose();
 		if (fxButtonItemProvider != null)

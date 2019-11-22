@@ -67,6 +67,15 @@ public interface UIFactory extends EFactory {
 	FXHBox createFXHBox();
 
 	/**
+	 * Returns a new object of class '<em>FXV Box</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FXV Box</em>'.
+	 * @generated
+	 */
+	FXVBox createFXVBox();
+
+	/**
 	 * Returns a new object of class '<em>FX Border Pane</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -856,6 +856,205 @@ public interface UIPackage extends EPackage {
 	int FXH_BOX_OPERATION_COUNT = FX_LAYOUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXVBoxImpl <em>FXV Box</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXVBoxImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXVBox()
+	 * @generated
+	 */
+	int FXV_BOX = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__ID = FX_LAYOUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__NAME = FX_LAYOUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__OPACITY = FX_LAYOUT__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__VISIBLE = FX_LAYOUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__DISABLE = FX_LAYOUT__DISABLE;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__STYLE = FX_LAYOUT__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__STYLE_CLASS = FX_LAYOUT__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__LAYOUT_X = FX_LAYOUT__LAYOUT_X;
+
+	/**
+	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__LAYOUT_Y = FX_LAYOUT__LAYOUT_Y;
+
+	/**
+	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__PREF_WIDTH = FX_LAYOUT__PREF_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__PREF_HEIGHT = FX_LAYOUT__PREF_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__MIN_WIDTH = FX_LAYOUT__MIN_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__MIN_HEIGHT = FX_LAYOUT__MIN_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__MAX_WIDTH = FX_LAYOUT__MAX_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__MAX_HEIGHT = FX_LAYOUT__MAX_HEIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__PADDING = FX_LAYOUT__PADDING;
+
+	/**
+	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__MARGIN = FX_LAYOUT__MARGIN;
+
+	/**
+	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__CHILDREN = FX_LAYOUT__CHILDREN;
+
+	/**
+	 * The feature id for the '<em><b>Spacing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__SPACING = FX_LAYOUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>FXV Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX_FEATURE_COUNT = FX_LAYOUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>FXV Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX_OPERATION_COUNT = FX_LAYOUT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXBorderPaneImpl <em>FX Border Pane</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -863,7 +1062,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXBorderPane()
 	 * @generated
 	 */
-	int FX_BORDER_PANE = 7;
+	int FX_BORDER_PANE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1098,7 +1297,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXButton()
 	 * @generated
 	 */
-	int FX_BUTTON = 8;
+	int FX_BUTTON = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1279,7 +1478,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLabel()
 	 * @generated
 	 */
-	int FX_LABEL = 9;
+	int FX_LABEL = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1460,7 +1659,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXCheckButton()
 	 * @generated
 	 */
-	int FX_CHECK_BUTTON = 10;
+	int FX_CHECK_BUTTON = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1641,7 +1840,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXRadioButton()
 	 * @generated
 	 */
-	int FX_RADIO_BUTTON = 11;
+	int FX_RADIO_BUTTON = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1822,7 +2021,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableView()
 	 * @generated
 	 */
-	int FX_TABLE_VIEW = 12;
+	int FX_TABLE_VIEW = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2012,7 +2211,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXFilteredTableView()
 	 * @generated
 	 */
-	int FX_FILTERED_TABLE_VIEW = 13;
+	int FX_FILTERED_TABLE_VIEW = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2202,7 +2401,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXSortFilteredTableView()
 	 * @generated
 	 */
-	int FX_SORT_FILTERED_TABLE_VIEW = 14;
+	int FX_SORT_FILTERED_TABLE_VIEW = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2392,7 +2591,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 15;
+	int FX_TABLE_COLUMN = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2878,6 +3077,27 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFXHBox_Spacing();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXVBox <em>FXV Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FXV Box</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXVBox
+	 * @generated
+	 */
+	EClass getFXVBox();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXVBox#getSpacing <em>Spacing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Spacing</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXVBox#getSpacing()
+	 * @see #getFXVBox()
+	 * @generated
+	 */
+	EAttribute getFXVBox_Spacing();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXBorderPane <em>FX Border Pane</em>}'.
@@ -3438,6 +3658,24 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FXH_BOX__SPACING = eINSTANCE.getFXHBox_Spacing();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXVBoxImpl <em>FXV Box</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXVBoxImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXVBox()
+		 * @generated
+		 */
+		EClass FXV_BOX = eINSTANCE.getFXVBox();
+
+		/**
+		 * The meta object literal for the '<em><b>Spacing</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FXV_BOX__SPACING = eINSTANCE.getFXVBox_Spacing();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXBorderPaneImpl <em>FX Border Pane</em>}' class.

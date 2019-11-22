@@ -18,6 +18,7 @@ import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.FXVBox;
 import de.dc.fx.ui.renderer.model.UIFactory;
 import de.dc.fx.ui.renderer.model.UIPackage;
 
@@ -84,6 +85,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	private EClass fxhBoxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxvBoxEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -610,6 +618,26 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFXVBox() {
+		return fxvBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXVBox_Spacing() {
+		return (EAttribute) fxvBoxEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXBorderPane() {
 		return fxBorderPaneEClass;
 	}
@@ -880,6 +908,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxhBoxEClass = createEClass(FXH_BOX);
 		createEAttribute(fxhBoxEClass, FXH_BOX__SPACING);
 
+		fxvBoxEClass = createEClass(FXV_BOX);
+		createEAttribute(fxvBoxEClass, FXV_BOX__SPACING);
+
 		fxBorderPaneEClass = createEClass(FX_BORDER_PANE);
 		createEReference(fxBorderPaneEClass, FX_BORDER_PANE__LEFT);
 		createEReference(fxBorderPaneEClass, FX_BORDER_PANE__RIGHT);
@@ -944,6 +975,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		// Add supertypes to classes
 		fxLayoutEClass.getESuperTypes().add(this.getFXNode());
 		fxhBoxEClass.getESuperTypes().add(this.getFXLayout());
+		fxvBoxEClass.getESuperTypes().add(this.getFXLayout());
 		fxBorderPaneEClass.getESuperTypes().add(this.getFXLayout());
 		fxButtonEClass.getESuperTypes().add(this.getFXNode());
 		fxLabelEClass.getESuperTypes().add(this.getFXNode());
@@ -1060,6 +1092,11 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		initEClass(fxhBoxEClass, FXHBox.class, "FXHBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXHBox_Spacing(), theEcorePackage.getEDouble(), "spacing", null, 0, 1, FXHBox.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(fxvBoxEClass, FXVBox.class, "FXVBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXVBox_Spacing(), theEcorePackage.getEDouble(), "spacing", null, 0, 1, FXVBox.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
