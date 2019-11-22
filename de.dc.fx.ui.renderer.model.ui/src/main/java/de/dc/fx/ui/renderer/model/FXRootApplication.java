@@ -15,6 +15,7 @@ public class FXRootApplication extends Application{
 		workbench.registerEmfEditor(FXRootDetailedEmfTreeViewCompact.class);
 		workbench.addViewToLeft(new EmfRecentlyOpenView());
 		workbench.addViewToLeft(new EmfPaletteView());
+		workbench.addViewToRight(new FXRootPreview());
 		primaryStage.setScene(new Scene(workbench));
 		primaryStage.show();
 	}

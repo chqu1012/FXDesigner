@@ -63,6 +63,7 @@ public class UIRenderer extends UISwitch<Node> {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private void invokeMethod(String name, FXEvent event) {
 		if (controller!=null) {
 			Method initializeMethod;
