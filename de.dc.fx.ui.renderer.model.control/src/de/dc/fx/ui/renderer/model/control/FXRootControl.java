@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.util.Optional;
 
 import de.dc.fx.ui.renderer.model.FXRoot;
+import javafx.event.Event;
 import javafx.scene.layout.BorderPane;
 
 public class FXRootControl extends BorderPane{
@@ -20,19 +21,24 @@ public class FXRootControl extends BorderPane{
 			try {
 				controllerClass = Class.forName(model.getController());
 				controller = controllerClass.newInstance();
-				invokeMethodBy("initialize");
+				invokeMethodBy("initialize", null);
 			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 				e.printStackTrace();
 			}
 		}
 	}
 	
-	public void invokeMethodBy(String methodName) {
+	public void invokeMethodBy(String methodName, Object params) {
 		if (controllerClass!=null && controller!=null) {
 			Method initializeMethod;
 			try {
-				initializeMethod = controllerClass.getMethod(methodName);
-				initializeMethod.invoke(controller,null);
+				if (params!=null) {
+					initializeMethod = controllerClass.getMethod(methodName, params.getClass());
+					initializeMethod.invoke(controller,params);
+				}else {
+					initializeMethod = controllerClass.getMethod(methodName);
+					initializeMethod.invoke(controller,null);
+				}
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 				e.printStackTrace();
 			}

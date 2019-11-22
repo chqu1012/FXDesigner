@@ -3,7 +3,6 @@
 package de.dc.fx.ui.renderer.model.provider;
 
 import de.dc.fx.ui.renderer.model.FXFilteredTableView;
-
 import java.util.Collection;
 import java.util.List;
 

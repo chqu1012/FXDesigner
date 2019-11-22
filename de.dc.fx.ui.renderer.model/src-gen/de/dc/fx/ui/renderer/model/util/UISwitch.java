@@ -84,6 +84,8 @@ public class UISwitch<T> extends Switch<T> {
 			FXNode fxNode = (FXNode) theEObject;
 			T result = caseFXNode(fxNode);
 			if (result == null)
+				result = caseFXEvent(fxNode);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -107,6 +109,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXNode(fxLayout);
 			if (result == null)
+				result = caseFXEvent(fxLayout);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -117,6 +121,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXLayout(fxhBox);
 			if (result == null)
 				result = caseFXNode(fxhBox);
+			if (result == null)
+				result = caseFXEvent(fxhBox);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -129,6 +135,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXNode(fxvBox);
 			if (result == null)
+				result = caseFXEvent(fxvBox);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -140,6 +148,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXNode(fxBorderPane);
 			if (result == null)
+				result = caseFXEvent(fxBorderPane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -148,6 +158,8 @@ public class UISwitch<T> extends Switch<T> {
 			T result = caseFXButton(fxButton);
 			if (result == null)
 				result = caseFXNode(fxButton);
+			if (result == null)
+				result = caseFXEvent(fxButton);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -158,6 +170,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXNode(fxLabel);
 			if (result == null)
+				result = caseFXEvent(fxLabel);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -166,6 +180,8 @@ public class UISwitch<T> extends Switch<T> {
 			T result = caseFXCheckButton(fxCheckButton);
 			if (result == null)
 				result = caseFXNode(fxCheckButton);
+			if (result == null)
+				result = caseFXEvent(fxCheckButton);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -176,6 +192,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXNode(fxRadioButton);
 			if (result == null)
+				result = caseFXEvent(fxRadioButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -184,6 +202,8 @@ public class UISwitch<T> extends Switch<T> {
 			T result = caseFXTableView(fxTableView);
 			if (result == null)
 				result = caseFXNode(fxTableView);
+			if (result == null)
+				result = caseFXEvent(fxTableView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -195,6 +215,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXTableView(fxFilteredTableView);
 			if (result == null)
 				result = caseFXNode(fxFilteredTableView);
+			if (result == null)
+				result = caseFXEvent(fxFilteredTableView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -208,6 +230,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXTableView(fxSortFilteredTableView);
 			if (result == null)
 				result = caseFXNode(fxSortFilteredTableView);
+			if (result == null)
+				result = caseFXEvent(fxSortFilteredTableView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

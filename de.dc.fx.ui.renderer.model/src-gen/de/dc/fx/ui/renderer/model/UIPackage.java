@@ -140,13 +140,22 @@ public interface UIPackage extends EPackage {
 	int FX_EVENT = 1;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_EVENT__ON_MOUSE_CLICKED = 0;
+
+	/**
 	 * The number of structural features of the '<em>FX Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_EVENT_FEATURE_COUNT = 0;
+	int FX_EVENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>FX Event</em>' class.
@@ -168,13 +177,22 @@ public interface UIPackage extends EPackage {
 	int FX_NODE = 2;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NODE__ON_MOUSE_CLICKED = FX_EVENT__ON_MOUSE_CLICKED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__ID = 0;
+	int FX_NODE__ID = FX_EVENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -183,7 +201,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__NAME = 1;
+	int FX_NODE__NAME = FX_EVENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
@@ -192,7 +210,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__OPACITY = 2;
+	int FX_NODE__OPACITY = FX_EVENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -201,7 +219,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__VISIBLE = 3;
+	int FX_NODE__VISIBLE = FX_EVENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Disable</b></em>' attribute.
@@ -210,7 +228,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__DISABLE = 4;
+	int FX_NODE__DISABLE = FX_EVENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -219,7 +237,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__STYLE = 5;
+	int FX_NODE__STYLE = FX_EVENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute list.
@@ -228,7 +246,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__STYLE_CLASS = 6;
+	int FX_NODE__STYLE_CLASS = FX_EVENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Layout X</b></em>' attribute.
@@ -237,7 +255,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__LAYOUT_X = 7;
+	int FX_NODE__LAYOUT_X = FX_EVENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Layout Y</b></em>' attribute.
@@ -246,7 +264,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__LAYOUT_Y = 8;
+	int FX_NODE__LAYOUT_Y = FX_EVENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Pref Width</b></em>' attribute.
@@ -255,7 +273,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__PREF_WIDTH = 9;
+	int FX_NODE__PREF_WIDTH = FX_EVENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Pref Height</b></em>' attribute.
@@ -264,7 +282,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__PREF_HEIGHT = 10;
+	int FX_NODE__PREF_HEIGHT = FX_EVENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Min Width</b></em>' attribute.
@@ -273,7 +291,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MIN_WIDTH = 11;
+	int FX_NODE__MIN_WIDTH = FX_EVENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Min Height</b></em>' attribute.
@@ -282,7 +300,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MIN_HEIGHT = 12;
+	int FX_NODE__MIN_HEIGHT = FX_EVENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Max Width</b></em>' attribute.
@@ -291,7 +309,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MAX_WIDTH = 13;
+	int FX_NODE__MAX_WIDTH = FX_EVENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Max Height</b></em>' attribute.
@@ -300,7 +318,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MAX_HEIGHT = 14;
+	int FX_NODE__MAX_HEIGHT = FX_EVENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Padding</b></em>' containment reference.
@@ -309,7 +327,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__PADDING = 15;
+	int FX_NODE__PADDING = FX_EVENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Margin</b></em>' containment reference.
@@ -318,7 +336,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE__MARGIN = 16;
+	int FX_NODE__MARGIN = FX_EVENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>FX Node</em>' class.
@@ -327,7 +345,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE_FEATURE_COUNT = 17;
+	int FX_NODE_FEATURE_COUNT = FX_EVENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>FX Node</em>' class.
@@ -336,7 +354,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_NODE_OPERATION_COUNT = 0;
+	int FX_NODE_OPERATION_COUNT = FX_EVENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl <em>FX Margin</em>}' class.
@@ -475,6 +493,15 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	int FX_LAYOUT = 5;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LAYOUT__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -665,6 +692,15 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	int FXH_BOX = 6;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXH_BOX__ON_MOUSE_CLICKED = FX_LAYOUT__ON_MOUSE_CLICKED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -866,6 +902,15 @@ public interface UIPackage extends EPackage {
 	int FXV_BOX = 7;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FXV_BOX__ON_MOUSE_CLICKED = FX_LAYOUT__ON_MOUSE_CLICKED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1063,6 +1108,15 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	int FX_BORDER_PANE = 8;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BORDER_PANE__ON_MOUSE_CLICKED = FX_LAYOUT__ON_MOUSE_CLICKED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1300,6 +1354,15 @@ public interface UIPackage extends EPackage {
 	int FX_BUTTON = 9;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_BUTTON__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1479,6 +1542,15 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	int FX_LABEL = 10;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_LABEL__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1662,6 +1734,15 @@ public interface UIPackage extends EPackage {
 	int FX_CHECK_BUTTON = 11;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_CHECK_BUTTON__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1843,6 +1924,15 @@ public interface UIPackage extends EPackage {
 	int FX_RADIO_BUTTON = 12;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_RADIO_BUTTON__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2022,6 +2112,15 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	int FX_TABLE_VIEW = 13;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TABLE_VIEW__ON_MOUSE_CLICKED = FX_NODE__ON_MOUSE_CLICKED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2214,6 +2313,15 @@ public interface UIPackage extends EPackage {
 	int FX_FILTERED_TABLE_VIEW = 14;
 
 	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_FILTERED_TABLE_VIEW__ON_MOUSE_CLICKED = FX_TABLE_VIEW__ON_MOUSE_CLICKED;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2402,6 +2510,15 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	int FX_SORT_FILTERED_TABLE_VIEW = 15;
+
+	/**
+	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_SORT_FILTERED_TABLE_VIEW__ON_MOUSE_CLICKED = FX_FILTERED_TABLE_VIEW__ON_MOUSE_CLICKED;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2730,6 +2847,17 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFXEvent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXEvent#getOnMouseClicked <em>On Mouse Clicked</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>On Mouse Clicked</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXEvent#getOnMouseClicked()
+	 * @see #getFXEvent()
+	 * @generated
+	 */
+	EAttribute getFXEvent_OnMouseClicked();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXNode <em>FX Node</em>}'.
@@ -3392,6 +3520,14 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FX_EVENT = eINSTANCE.getFXEvent();
+
+		/**
+		 * The meta object literal for the '<em><b>On Mouse Clicked</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_EVENT__ON_MOUSE_CLICKED = eINSTANCE.getFXEvent_OnMouseClicked();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXNodeImpl <em>FX Node</em>}' class.

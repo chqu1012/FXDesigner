@@ -298,6 +298,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFXEvent_OnMouseClicked() {
+		return (EAttribute) fxEventEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXNode() {
 		return fxNodeEClass;
 	}
@@ -870,6 +880,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEAttribute(fxRootEClass, FX_ROOT__STYLE_CLASS);
 
 		fxEventEClass = createEClass(FX_EVENT);
+		createEAttribute(fxEventEClass, FX_EVENT__ON_MOUSE_CLICKED);
 
 		fxNodeEClass = createEClass(FX_NODE);
 		createEAttribute(fxNodeEClass, FX_NODE__ID);
@@ -973,6 +984,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		fxNodeEClass.getESuperTypes().add(this.getFXEvent());
 		fxLayoutEClass.getESuperTypes().add(this.getFXNode());
 		fxhBoxEClass.getESuperTypes().add(this.getFXLayout());
 		fxvBoxEClass.getESuperTypes().add(this.getFXLayout());
@@ -1003,6 +1015,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				IS_ORDERED);
 
 		initEClass(fxEventEClass, FXEvent.class, "FXEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXEvent_OnMouseClicked(), theEcorePackage.getEString(), "onMouseClicked", null, 0, 1,
+				FXEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxNodeEClass, FXNode.class, "FXNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXNode_Id(), theEcorePackage.getEString(), "id", null, 0, 1, FXNode.class, !IS_TRANSIENT,

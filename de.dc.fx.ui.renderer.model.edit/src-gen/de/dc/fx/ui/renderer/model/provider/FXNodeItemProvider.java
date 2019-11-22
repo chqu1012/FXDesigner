@@ -5,27 +5,15 @@ package de.dc.fx.ui.renderer.model.provider;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.UIFactory;
 import de.dc.fx.ui.renderer.model.UIPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -34,9 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXNodeItemProvider extends ItemProviderAdapter
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-		IItemLabelProvider, IItemPropertySource, ITableItemLabelProvider {
+public class FXNodeItemProvider extends FXEventItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -124,37 +110,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 	}
 
 	/**
-	 * This adds a property descriptor for the Style feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStylePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXNode_style_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_style_feature", "_UI_FXNode_type"),
-						UIPackage.Literals.FX_NODE__STYLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_StylePropertyCategory"), null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXNode_styleClass_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_styleClass_feature",
-								"_UI_FXNode_type"),
-						UIPackage.Literals.FX_NODE__STYLE_CLASS, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_StylePropertyCategory"), null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Visible feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,6 +139,37 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 								"_UI_FXNode_type"),
 						UIPackage.Literals.FX_NODE__DISABLE, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Style feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStylePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXNode_style_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_style_feature", "_UI_FXNode_type"),
+						UIPackage.Literals.FX_NODE__STYLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_StylePropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Style Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStyleClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXNode_styleClass_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_styleClass_feature",
+								"_UI_FXNode_type"),
+						UIPackage.Literals.FX_NODE__STYLE_CLASS, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_StylePropertyCategory"), null));
 	}
 
 	/**
@@ -346,21 +332,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 	}
 
 	/**
-	 * This returns <code>getImage(object)</code> for the column index <code>0</code> or <code>super.getImage(object)</code> otherwise.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getText(Object)
-	 * @see #getColumnText(Object, int)
-	 * @generated
-	 */
-	@Override
-	public Object getColumnImage(Object object, int columnIndex) {
-		// TODO: implement this method to return appropriate information for each column.
-		// Ensure that you remove @generated or mark it @generated NOT
-		return columnIndex == 0 ? getImage(object) : super.getImage(object);
-	}
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -381,21 +352,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 		String label = ((FXNode) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_FXNode_type")
 				: getString("_UI_FXNode_type") + " " + label;
-	}
-
-	/**
-	 * This returns <code>getText(object)</code> for the column index <code>0</code> or <code>super.getText(object)</code> otherwise.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImage(Object)
-	 * @see #getColumnImage(Object, int)
-	 * @generated
-	 */
-	@Override
-	public String getColumnText(Object object, int columnIndex) {
-		// TODO: implement this method to return appropriate information for each column.
-		// Ensure that you remove @generated or mark it @generated NOT
-		return columnIndex == 0 ? getText(object) : super.getText(object);
 	}
 
 	/**
@@ -451,17 +407,6 @@ public class FXNodeItemProvider extends ItemProviderAdapter
 
 		newChildDescriptors
 				.add(createChildParameter(UIPackage.Literals.FX_NODE__MARGIN, UIFactory.eINSTANCE.createFXMargin()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return UIEditPlugin.INSTANCE;
 	}
 
 }

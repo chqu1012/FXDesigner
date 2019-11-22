@@ -2,6 +2,8 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
+import de.dc.fx.ui.renderer.model.FXEvent;
+import de.dc.fx.ui.renderer.model.UIPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -10,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -17,7 +20,9 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITableItemLabelProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXEvent} object.
@@ -49,8 +54,25 @@ public class FXEventItemProvider extends ItemProviderAdapter
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addOnMouseClickedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the On Mouse Clicked feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOnMouseClickedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_FXEvent_onMouseClicked_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXEvent_onMouseClicked_feature",
+								"_UI_FXEvent_type"),
+						UIPackage.Literals.FX_EVENT__ON_MOUSE_CLICKED, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_EventPropertyCategory"), null));
 	}
 
 	/**
@@ -97,7 +119,9 @@ public class FXEventItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_FXEvent_type");
+		String label = ((FXEvent) object).getOnMouseClicked();
+		return label == null || label.length() == 0 ? getString("_UI_FXEvent_type")
+				: getString("_UI_FXEvent_type") + " " + label;
 	}
 
 	/**
@@ -125,6 +149,12 @@ public class FXEventItemProvider extends ItemProviderAdapter
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(FXEvent.class)) {
+		case UIPackage.FX_EVENT__ON_MOUSE_CLICKED:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

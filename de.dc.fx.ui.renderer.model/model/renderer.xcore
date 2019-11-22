@@ -21,10 +21,11 @@ class FXRoot{
 }
 
 class FXEvent{
-	
+  @GenModel(propertyCategory="Event")
+  String onMouseClicked
 }
 
-abstract class FXNode{
+abstract class FXNode extends FXEvent{
 	String ^id
 	String name
 	double opacity

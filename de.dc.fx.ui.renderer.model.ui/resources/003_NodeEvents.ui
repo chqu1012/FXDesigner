@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:FXRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://www.frateranatis.org/ui" basePackage="de.dc.fx.ui.renderer.model.ui" controller="de.dc.fx.ui.renderer.model.ui.controller.NodeEventsController">
+  <children xsi:type="model:FXVBox">
+    <children xsi:type="model:FXButton" onMouseClicked="onMyButtonClicked" id="buttonFillValues" name="Fill Button Values"/>
+    <children xsi:type="model:FXButton" onMouseClicked="onMyButtonClicked" id="buttonReset" name="Reset Values"/>
+    <children xsi:type="model:FXLabel" id="myLabel" name="Hello Label"/>
+  </children>
+</model:FXRoot>

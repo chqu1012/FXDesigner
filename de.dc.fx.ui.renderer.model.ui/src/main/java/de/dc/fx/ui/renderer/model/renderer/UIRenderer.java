@@ -1,13 +1,16 @@
 package de.dc.fx.ui.renderer.model.renderer;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 import de.dc.fx.ui.renderer.model.FXBorderPane;
 import de.dc.fx.ui.renderer.model.FXButton;
+import de.dc.fx.ui.renderer.model.FXEvent;
 import de.dc.fx.ui.renderer.model.FXFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXHBox;
+import de.dc.fx.ui.renderer.model.FXLabel;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
@@ -22,6 +25,7 @@ import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -31,6 +35,7 @@ import javafx.scene.layout.VBox;
 public class UIRenderer extends UISwitch<Node> {
 
 	private Map<String, Region> controlRegistry = new HashMap<>();
+	private FXRootControl root;
 	
 	@SuppressWarnings("unchecked")
 	public <T extends Region> T findNodeBy(String id) {
@@ -40,6 +45,7 @@ public class UIRenderer extends UISwitch<Node> {
 	private Region init(FXNode object, Region node) {
 		controlRegistry.put(object.getId(), node);
 		initSize(object, node);
+		caseFXEvent(object);
 		return node;
 	}
 	
@@ -57,10 +63,29 @@ public class UIRenderer extends UISwitch<Node> {
 	}
 	
 	@Override
+	public Node caseFXEvent(FXEvent object) {
+		FXNode fxNode = (FXNode) object;
+		String id = fxNode.getId();
+		Region control = controlRegistry.get(id);
+		if (control != null) {
+			if (object.getOnMouseClicked()!=null) {
+				control.setOnMouseClicked(e-> root.invokeMethodBy(object.getOnMouseClicked(), e));
+			}
+		}
+		return super.caseFXEvent(object);
+	}
+	
+	@Override
+	public Node caseFXLabel(FXLabel object) {
+		Label node = new Label(object.getName()==null?"":object.getName());
+		return init(object, node);
+	}
+	
+	@Override
 	public Node caseFXRoot(FXRoot object) {
-		FXRootControl node = new FXRootControl(object);
-		object.getChildren().forEach(e->node.setCenter(doSwitch(e)));
-		return node;
+		root = new FXRootControl(object);
+		object.getChildren().forEach(e->root.setCenter(doSwitch(e)));
+		return root;
 	}
 
 	@Override
@@ -90,14 +115,14 @@ public class UIRenderer extends UISwitch<Node> {
 	@Override
 	public Node caseFXHBox(FXHBox object) {
 		HBox node = new HBox(object.getSpacing());
-		object.getChildren().forEach(e->addChild(node, object));
+		object.getChildren().forEach(e->addChild(node, e));
 		return init(object, node);
 	}
 	
 	@Override
 	public Node caseFXVBox(FXVBox object) {
 		VBox node = new VBox(object.getSpacing());
-		object.getChildren().forEach(e->addChild(node, object));
+		object.getChildren().forEach(e->addChild(node, e));
 		return init(object, node);
 	}
 	
@@ -140,5 +165,22 @@ public class UIRenderer extends UISwitch<Node> {
 		Node current = doSwitch(eNode);
 		initSize(eNode, node);
 		node.getChildren().add(current);
+	}
+
+	public void initialize() {
+		root.getController().ifPresent(e->{
+			Field[] declaredFields = e.getClass().getDeclaredFields();
+			for (Field field : declaredFields) {
+				Region control = controlRegistry.get(field.getName());
+				if (control!=null) {
+					try {
+						field.setAccessible(true);
+						field.set(e, control);
+					} catch (IllegalArgumentException | IllegalAccessException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
 	}
 }
