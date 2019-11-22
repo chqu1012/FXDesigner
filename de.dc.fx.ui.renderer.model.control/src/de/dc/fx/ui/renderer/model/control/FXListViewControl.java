@@ -9,10 +9,9 @@ public class FXListViewControl<T> extends FXBaseView<T> implements IFXNodeContro
 
 	protected FXListView model;
 
-	protected ListView<T> view = new ListView<>(masterData);
-	
 	public FXListViewControl(FXListView model) {
 		super(model);
+		((ListView<T>)view).setItems(masterData);
 	}
 	
 	@Override
