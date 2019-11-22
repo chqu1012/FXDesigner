@@ -9,7 +9,7 @@ import javafx.scene.control.Control;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
-public abstract class FXBaseView<T> extends VBox implements IFXNodeControl{
+public abstract class FXBaseView<T> extends VBox implements IFXSelectionModelNode<T>{
 
 	protected ObservableList<T> masterData = FXCollections.observableArrayList(); 
 	

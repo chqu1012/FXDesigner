@@ -3,5 +3,6 @@
   <children xsi:type="model:FXVBox">
     <children xsi:type="model:FXListView" onMouseClicked="onListViewPersonClicked" id="listViewPerson"/>
     <children xsi:type="model:FXButton" onMouseClicked="onButtonClicked" name="Create Item"/>
+    <children xsi:type="model:FXButton" onMouseClicked="onButtonRemovedItemsClicked" name="RemoveItems"/>
   </children>
 </model:FXRoot>

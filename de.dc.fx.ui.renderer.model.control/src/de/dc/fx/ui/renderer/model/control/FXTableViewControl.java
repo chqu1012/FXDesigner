@@ -8,6 +8,8 @@ import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import javafx.scene.control.Control;
+import javafx.scene.control.ListView;
+import javafx.scene.control.SelectionModel;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.util.Callback;
@@ -41,6 +43,11 @@ public class FXTableViewControl<T> extends FXBaseView<T>{
 		columnsRegistry.put(id , column);
 		
 		((TableView<T>)view).getColumns().add(column);
+	}
+	
+	@Override
+	public SelectionModel<T> getSelectionModel() {
+		return ((TableView<T>)view).getSelectionModel();
 	}
 	
 	public Optional<TableColumn> findColumnBy(String id) {

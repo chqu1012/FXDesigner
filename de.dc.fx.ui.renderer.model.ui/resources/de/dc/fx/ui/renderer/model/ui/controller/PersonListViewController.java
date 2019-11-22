@@ -19,4 +19,9 @@ public class PersonListViewController {
 	public void onButtonClicked(MouseEvent e) {
 		listViewPerson.getMasterData().add("Hello World");
 	}
+
+	public void onButtonRemovedItemsClicked(MouseEvent e) {
+		String selection = listViewPerson.getSelectionModel().getSelectedItem();
+		listViewPerson.getMasterData().remove(selection);
+	}
 }
