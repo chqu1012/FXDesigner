@@ -95,6 +95,8 @@ class FXTableView extends FXNode{
 	contains FXTableColumn[0..*] columns
 }
 
+class FXFilteredTableView extends FXTableView{}
+
 class FXTableColumn{
 //	refers FXField field
 	String ^id

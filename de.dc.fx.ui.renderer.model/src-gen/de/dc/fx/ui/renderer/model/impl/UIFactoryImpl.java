@@ -77,6 +77,8 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXRadioButton();
 		case UIPackage.FX_TABLE_VIEW:
 			return createFXTableView();
+		case UIPackage.FX_FILTERED_TABLE_VIEW:
+			return createFXFilteredTableView();
 		case UIPackage.FX_TABLE_COLUMN:
 			return createFXTableColumn();
 		default:
@@ -203,6 +205,17 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXTableView createFXTableView() {
 		FXTableViewImpl fxTableView = new FXTableViewImpl();
 		return fxTableView;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXFilteredTableView createFXFilteredTableView() {
+		FXFilteredTableViewImpl fxFilteredTableView = new FXFilteredTableViewImpl();
+		return fxFilteredTableView;
 	}
 
 	/**

@@ -177,6 +177,17 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case UIPackage.FX_FILTERED_TABLE_VIEW: {
+			FXFilteredTableView fxFilteredTableView = (FXFilteredTableView) theEObject;
+			T result = caseFXFilteredTableView(fxFilteredTableView);
+			if (result == null)
+				result = caseFXTableView(fxFilteredTableView);
+			if (result == null)
+				result = caseFXNode(fxFilteredTableView);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FX_TABLE_COLUMN: {
 			FXTableColumn fxTableColumn = (FXTableColumn) theEObject;
 			T result = caseFXTableColumn(fxTableColumn);
@@ -381,6 +392,21 @@ public class UISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXTableView(FXTableView object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Filtered Table View</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Filtered Table View</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXFilteredTableView(FXFilteredTableView object) {
 		return null;
 	}
 

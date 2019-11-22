@@ -121,6 +121,15 @@ public interface UIFactory extends EFactory {
 	FXTableView createFXTableView();
 
 	/**
+	 * Returns a new object of class '<em>FX Filtered Table View</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Filtered Table View</em>'.
+	 * @generated
+	 */
+	FXFilteredTableView createFXFilteredTableView();
+
+	/**
 	 * Returns a new object of class '<em>FX Table Column</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

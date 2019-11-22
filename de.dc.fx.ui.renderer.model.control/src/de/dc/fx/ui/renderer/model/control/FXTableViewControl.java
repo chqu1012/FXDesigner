@@ -12,18 +12,23 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 
-public class FXTableViewControl<T> extends TableView<T> implements IFXNodeControl{
+public class FXTableViewControl<T> extends VBox implements IFXNodeControl{
 
 	private FXTableView model;
-	private Map<String, TableColumn> columnsRegistry = new HashMap<String, TableColumn>();
-	private ObservableList<T> masterData = FXCollections.observableArrayList(); 
+	protected Map<String, TableColumn> columnsRegistry = new HashMap<String, TableColumn>();
+	protected ObservableList<T> masterData = FXCollections.observableArrayList(); 
+	
+	protected TableView<T> tableView = new TableView<>(masterData);
 	
 	public FXTableViewControl(FXTableView model) {
 		this.model=model;
 		model.getColumns().forEach(e->createColumn(e));
-		setItems(masterData);
+		VBox.setVgrow(tableView, Priority.ALWAYS);
+		getChildren().add(tableView);
 	}
 	
 	public void add(T t) {
@@ -42,7 +47,7 @@ public class FXTableViewControl<T> extends TableView<T> implements IFXNodeContro
 		return masterData;
 	}
 	
-	private void createColumn(FXTableColumn e) {
+	public void createColumn(FXTableColumn e) {
 		TableColumn column = new TableColumn(e.getName());
 		if (null!=e.getCellFactory()) {
 			try {
@@ -60,7 +65,7 @@ public class FXTableViewControl<T> extends TableView<T> implements IFXNodeContro
 		String id = e.getId() == null? e.getName() : e.getId();
 		columnsRegistry.put(id , column);
 		
-		getColumns().add(column);
+		tableView.getColumns().add(column);
 	}
 
 	public Optional<TableColumn> findColumnBy(String id) {

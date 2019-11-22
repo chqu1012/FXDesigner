@@ -328,6 +328,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXFilteredTableView} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXFilteredTableViewItemProvider fxFilteredTableViewItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXFilteredTableView}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXFilteredTableViewAdapter() {
+		if (fxFilteredTableViewItemProvider == null) {
+			fxFilteredTableViewItemProvider = new FXFilteredTableViewItemProvider(this);
+		}
+
+		return fxFilteredTableViewItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTableColumn} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -477,6 +500,8 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxRadioButtonItemProvider.dispose();
 		if (fxTableViewItemProvider != null)
 			fxTableViewItemProvider.dispose();
+		if (fxFilteredTableViewItemProvider != null)
+			fxFilteredTableViewItemProvider.dispose();
 		if (fxTableColumnItemProvider != null)
 			fxTableColumnItemProvider.dispose();
 	}

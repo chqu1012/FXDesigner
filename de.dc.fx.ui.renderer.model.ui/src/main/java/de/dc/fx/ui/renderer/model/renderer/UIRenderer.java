@@ -6,11 +6,13 @@ import java.util.Optional;
 
 import de.dc.fx.ui.renderer.model.FXBorderPane;
 import de.dc.fx.ui.renderer.model.FXButton;
+import de.dc.fx.ui.renderer.model.FXFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXHBox;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
@@ -56,6 +58,13 @@ public class UIRenderer extends UISwitch<Node> {
 		return node;
 	}
 
+	@Override
+	public Node caseFXFilteredTableView(FXFilteredTableView object) {
+		FXFilteredTableViewControl<Object> node = new FXFilteredTableViewControl<>(object);
+		init(object, node);
+		return node;
+	}
+	
 	@Override
 	public Node caseFXTableView(FXTableView object) {
 		FXTableViewControl<Object> node = new FXTableViewControl<>(object);
