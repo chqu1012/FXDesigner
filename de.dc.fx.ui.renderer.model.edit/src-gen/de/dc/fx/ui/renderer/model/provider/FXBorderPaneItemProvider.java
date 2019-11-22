@@ -268,9 +268,7 @@ public class FXBorderPaneItemProvider extends FXLayoutItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == UIPackage.Literals.FX_NODE__PADDING
-				|| childFeature == UIPackage.Literals.FX_NODE__MARGIN
-				|| childFeature == UIPackage.Literals.FX_LAYOUT__CHILDREN
+		boolean qualify = childFeature == UIPackage.Literals.FX_LAYOUT__CHILDREN
 				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__LEFT
 				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__RIGHT
 				|| childFeature == UIPackage.Literals.FX_BORDER_PANE__CENTER

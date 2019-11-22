@@ -1,17 +1,14 @@
 package de.dc.fx.ui.renderer.model.renderer;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
 import de.dc.fx.ui.renderer.model.FXBorderPane;
 import de.dc.fx.ui.renderer.model.FXButton;
-import de.dc.fx.ui.renderer.model.FXEvent;
 import de.dc.fx.ui.renderer.model.FXHBox;
-import de.dc.fx.ui.renderer.model.FXInsets;
 import de.dc.fx.ui.renderer.model.FXNode;
+import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXTableView;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
@@ -27,10 +24,10 @@ import javafx.scene.layout.Region;
 
 public class UIRenderer extends UISwitch<Node> {
 
-	private Map<String, Node> controlRegistry = new HashMap<>();
+	private Map<String, Region> controlRegistry = new HashMap<>();
 	
 	@SuppressWarnings("unchecked")
-	public <T extends Node> T findNodeBy(String id) {
+	public <T extends Region> T findNodeBy(String id) {
 		return (T) controlRegistry.get(id);
 	}
 
@@ -87,30 +84,34 @@ public class UIRenderer extends UISwitch<Node> {
 		node.setLayoutX(object.getLayoutX());
 		node.setLayoutY(object.getLayoutY());
 
-		init(object, node);
-
 		createBorderPaneItem(object.getLeft()).ifPresent(e -> node.setLeft(e));
 		createBorderPaneItem(object.getRight()).ifPresent(e -> node.setRight(e));
 		createBorderPaneItem(object.getTop()).ifPresent(e -> node.setTop(e));
 		createBorderPaneItem(object.getBottom()).ifPresent(e -> node.setBottom(e));
 		createBorderPaneItem(object.getCenter()).ifPresent(e -> node.setCenter(e));
+
+		init(object, node);
 		return node;
 	}
 	
 	private Optional<Node> createBorderPaneItem(FXNode mNode) {
 		if (mNode!=null) {
 			Optional<Node> node = Optional.ofNullable(doSwitch(mNode));
-			BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
+//			BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
 			return node;
 		}
 		return Optional.empty();
 	}
 	
-	private Insets createInsets(FXInsets mMargin) {
-		if (mMargin == null) {
-			return new Insets(5);
+	@Override
+	public Node caseFXPadding(FXPadding object) {
+		FXNode node = (FXNode) object.eContainer();
+		Region uiNode = controlRegistry.get(node.getId());
+		if (uiNode!=null) {
+			uiNode.setPadding(new Insets(object.getLeft(), object.getRight(), object.getTop(), object.getBottom()));
 		}
-		return new Insets(mMargin.getLeft(), mMargin.getRight(), mMargin.getTop(), mMargin.getBottom());
+		// Emtpy Node
+		return new Pane();
 	}
 	
 	private void addChild(Pane node, FXNode eNode) {

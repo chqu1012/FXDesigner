@@ -2,7 +2,7 @@
  */
 package de.dc.fx.ui.renderer.model.impl;
 
-import de.dc.fx.ui.renderer.model.FXInsets;
+import de.dc.fx.ui.renderer.model.FXMargin;
 import de.dc.fx.ui.renderer.model.UIPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,21 +14,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>FX Insets</b></em>'.
+ * An implementation of the model object '<em><b>FX Margin</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl#getTop <em>Top</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl#getBottom <em>Bottom</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl#getRight <em>Right</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl#getTop <em>Top</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl#getBottom <em>Bottom</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl#getLeft <em>Left</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInsets {
+public class FXMarginImpl extends MinimalEObjectImpl.Container implements FXMargin {
 	/**
 	 * The default value of the '{@link #getTop() <em>Top</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FXInsetsImpl() {
+	protected FXMarginImpl() {
 		super();
 	}
 
@@ -125,7 +125,7 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UIPackage.Literals.FX_INSETS;
+		return UIPackage.Literals.FX_MARGIN;
 	}
 
 	/**
@@ -148,7 +148,7 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 		double oldTop = top;
 		top = newTop;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_INSETS__TOP, oldTop, top));
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_MARGIN__TOP, oldTop, top));
 	}
 
 	/**
@@ -171,7 +171,7 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 		double oldBottom = bottom;
 		bottom = newBottom;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_INSETS__BOTTOM, oldBottom, bottom));
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_MARGIN__BOTTOM, oldBottom, bottom));
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 		double oldRight = right;
 		right = newRight;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_INSETS__RIGHT, oldRight, right));
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_MARGIN__RIGHT, oldRight, right));
 	}
 
 	/**
@@ -217,7 +217,7 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 		double oldLeft = left;
 		left = newLeft;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_INSETS__LEFT, oldLeft, left));
+			eNotify(new ENotificationImpl(this, Notification.SET, UIPackage.FX_MARGIN__LEFT, oldLeft, left));
 	}
 
 	/**
@@ -228,13 +228,13 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UIPackage.FX_INSETS__TOP:
+		case UIPackage.FX_MARGIN__TOP:
 			return getTop();
-		case UIPackage.FX_INSETS__BOTTOM:
+		case UIPackage.FX_MARGIN__BOTTOM:
 			return getBottom();
-		case UIPackage.FX_INSETS__RIGHT:
+		case UIPackage.FX_MARGIN__RIGHT:
 			return getRight();
-		case UIPackage.FX_INSETS__LEFT:
+		case UIPackage.FX_MARGIN__LEFT:
 			return getLeft();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -248,16 +248,16 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UIPackage.FX_INSETS__TOP:
+		case UIPackage.FX_MARGIN__TOP:
 			setTop((Double) newValue);
 			return;
-		case UIPackage.FX_INSETS__BOTTOM:
+		case UIPackage.FX_MARGIN__BOTTOM:
 			setBottom((Double) newValue);
 			return;
-		case UIPackage.FX_INSETS__RIGHT:
+		case UIPackage.FX_MARGIN__RIGHT:
 			setRight((Double) newValue);
 			return;
-		case UIPackage.FX_INSETS__LEFT:
+		case UIPackage.FX_MARGIN__LEFT:
 			setLeft((Double) newValue);
 			return;
 		}
@@ -272,16 +272,16 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UIPackage.FX_INSETS__TOP:
+		case UIPackage.FX_MARGIN__TOP:
 			setTop(TOP_EDEFAULT);
 			return;
-		case UIPackage.FX_INSETS__BOTTOM:
+		case UIPackage.FX_MARGIN__BOTTOM:
 			setBottom(BOTTOM_EDEFAULT);
 			return;
-		case UIPackage.FX_INSETS__RIGHT:
+		case UIPackage.FX_MARGIN__RIGHT:
 			setRight(RIGHT_EDEFAULT);
 			return;
-		case UIPackage.FX_INSETS__LEFT:
+		case UIPackage.FX_MARGIN__LEFT:
 			setLeft(LEFT_EDEFAULT);
 			return;
 		}
@@ -296,13 +296,13 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UIPackage.FX_INSETS__TOP:
+		case UIPackage.FX_MARGIN__TOP:
 			return top != TOP_EDEFAULT;
-		case UIPackage.FX_INSETS__BOTTOM:
+		case UIPackage.FX_MARGIN__BOTTOM:
 			return bottom != BOTTOM_EDEFAULT;
-		case UIPackage.FX_INSETS__RIGHT:
+		case UIPackage.FX_MARGIN__RIGHT:
 			return right != RIGHT_EDEFAULT;
-		case UIPackage.FX_INSETS__LEFT:
+		case UIPackage.FX_MARGIN__LEFT:
 			return left != LEFT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -331,4 +331,4 @@ public class FXInsetsImpl extends MinimalEObjectImpl.Container implements FXInse
 		return result.toString();
 	}
 
-} //FXInsetsImpl
+} //FXMarginImpl

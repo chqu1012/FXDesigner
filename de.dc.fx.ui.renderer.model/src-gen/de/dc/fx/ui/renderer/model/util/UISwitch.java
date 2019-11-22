@@ -87,9 +87,16 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case UIPackage.FX_INSETS: {
-			FXInsets fxInsets = (FXInsets) theEObject;
-			T result = caseFXInsets(fxInsets);
+		case UIPackage.FX_MARGIN: {
+			FXMargin fxMargin = (FXMargin) theEObject;
+			T result = caseFXMargin(fxMargin);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UIPackage.FX_PADDING: {
+			FXPadding fxPadding = (FXPadding) theEObject;
+			T result = caseFXPadding(fxPadding);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -228,17 +235,32 @@ public class UISwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>FX Insets</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>FX Margin</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>FX Insets</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>FX Margin</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFXInsets(FXInsets object) {
+	public T caseFXMargin(FXMargin object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Padding</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Padding</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXPadding(FXPadding object) {
 		return null;
 	}
 

@@ -339,14 +339,14 @@ public interface UIPackage extends EPackage {
 	int FX_NODE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl <em>FX Insets</em>}' class.
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl <em>FX Margin</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see de.dc.fx.ui.renderer.model.impl.FXInsetsImpl
-	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXInsets()
+	 * @see de.dc.fx.ui.renderer.model.impl.FXMarginImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXMargin()
 	 * @generated
 	 */
-	int FX_INSETS = 3;
+	int FX_MARGIN = 3;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' attribute.
@@ -355,7 +355,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_INSETS__TOP = 0;
+	int FX_MARGIN__TOP = 0;
 
 	/**
 	 * The feature id for the '<em><b>Bottom</b></em>' attribute.
@@ -364,7 +364,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_INSETS__BOTTOM = 1;
+	int FX_MARGIN__BOTTOM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' attribute.
@@ -373,7 +373,7 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_INSETS__RIGHT = 2;
+	int FX_MARGIN__RIGHT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' attribute.
@@ -382,25 +382,89 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FX_INSETS__LEFT = 3;
+	int FX_MARGIN__LEFT = 3;
 
 	/**
-	 * The number of structural features of the '<em>FX Insets</em>' class.
+	 * The number of structural features of the '<em>FX Margin</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_INSETS_FEATURE_COUNT = 4;
+	int FX_MARGIN_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>FX Insets</em>' class.
+	 * The number of operations of the '<em>FX Margin</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_INSETS_OPERATION_COUNT = 0;
+	int FX_MARGIN_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXPaddingImpl <em>FX Padding</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXPaddingImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXPadding()
+	 * @generated
+	 */
+	int FX_PADDING = 4;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_PADDING__TOP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_PADDING__BOTTOM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_PADDING__RIGHT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_PADDING__LEFT = 3;
+
+	/**
+	 * The number of structural features of the '<em>FX Padding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_PADDING_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>FX Padding</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_PADDING_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXLayoutImpl <em>FX Layout</em>}' class.
@@ -410,7 +474,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLayout()
 	 * @generated
 	 */
-	int FX_LAYOUT = 4;
+	int FX_LAYOUT = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -600,7 +664,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXHBox()
 	 * @generated
 	 */
-	int FXH_BOX = 5;
+	int FXH_BOX = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -799,7 +863,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXBorderPane()
 	 * @generated
 	 */
-	int FX_BORDER_PANE = 6;
+	int FX_BORDER_PANE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1034,7 +1098,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXButton()
 	 * @generated
 	 */
-	int FX_BUTTON = 7;
+	int FX_BUTTON = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1215,7 +1279,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLabel()
 	 * @generated
 	 */
-	int FX_LABEL = 8;
+	int FX_LABEL = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1396,7 +1460,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXCheckButton()
 	 * @generated
 	 */
-	int FX_CHECK_BUTTON = 9;
+	int FX_CHECK_BUTTON = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1577,7 +1641,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXRadioButton()
 	 * @generated
 	 */
-	int FX_RADIO_BUTTON = 10;
+	int FX_RADIO_BUTTON = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1758,7 +1822,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableView()
 	 * @generated
 	 */
-	int FX_TABLE_VIEW = 11;
+	int FX_TABLE_VIEW = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1948,7 +2012,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 12;
+	int FX_TABLE_COLUMN = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2286,58 +2350,112 @@ public interface UIPackage extends EPackage {
 	EReference getFXNode_Margin();
 
 	/**
-	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXInsets <em>FX Insets</em>}'.
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXMargin <em>FX Margin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>FX Insets</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXInsets
+	 * @return the meta object for class '<em>FX Margin</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXMargin
 	 * @generated
 	 */
-	EClass getFXInsets();
+	EClass getFXMargin();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getTop <em>Top</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXMargin#getTop <em>Top</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Top</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXInsets#getTop()
-	 * @see #getFXInsets()
+	 * @see de.dc.fx.ui.renderer.model.FXMargin#getTop()
+	 * @see #getFXMargin()
 	 * @generated
 	 */
-	EAttribute getFXInsets_Top();
+	EAttribute getFXMargin_Top();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getBottom <em>Bottom</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXMargin#getBottom <em>Bottom</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Bottom</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXInsets#getBottom()
-	 * @see #getFXInsets()
+	 * @see de.dc.fx.ui.renderer.model.FXMargin#getBottom()
+	 * @see #getFXMargin()
 	 * @generated
 	 */
-	EAttribute getFXInsets_Bottom();
+	EAttribute getFXMargin_Bottom();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getRight <em>Right</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXMargin#getRight <em>Right</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Right</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXInsets#getRight()
-	 * @see #getFXInsets()
+	 * @see de.dc.fx.ui.renderer.model.FXMargin#getRight()
+	 * @see #getFXMargin()
 	 * @generated
 	 */
-	EAttribute getFXInsets_Right();
+	EAttribute getFXMargin_Right();
 
 	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXInsets#getLeft <em>Left</em>}'.
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXMargin#getLeft <em>Left</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Left</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXInsets#getLeft()
-	 * @see #getFXInsets()
+	 * @see de.dc.fx.ui.renderer.model.FXMargin#getLeft()
+	 * @see #getFXMargin()
 	 * @generated
 	 */
-	EAttribute getFXInsets_Left();
+	EAttribute getFXMargin_Left();
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXPadding <em>FX Padding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Padding</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXPadding
+	 * @generated
+	 */
+	EClass getFXPadding();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXPadding#getTop <em>Top</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Top</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXPadding#getTop()
+	 * @see #getFXPadding()
+	 * @generated
+	 */
+	EAttribute getFXPadding_Top();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXPadding#getBottom <em>Bottom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Bottom</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXPadding#getBottom()
+	 * @see #getFXPadding()
+	 * @generated
+	 */
+	EAttribute getFXPadding_Bottom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXPadding#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Right</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXPadding#getRight()
+	 * @see #getFXPadding()
+	 * @generated
+	 */
+	EAttribute getFXPadding_Right();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXPadding#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Left</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXPadding#getLeft()
+	 * @see #getFXPadding()
+	 * @generated
+	 */
+	EAttribute getFXPadding_Left();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXLayout <em>FX Layout</em>}'.
@@ -2802,14 +2920,14 @@ public interface UIPackage extends EPackage {
 		EReference FX_NODE__MARGIN = eINSTANCE.getFXNode_Margin();
 
 		/**
-		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXInsetsImpl <em>FX Insets</em>}' class.
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXMarginImpl <em>FX Margin</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see de.dc.fx.ui.renderer.model.impl.FXInsetsImpl
-		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXInsets()
+		 * @see de.dc.fx.ui.renderer.model.impl.FXMarginImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXMargin()
 		 * @generated
 		 */
-		EClass FX_INSETS = eINSTANCE.getFXInsets();
+		EClass FX_MARGIN = eINSTANCE.getFXMargin();
 
 		/**
 		 * The meta object literal for the '<em><b>Top</b></em>' attribute feature.
@@ -2817,7 +2935,7 @@ public interface UIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FX_INSETS__TOP = eINSTANCE.getFXInsets_Top();
+		EAttribute FX_MARGIN__TOP = eINSTANCE.getFXMargin_Top();
 
 		/**
 		 * The meta object literal for the '<em><b>Bottom</b></em>' attribute feature.
@@ -2825,7 +2943,7 @@ public interface UIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FX_INSETS__BOTTOM = eINSTANCE.getFXInsets_Bottom();
+		EAttribute FX_MARGIN__BOTTOM = eINSTANCE.getFXMargin_Bottom();
 
 		/**
 		 * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
@@ -2833,7 +2951,7 @@ public interface UIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FX_INSETS__RIGHT = eINSTANCE.getFXInsets_Right();
+		EAttribute FX_MARGIN__RIGHT = eINSTANCE.getFXMargin_Right();
 
 		/**
 		 * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
@@ -2841,7 +2959,49 @@ public interface UIPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FX_INSETS__LEFT = eINSTANCE.getFXInsets_Left();
+		EAttribute FX_MARGIN__LEFT = eINSTANCE.getFXMargin_Left();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXPaddingImpl <em>FX Padding</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXPaddingImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXPadding()
+		 * @generated
+		 */
+		EClass FX_PADDING = eINSTANCE.getFXPadding();
+
+		/**
+		 * The meta object literal for the '<em><b>Top</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_PADDING__TOP = eINSTANCE.getFXPadding_Top();
+
+		/**
+		 * The meta object literal for the '<em><b>Bottom</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_PADDING__BOTTOM = eINSTANCE.getFXPadding_Bottom();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_PADDING__RIGHT = eINSTANCE.getFXPadding_Right();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_PADDING__LEFT = eINSTANCE.getFXPadding_Left();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXLayoutImpl <em>FX Layout</em>}' class.

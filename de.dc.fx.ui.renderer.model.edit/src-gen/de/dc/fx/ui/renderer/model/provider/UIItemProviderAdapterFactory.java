@@ -121,26 +121,49 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXInsets} instances.
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXMargin} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FXInsetsItemProvider fxInsetsItemProvider;
+	protected FXMarginItemProvider fxMarginItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXInsets}.
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXMargin}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createFXInsetsAdapter() {
-		if (fxInsetsItemProvider == null) {
-			fxInsetsItemProvider = new FXInsetsItemProvider(this);
+	public Adapter createFXMarginAdapter() {
+		if (fxMarginItemProvider == null) {
+			fxMarginItemProvider = new FXMarginItemProvider(this);
 		}
 
-		return fxInsetsItemProvider;
+		return fxMarginItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXPadding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXPaddingItemProvider fxPaddingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXPadding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXPaddingAdapter() {
+		if (fxPaddingItemProvider == null) {
+			fxPaddingItemProvider = new FXPaddingItemProvider(this);
+		}
+
+		return fxPaddingItemProvider;
 	}
 
 	/**
@@ -436,8 +459,10 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxRootItemProvider.dispose();
 		if (fxEventItemProvider != null)
 			fxEventItemProvider.dispose();
-		if (fxInsetsItemProvider != null)
-			fxInsetsItemProvider.dispose();
+		if (fxMarginItemProvider != null)
+			fxMarginItemProvider.dispose();
+		if (fxPaddingItemProvider != null)
+			fxPaddingItemProvider.dispose();
 		if (fxhBoxItemProvider != null)
 			fxhBoxItemProvider.dispose();
 		if (fxBorderPaneItemProvider != null)

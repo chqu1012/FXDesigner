@@ -2,7 +2,7 @@
  */
 package de.dc.fx.ui.renderer.model.provider;
 
-import de.dc.fx.ui.renderer.model.FXInsets;
+import de.dc.fx.ui.renderer.model.FXMargin;
 import de.dc.fx.ui.renderer.model.UIPackage;
 
 import java.util.Collection;
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXInsets} object.
+ * This is the item provider adapter for a {@link de.dc.fx.ui.renderer.model.FXMargin} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class FXInsetsItemProvider extends ItemProviderAdapter
+public class FXMarginItemProvider extends ItemProviderAdapter
 		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
 		IItemLabelProvider, IItemPropertySource, ITableItemLabelProvider {
 	/**
@@ -40,7 +40,7 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FXInsetsItemProvider(AdapterFactory adapterFactory) {
+	public FXMarginItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -72,10 +72,10 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	protected void addTopPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXInsets_top_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_top_feature",
-								"_UI_FXInsets_type"),
-						UIPackage.Literals.FX_INSETS__TOP, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						getResourceLocator(), getString("_UI_FXMargin_top_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXMargin_top_feature",
+								"_UI_FXMargin_type"),
+						UIPackage.Literals.FX_MARGIN__TOP, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 						null, null));
 	}
 
@@ -88,10 +88,10 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	protected void addBottomPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXInsets_bottom_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_bottom_feature",
-								"_UI_FXInsets_type"),
-						UIPackage.Literals.FX_INSETS__BOTTOM, true, false, false,
+						getResourceLocator(), getString("_UI_FXMargin_bottom_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXMargin_bottom_feature",
+								"_UI_FXMargin_type"),
+						UIPackage.Literals.FX_MARGIN__BOTTOM, true, false, false,
 						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
@@ -104,10 +104,10 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	protected void addRightPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXInsets_right_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_right_feature",
-								"_UI_FXInsets_type"),
-						UIPackage.Literals.FX_INSETS__RIGHT, true, false, false,
+						getResourceLocator(), getString("_UI_FXMargin_right_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXMargin_right_feature",
+								"_UI_FXMargin_type"),
+						UIPackage.Literals.FX_MARGIN__RIGHT, true, false, false,
 						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
@@ -120,22 +120,22 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	protected void addLeftPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXInsets_left_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXInsets_left_feature",
-								"_UI_FXInsets_type"),
-						UIPackage.Literals.FX_INSETS__LEFT, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
+						getResourceLocator(), getString("_UI_FXMargin_left_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXMargin_left_feature",
+								"_UI_FXMargin_type"),
+						UIPackage.Literals.FX_MARGIN__LEFT, true, false, false, ItemPropertyDescriptor.REAL_VALUE_IMAGE,
 						null, null));
 	}
 
 	/**
-	 * This returns FXInsets.gif.
+	 * This returns FXMargin.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXInsets"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/FXMargin"));
 	}
 
 	/**
@@ -171,8 +171,8 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	 */
 	@Override
 	public String getText(Object object) {
-		FXInsets fxInsets = (FXInsets) object;
-		return getString("_UI_FXInsets_type") + " " + fxInsets.getTop();
+		FXMargin fxMargin = (FXMargin) object;
+		return getString("_UI_FXMargin_type") + " " + fxMargin.getTop();
 	}
 
 	/**
@@ -201,11 +201,11 @@ public class FXInsetsItemProvider extends ItemProviderAdapter
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(FXInsets.class)) {
-		case UIPackage.FX_INSETS__TOP:
-		case UIPackage.FX_INSETS__BOTTOM:
-		case UIPackage.FX_INSETS__RIGHT:
-		case UIPackage.FX_INSETS__LEFT:
+		switch (notification.getFeatureID(FXMargin.class)) {
+		case UIPackage.FX_MARGIN__TOP:
+		case UIPackage.FX_MARGIN__BOTTOM:
+		case UIPackage.FX_MARGIN__RIGHT:
+		case UIPackage.FX_MARGIN__LEFT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -40,13 +40,22 @@ public interface UIFactory extends EFactory {
 	FXEvent createFXEvent();
 
 	/**
-	 * Returns a new object of class '<em>FX Insets</em>'.
+	 * Returns a new object of class '<em>FX Margin</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>FX Insets</em>'.
+	 * @return a new object of class '<em>FX Margin</em>'.
 	 * @generated
 	 */
-	FXInsets createFXInsets();
+	FXMargin createFXMargin();
+
+	/**
+	 * Returns a new object of class '<em>FX Padding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Padding</em>'.
+	 * @generated
+	 */
+	FXPadding createFXPadding();
 
 	/**
 	 * Returns a new object of class '<em>FXH Box</em>'.

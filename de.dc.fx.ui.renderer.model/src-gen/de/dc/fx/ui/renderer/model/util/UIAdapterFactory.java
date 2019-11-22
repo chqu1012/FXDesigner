@@ -82,8 +82,13 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseFXInsets(FXInsets object) {
-			return createFXInsetsAdapter();
+		public Adapter caseFXMargin(FXMargin object) {
+			return createFXMarginAdapter();
+		}
+
+		@Override
+		public Adapter caseFXPadding(FXPadding object) {
+			return createFXPaddingAdapter();
 		}
 
 		@Override
@@ -193,16 +198,30 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXInsets <em>FX Insets</em>}'.
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXMargin <em>FX Margin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see de.dc.fx.ui.renderer.model.FXInsets
+	 * @see de.dc.fx.ui.renderer.model.FXMargin
 	 * @generated
 	 */
-	public Adapter createFXInsetsAdapter() {
+	public Adapter createFXMarginAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXPadding <em>FX Padding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXPadding
+	 * @generated
+	 */
+	public Adapter createFXPaddingAdapter() {
 		return null;
 	}
 

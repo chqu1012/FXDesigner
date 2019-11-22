@@ -2,8 +2,9 @@
  */
 package de.dc.fx.ui.renderer.model.impl;
 
-import de.dc.fx.ui.renderer.model.FXInsets;
+import de.dc.fx.ui.renderer.model.FXMargin;
 import de.dc.fx.ui.renderer.model.FXNode;
+import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.UIPackage;
 
 import java.util.Collection;
@@ -349,7 +350,7 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected FXInsets padding;
+	protected FXPadding padding;
 
 	/**
 	 * The cached value of the '{@link #getMargin() <em>Margin</em>}' containment reference.
@@ -359,7 +360,7 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected FXInsets margin;
+	protected FXMargin margin;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -725,7 +726,7 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public FXInsets getPadding() {
+	public FXPadding getPadding() {
 		return padding;
 	}
 
@@ -734,8 +735,8 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPadding(FXInsets newPadding, NotificationChain msgs) {
-		FXInsets oldPadding = padding;
+	public NotificationChain basicSetPadding(FXPadding newPadding, NotificationChain msgs) {
+		FXPadding oldPadding = padding;
 		padding = newPadding;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__PADDING,
@@ -754,7 +755,7 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setPadding(FXInsets newPadding) {
+	public void setPadding(FXPadding newPadding) {
 		if (newPadding != padding) {
 			NotificationChain msgs = null;
 			if (padding != null)
@@ -776,7 +777,7 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public FXInsets getMargin() {
+	public FXMargin getMargin() {
 		return margin;
 	}
 
@@ -785,8 +786,8 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMargin(FXInsets newMargin, NotificationChain msgs) {
-		FXInsets oldMargin = margin;
+	public NotificationChain basicSetMargin(FXMargin newMargin, NotificationChain msgs) {
+		FXMargin oldMargin = margin;
 		margin = newMargin;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, UIPackage.FX_NODE__MARGIN,
@@ -805,7 +806,7 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public void setMargin(FXInsets newMargin) {
+	public void setMargin(FXMargin newMargin) {
 		if (newMargin != margin) {
 			NotificationChain msgs = null;
 			if (margin != null)
@@ -939,10 +940,10 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			setMaxHeight((Double) newValue);
 			return;
 		case UIPackage.FX_NODE__PADDING:
-			setPadding((FXInsets) newValue);
+			setPadding((FXPadding) newValue);
 			return;
 		case UIPackage.FX_NODE__MARGIN:
-			setMargin((FXInsets) newValue);
+			setMargin((FXMargin) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -1002,10 +1003,10 @@ public abstract class FXNodeImpl extends MinimalEObjectImpl.Container implements
 			setMaxHeight(MAX_HEIGHT_EDEFAULT);
 			return;
 		case UIPackage.FX_NODE__PADDING:
-			setPadding((FXInsets) null);
+			setPadding((FXPadding) null);
 			return;
 		case UIPackage.FX_NODE__MARGIN:
-			setMargin((FXInsets) null);
+			setMargin((FXMargin) null);
 			return;
 		}
 		super.eUnset(featureID);

@@ -59,8 +59,10 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXRoot();
 		case UIPackage.FX_EVENT:
 			return createFXEvent();
-		case UIPackage.FX_INSETS:
-			return createFXInsets();
+		case UIPackage.FX_MARGIN:
+			return createFXMargin();
+		case UIPackage.FX_PADDING:
+			return createFXPadding();
 		case UIPackage.FXH_BOX:
 			return createFXHBox();
 		case UIPackage.FX_BORDER_PANE:
@@ -110,9 +112,20 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	 * @generated
 	 */
 	@Override
-	public FXInsets createFXInsets() {
-		FXInsetsImpl fxInsets = new FXInsetsImpl();
-		return fxInsets;
+	public FXMargin createFXMargin() {
+		FXMarginImpl fxMargin = new FXMarginImpl();
+		return fxMargin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXPadding createFXPadding() {
+		FXPaddingImpl fxPadding = new FXPaddingImpl();
+		return fxPadding;
 	}
 
 	/**

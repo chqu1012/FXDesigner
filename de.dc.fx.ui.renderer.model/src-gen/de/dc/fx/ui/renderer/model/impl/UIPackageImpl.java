@@ -7,10 +7,11 @@ import de.dc.fx.ui.renderer.model.FXButton;
 import de.dc.fx.ui.renderer.model.FXCheckButton;
 import de.dc.fx.ui.renderer.model.FXEvent;
 import de.dc.fx.ui.renderer.model.FXHBox;
-import de.dc.fx.ui.renderer.model.FXInsets;
 import de.dc.fx.ui.renderer.model.FXLabel;
 import de.dc.fx.ui.renderer.model.FXLayout;
+import de.dc.fx.ui.renderer.model.FXMargin;
 import de.dc.fx.ui.renderer.model.FXNode;
+import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRadioButton;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
@@ -59,7 +60,14 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fxInsetsEClass = null;
+	private EClass fxMarginEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxPaddingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -446,8 +454,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getFXInsets() {
-		return fxInsetsEClass;
+	public EClass getFXMargin() {
+		return fxMarginEClass;
 	}
 
 	/**
@@ -456,8 +464,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXInsets_Top() {
-		return (EAttribute) fxInsetsEClass.getEStructuralFeatures().get(0);
+	public EAttribute getFXMargin_Top() {
+		return (EAttribute) fxMarginEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -466,8 +474,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXInsets_Bottom() {
-		return (EAttribute) fxInsetsEClass.getEStructuralFeatures().get(1);
+	public EAttribute getFXMargin_Bottom() {
+		return (EAttribute) fxMarginEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -476,8 +484,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXInsets_Right() {
-		return (EAttribute) fxInsetsEClass.getEStructuralFeatures().get(2);
+	public EAttribute getFXMargin_Right() {
+		return (EAttribute) fxMarginEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -486,8 +494,58 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXInsets_Left() {
-		return (EAttribute) fxInsetsEClass.getEStructuralFeatures().get(3);
+	public EAttribute getFXMargin_Left() {
+		return (EAttribute) fxMarginEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getFXPadding() {
+		return fxPaddingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXPadding_Top() {
+		return (EAttribute) fxPaddingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXPadding_Bottom() {
+		return (EAttribute) fxPaddingEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXPadding_Right() {
+		return (EAttribute) fxPaddingEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXPadding_Left() {
+		return (EAttribute) fxPaddingEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -768,11 +826,17 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEReference(fxNodeEClass, FX_NODE__PADDING);
 		createEReference(fxNodeEClass, FX_NODE__MARGIN);
 
-		fxInsetsEClass = createEClass(FX_INSETS);
-		createEAttribute(fxInsetsEClass, FX_INSETS__TOP);
-		createEAttribute(fxInsetsEClass, FX_INSETS__BOTTOM);
-		createEAttribute(fxInsetsEClass, FX_INSETS__RIGHT);
-		createEAttribute(fxInsetsEClass, FX_INSETS__LEFT);
+		fxMarginEClass = createEClass(FX_MARGIN);
+		createEAttribute(fxMarginEClass, FX_MARGIN__TOP);
+		createEAttribute(fxMarginEClass, FX_MARGIN__BOTTOM);
+		createEAttribute(fxMarginEClass, FX_MARGIN__RIGHT);
+		createEAttribute(fxMarginEClass, FX_MARGIN__LEFT);
+
+		fxPaddingEClass = createEClass(FX_PADDING);
+		createEAttribute(fxPaddingEClass, FX_PADDING__TOP);
+		createEAttribute(fxPaddingEClass, FX_PADDING__BOTTOM);
+		createEAttribute(fxPaddingEClass, FX_PADDING__RIGHT);
+		createEAttribute(fxPaddingEClass, FX_PADDING__LEFT);
 
 		fxLayoutEClass = createEClass(FX_LAYOUT);
 		createEReference(fxLayoutEClass, FX_LAYOUT__CHILDREN);
@@ -910,25 +974,40 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		initEAttribute(getFXNode_MaxHeight(), theEcorePackage.getEDouble(), "maxHeight", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getFXNode_Padding(), this.getFXInsets(), null, "padding", null, 0, 1, FXNode.class,
+		initEReference(getFXNode_Padding(), this.getFXPadding(), null, "padding", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFXNode_Margin(), this.getFXInsets(), null, "margin", null, 0, 1, FXNode.class, !IS_TRANSIENT,
+		initEReference(getFXNode_Margin(), this.getFXMargin(), null, "margin", null, 0, 1, FXNode.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(fxInsetsEClass, FXInsets.class, "FXInsets", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(fxMarginEClass, FXMargin.class, "FXMargin", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFXInsets_Top(), theEcorePackage.getEDouble(), "top", "0.0", 0, 1, FXInsets.class,
+		initEAttribute(getFXMargin_Top(), theEcorePackage.getEDouble(), "top", "0.0", 0, 1, FXMargin.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getFXInsets_Bottom(), theEcorePackage.getEDouble(), "bottom", "0.0", 0, 1, FXInsets.class,
+		initEAttribute(getFXMargin_Bottom(), theEcorePackage.getEDouble(), "bottom", "0.0", 0, 1, FXMargin.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getFXInsets_Right(), theEcorePackage.getEDouble(), "right", "0.0", 0, 1, FXInsets.class,
+		initEAttribute(getFXMargin_Right(), theEcorePackage.getEDouble(), "right", "0.0", 0, 1, FXMargin.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getFXInsets_Left(), theEcorePackage.getEDouble(), "left", "0.0", 0, 1, FXInsets.class,
+		initEAttribute(getFXMargin_Left(), theEcorePackage.getEDouble(), "left", "0.0", 0, 1, FXMargin.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(fxPaddingEClass, FXPadding.class, "FXPadding", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXPadding_Top(), theEcorePackage.getEDouble(), "top", "0.0", 0, 1, FXPadding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getFXPadding_Bottom(), theEcorePackage.getEDouble(), "bottom", "0.0", 0, 1, FXPadding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getFXPadding_Right(), theEcorePackage.getEDouble(), "right", "0.0", 0, 1, FXPadding.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getFXPadding_Left(), theEcorePackage.getEDouble(), "left", "0.0", 0, 1, FXPadding.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

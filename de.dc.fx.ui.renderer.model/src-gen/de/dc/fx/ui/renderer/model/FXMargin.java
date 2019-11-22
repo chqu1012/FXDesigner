@@ -6,24 +6,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>FX Insets</b></em>'.
+ * A representation of the model object '<em><b>FX Margin</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link de.dc.fx.ui.renderer.model.FXInsets#getTop <em>Top</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.FXInsets#getBottom <em>Bottom</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.FXInsets#getRight <em>Right</em>}</li>
- *   <li>{@link de.dc.fx.ui.renderer.model.FXInsets#getLeft <em>Left</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.FXMargin#getTop <em>Top</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.FXMargin#getBottom <em>Bottom</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.FXMargin#getRight <em>Right</em>}</li>
+ *   <li>{@link de.dc.fx.ui.renderer.model.FXMargin#getLeft <em>Left</em>}</li>
  * </ul>
  *
- * @see de.dc.fx.ui.renderer.model.UIPackage#getFXInsets()
+ * @see de.dc.fx.ui.renderer.model.UIPackage#getFXMargin()
  * @model
  * @generated
  */
-public interface FXInsets extends EObject {
+public interface FXMargin extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Top</b></em>' attribute.
 	 * The default value is <code>"0.0"</code>.
@@ -31,14 +31,14 @@ public interface FXInsets extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Top</em>' attribute.
 	 * @see #setTop(double)
-	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXInsets_Top()
+	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXMargin_Top()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getTop();
 
 	/**
-	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXInsets#getTop <em>Top</em>}' attribute.
+	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXMargin#getTop <em>Top</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Top</em>' attribute.
@@ -54,14 +54,14 @@ public interface FXInsets extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bottom</em>' attribute.
 	 * @see #setBottom(double)
-	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXInsets_Bottom()
+	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXMargin_Bottom()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getBottom();
 
 	/**
-	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXInsets#getBottom <em>Bottom</em>}' attribute.
+	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXMargin#getBottom <em>Bottom</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Bottom</em>' attribute.
@@ -77,14 +77,14 @@ public interface FXInsets extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Right</em>' attribute.
 	 * @see #setRight(double)
-	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXInsets_Right()
+	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXMargin_Right()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getRight();
 
 	/**
-	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXInsets#getRight <em>Right</em>}' attribute.
+	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXMargin#getRight <em>Right</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Right</em>' attribute.
@@ -100,14 +100,14 @@ public interface FXInsets extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Left</em>' attribute.
 	 * @see #setLeft(double)
-	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXInsets_Left()
+	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXMargin_Left()
 	 * @model default="0.0" unique="false"
 	 * @generated
 	 */
 	double getLeft();
 
 	/**
-	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXInsets#getLeft <em>Left</em>}' attribute.
+	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXMargin#getLeft <em>Left</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Left</em>' attribute.
@@ -116,4 +116,4 @@ public interface FXInsets extends EObject {
 	 */
 	void setLeft(double value);
 
-} // FXInsets
+} // FXMargin

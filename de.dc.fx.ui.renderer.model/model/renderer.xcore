@@ -51,11 +51,18 @@ abstract class FXNode{
  @GenModel(propertyCategory="Layout")
 	double maxHeight
 
-	contains FXInsets padding
-	contains FXInsets margin
+	contains FXPadding padding
+	contains FXMargin margin
 }
 
-class FXInsets{
+class FXMargin{
+	double top ='0.0'
+	double bottom ='0.0'
+	double right ='0.0'
+	double left ='0.0'
+}
+
+class FXPadding{
 	double top ='0.0'
 	double bottom ='0.0'
 	double right ='0.0'

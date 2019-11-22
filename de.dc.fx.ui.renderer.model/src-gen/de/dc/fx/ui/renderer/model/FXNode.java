@@ -364,12 +364,12 @@ public interface FXNode extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Padding</em>' containment reference.
-	 * @see #setPadding(FXInsets)
+	 * @see #setPadding(FXPadding)
 	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXNode_Padding()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FXInsets getPadding();
+	FXPadding getPadding();
 
 	/**
 	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXNode#getPadding <em>Padding</em>}' containment reference.
@@ -379,19 +379,19 @@ public interface FXNode extends EObject {
 	 * @see #getPadding()
 	 * @generated
 	 */
-	void setPadding(FXInsets value);
+	void setPadding(FXPadding value);
 
 	/**
 	 * Returns the value of the '<em><b>Margin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Margin</em>' containment reference.
-	 * @see #setMargin(FXInsets)
+	 * @see #setMargin(FXMargin)
 	 * @see de.dc.fx.ui.renderer.model.UIPackage#getFXNode_Margin()
 	 * @model containment="true"
 	 * @generated
 	 */
-	FXInsets getMargin();
+	FXMargin getMargin();
 
 	/**
 	 * Sets the value of the '{@link de.dc.fx.ui.renderer.model.FXNode#getMargin <em>Margin</em>}' containment reference.
@@ -401,6 +401,6 @@ public interface FXNode extends EObject {
 	 * @see #getMargin()
 	 * @generated
 	 */
-	void setMargin(FXInsets value);
+	void setMargin(FXMargin value);
 
 } // FXNode
