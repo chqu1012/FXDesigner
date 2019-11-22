@@ -14,6 +14,7 @@ import de.dc.fx.ui.renderer.model.FXInsets;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.control.FXRootControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
@@ -28,9 +29,6 @@ public class UIRenderer extends UISwitch<Node> {
 
 	private Map<String, Node> controlRegistry = new HashMap<>();
 	
-	private Class<?> controller;
-	private Object controllerInstance;
-
 	@SuppressWarnings("unchecked")
 	public <T extends Node> T findNodeBy(String id) {
 		return (T) controlRegistry.get(id);
@@ -54,32 +52,9 @@ public class UIRenderer extends UISwitch<Node> {
 		}
 	}
 	
-	@SuppressWarnings("unused")
-	private void invokeMethod(String name, FXEvent event) {
-		if (controller!=null) {
-			Method initializeMethod;
-			try {
-				initializeMethod = controller.getMethod(name,event.getClass());
-				initializeMethod.invoke(controllerInstance, event);
-			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-				e.printStackTrace();
-			}
-		}
-	}
-	
 	@Override
 	public Node caseFXRoot(FXRoot object) {
-		if (object.getController()!=null) {
-			try {
-				controller = Class.forName(object.getController());
-				controllerInstance = controller.newInstance();
-				Method initializeMethod = controller.getMethod("initialize");
-				initializeMethod.invoke(controllerInstance,null);
-			} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | SecurityException | IllegalArgumentException | InvocationTargetException e) {
-				e.printStackTrace();
-			}
-		}
-		BorderPane node = new BorderPane();
+		FXRootControl node = new FXRootControl(object);
 		object.getChildren().forEach(e->node.setCenter(doSwitch(e)));
 		return node;
 	}
@@ -101,7 +76,7 @@ public class UIRenderer extends UISwitch<Node> {
 	@Override
 	public Node caseFXHBox(FXHBox object) {
 		HBox node = new HBox(object.getSpacing());
-		object.getChildren().forEach(e->node.getChildren().add(doSwitch(e)));
+		object.getChildren().forEach(e->addChild(node, object));
 		init(object, node);
 		return node;
 	}
@@ -119,8 +94,6 @@ public class UIRenderer extends UISwitch<Node> {
 		createBorderPaneItem(object.getTop()).ifPresent(e -> node.setTop(e));
 		createBorderPaneItem(object.getBottom()).ifPresent(e -> node.setBottom(e));
 		createBorderPaneItem(object.getCenter()).ifPresent(e -> node.setCenter(e));
-
-		object.getChildren().forEach(e -> addChild(node, e));
 		return node;
 	}
 	
