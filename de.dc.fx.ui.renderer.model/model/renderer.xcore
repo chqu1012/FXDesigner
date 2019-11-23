@@ -75,7 +75,9 @@ abstract class FXLayout extends FXNode{
 }
 
 class FXAccordion extends FXLayout{
-	
+}
+
+class FXTiledPane extends FXLayout{
 }
 
 class FXTabPane extends FXLayout{

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+import de.dc.fx.ui.renderer.model.FXAccordion;
 import de.dc.fx.ui.renderer.model.FXBorderPane;
 import de.dc.fx.ui.renderer.model.FXButton;
 import de.dc.fx.ui.renderer.model.FXEvent;
@@ -19,7 +20,9 @@ import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTab;
 import de.dc.fx.ui.renderer.model.FXTabPane;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.FXTiledPane;
 import de.dc.fx.ui.renderer.model.FXVBox;
+import de.dc.fx.ui.renderer.model.control.FXAccordionControl;
 import de.dc.fx.ui.renderer.model.control.FXBaseView;
 import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXListViewControl;
@@ -31,10 +34,12 @@ import de.dc.fx.ui.renderer.model.control.UI;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -139,6 +144,22 @@ public class UIRenderer extends UISwitch<Node> {
 	@Override
 	public Node caseFXButton(FXButton object) {
 		Button node = new Button(object.getName());
+		return init(object, node);
+	}
+	
+	@Override
+	public Node caseFXAccordion(FXAccordion object) {
+		FXAccordionControl node = new FXAccordionControl(object);
+		object.getChildren().stream().filter(e-> e instanceof FXTiledPane).map(e-> (FXTiledPane)e).
+		forEach(e->node.createTtitlePane(e.getName(), caseFXTiledPane(e)));
+		return init(object, node);
+	}
+	
+	@Override
+	public Node caseFXTiledPane(FXTiledPane object) {
+		TitledPane node = new TitledPane();
+		node.setText(object.getName());
+		object.getChildren().forEach(e->node.setContent(doSwitch(e)));
 		return init(object, node);
 	}
 	

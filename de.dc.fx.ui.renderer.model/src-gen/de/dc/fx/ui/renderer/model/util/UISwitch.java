@@ -127,6 +127,19 @@ public class UISwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case UIPackage.FX_TILED_PANE: {
+			FXTiledPane fxTiledPane = (FXTiledPane) theEObject;
+			T result = caseFXTiledPane(fxTiledPane);
+			if (result == null)
+				result = caseFXLayout(fxTiledPane);
+			if (result == null)
+				result = caseFXNode(fxTiledPane);
+			if (result == null)
+				result = caseFXEvent(fxTiledPane);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FX_TAB_PANE: {
 			FXTabPane fxTabPane = (FXTabPane) theEObject;
 			T result = caseFXTabPane(fxTabPane);
@@ -398,6 +411,21 @@ public class UISwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFXAccordion(FXAccordion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Tiled Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Tiled Pane</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXTiledPane(FXTiledPane object) {
 		return null;
 	}
 

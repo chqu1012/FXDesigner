@@ -190,6 +190,29 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTiledPane} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FXTiledPaneItemProvider fxTiledPaneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link de.dc.fx.ui.renderer.model.FXTiledPane}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFXTiledPaneAdapter() {
+		if (fxTiledPaneItemProvider == null) {
+			fxTiledPaneItemProvider = new FXTiledPaneItemProvider(this);
+		}
+
+		return fxTiledPaneItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link de.dc.fx.ui.renderer.model.FXTabPane} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -626,6 +649,8 @@ public class UIItemProviderAdapterFactory extends UIAdapterFactory
 			fxPaddingItemProvider.dispose();
 		if (fxAccordionItemProvider != null)
 			fxAccordionItemProvider.dispose();
+		if (fxTiledPaneItemProvider != null)
+			fxTiledPaneItemProvider.dispose();
 		if (fxTabPaneItemProvider != null)
 			fxTabPaneItemProvider.dispose();
 		if (fxhBoxItemProvider != null)

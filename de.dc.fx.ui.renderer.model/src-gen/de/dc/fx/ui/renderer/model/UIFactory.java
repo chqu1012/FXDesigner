@@ -67,6 +67,15 @@ public interface UIFactory extends EFactory {
 	FXAccordion createFXAccordion();
 
 	/**
+	 * Returns a new object of class '<em>FX Tiled Pane</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FX Tiled Pane</em>'.
+	 * @generated
+	 */
+	FXTiledPane createFXTiledPane();
+
+	/**
 	 * Returns a new object of class '<em>FX Tab Pane</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

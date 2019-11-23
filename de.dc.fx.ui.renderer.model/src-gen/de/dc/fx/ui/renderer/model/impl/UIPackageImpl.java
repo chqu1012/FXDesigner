@@ -23,6 +23,7 @@ import de.dc.fx.ui.renderer.model.FXTabClosePolicy;
 import de.dc.fx.ui.renderer.model.FXTabPane;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
+import de.dc.fx.ui.renderer.model.FXTiledPane;
 import de.dc.fx.ui.renderer.model.FXVBox;
 import de.dc.fx.ui.renderer.model.UIFactory;
 import de.dc.fx.ui.renderer.model.UIPackage;
@@ -91,6 +92,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	private EClass fxAccordionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxTiledPaneEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -659,6 +667,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFXTiledPane() {
+		return fxTiledPaneEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXTabPane() {
 		return fxTabPaneEClass;
 	}
@@ -1029,6 +1047,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		fxAccordionEClass = createEClass(FX_ACCORDION);
 
+		fxTiledPaneEClass = createEClass(FX_TILED_PANE);
+
 		fxTabPaneEClass = createEClass(FX_TAB_PANE);
 		createEAttribute(fxTabPaneEClass, FX_TAB_PANE__TAB_CLOSE_POLICY);
 
@@ -1111,6 +1131,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxNodeEClass.getESuperTypes().add(this.getFXEvent());
 		fxLayoutEClass.getESuperTypes().add(this.getFXNode());
 		fxAccordionEClass.getESuperTypes().add(this.getFXLayout());
+		fxTiledPaneEClass.getESuperTypes().add(this.getFXLayout());
 		fxTabPaneEClass.getESuperTypes().add(this.getFXLayout());
 		fxhBoxEClass.getESuperTypes().add(this.getFXLayout());
 		fxvBoxEClass.getESuperTypes().add(this.getFXLayout());
@@ -1234,6 +1255,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxAccordionEClass, FXAccordion.class, "FXAccordion", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fxTiledPaneEClass, FXTiledPane.class, "FXTiledPane", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fxTabPaneEClass, FXTabPane.class, "FXTabPane", !IS_ABSTRACT, !IS_INTERFACE,

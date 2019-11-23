@@ -102,6 +102,11 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseFXTiledPane(FXTiledPane object) {
+			return createFXTiledPaneAdapter();
+		}
+
+		@Override
 		public Adapter caseFXTabPane(FXTabPane object) {
 			return createFXTabPaneAdapter();
 		}
@@ -285,6 +290,20 @@ public class UIAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFXAccordionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link de.dc.fx.ui.renderer.model.FXTiledPane <em>FX Tiled Pane</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see de.dc.fx.ui.renderer.model.FXTiledPane
+	 * @generated
+	 */
+	public Adapter createFXTiledPaneAdapter() {
 		return null;
 	}
 

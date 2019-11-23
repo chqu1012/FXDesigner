@@ -135,6 +135,9 @@ public class FXLayoutItemProvider extends FXNodeItemProvider {
 				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXAccordion()));
 
 		newChildDescriptors.add(
+				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTiledPane()));
+
+		newChildDescriptors.add(
 				createChildParameter(UIPackage.Literals.FX_LAYOUT__CHILDREN, UIFactory.eINSTANCE.createFXTabPane()));
 
 		newChildDescriptors
