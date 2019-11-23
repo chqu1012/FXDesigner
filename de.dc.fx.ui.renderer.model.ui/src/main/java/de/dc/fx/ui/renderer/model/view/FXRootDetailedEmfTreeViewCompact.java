@@ -8,6 +8,12 @@ public class FXRootDetailedEmfTreeViewCompact extends EmfDetailedTreeViewCompact
 
 	@Override
 	protected EmfTreeModelView<FXRoot> initEmfModelTreeView() {
-		return new FXRootEmfTreeModelView();
+		FXRootEmfTreeModelView view = new FXRootEmfTreeModelView();
+		view.activeGenerateMenu(true);
+		view.addMenuItemToGenerateMenu("Generate Controller", t -> {
+			System.out.println("Generate Controller");
+			return null;
+		});
+		return view;
 	}
 }
