@@ -25,6 +25,7 @@ import de.dc.fx.ui.renderer.model.control.FXFilteredTableViewControl;
 import de.dc.fx.ui.renderer.model.control.FXListViewControl;
 import de.dc.fx.ui.renderer.model.control.FXRootControl;
 import de.dc.fx.ui.renderer.model.control.FXSortFilteredTableViewControl;
+import de.dc.fx.ui.renderer.model.control.FXTabPaneControl;
 import de.dc.fx.ui.renderer.model.control.FXTableViewControl;
 import de.dc.fx.ui.renderer.model.control.UI;
 import de.dc.fx.ui.renderer.model.util.UISwitch;
@@ -74,16 +75,8 @@ public class UIRenderer extends UISwitch<Node> {
 
 	@Override
 	public Node caseFXTabPane(FXTabPane object) {
-		TabPane node = new TabPane();
-		object.getChildren().stream().map(e->(FXTab)e).forEach(e-> {
-			Tab tab = new Tab(e.getName()==null? "": e.getName());
-			FXNode content = e.getContent();
-			if (content!=null) {
-				tab.setContent(doSwitch(content));
-			}
-			node.getTabs().add(tab);
-			tabRegistry.put(e.getId(), tab);
-		});
+		FXTabPaneControl node = new FXTabPaneControl(object);
+		object.getChildren().stream().map(e->(FXTab)e).forEach(e-> node.createTab(e.getName(), doSwitch(e)));
 		return init(object, node);
 	}
 	
