@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<model:FXRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://www.frateranatis.org/ui" basePackage="de.dc.fx.ui.renderer.model.ui" controller="de.dc.fx.ui.renderer.model.ui.controller.TabPaneController">
+  <children xsi:type="model:FXVBox">
+    <children xsi:type="model:FXAccordion">
+      <children xsi:type="model:FXTiledPane" name="Layout">
+        <children xsi:type="model:FXSortFilteredTableView"/>
+      </children>
+      <children xsi:type="model:FXTiledPane" name="Event">
+        <children xsi:type="model:FXVBox">
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXListView"/>
+        </children>
+      </children>
+      <children xsi:type="model:FXTiledPane" name="Style">
+        <children xsi:type="model:FXVBox">
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+          <children xsi:type="model:FXButton"/>
+        </children>
+      </children>
+      <children xsi:type="model:FXTiledPane" name="General">
+        <children xsi:type="model:FXTabPane">
+          <children xsi:type="model:FXTab"/>
+          <children xsi:type="model:FXTab"/>
+          <children xsi:type="model:FXTab"/>
+          <children xsi:type="model:FXTab"/>
+          <children xsi:type="model:FXTab"/>
+        </children>
+      </children>
+    </children>
+  </children>
+</model:FXRoot>
