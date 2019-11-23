@@ -5,6 +5,7 @@ package de.dc.fx.ui.renderer.model.impl;
 import de.dc.fx.ui.renderer.model.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -95,6 +96,36 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 			return createFXTableColumn();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case UIPackage.FX_TAB_CLOSE_POLICY:
+			return createFXTabClosePolicyFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case UIPackage.FX_TAB_CLOSE_POLICY:
+			return convertFXTabClosePolicyToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -305,6 +336,48 @@ public class UIFactoryImpl extends EFactoryImpl implements UIFactory {
 	public FXTableColumn createFXTableColumn() {
 		FXTableColumnImpl fxTableColumn = new FXTableColumnImpl();
 		return fxTableColumn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public FXTabClosePolicy createFXTabClosePolicy(String literal) {
+		FXTabClosePolicy result = FXTabClosePolicy.get(literal);
+		if (result == null)
+			throw new IllegalArgumentException("The value '" + literal + "' is not a valid enumerator of '"
+					+ UIPackage.Literals.FX_TAB_CLOSE_POLICY.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FXTabClosePolicy createFXTabClosePolicyFromString(EDataType eDataType, String initialValue) {
+		return createFXTabClosePolicy(initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertFXTabClosePolicy(FXTabClosePolicy instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFXTabClosePolicyToString(EDataType eDataType, Object instanceValue) {
+		return convertFXTabClosePolicy((FXTabClosePolicy) instanceValue);
 	}
 
 	/**

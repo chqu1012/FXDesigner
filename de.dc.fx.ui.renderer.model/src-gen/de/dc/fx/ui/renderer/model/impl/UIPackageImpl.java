@@ -19,6 +19,7 @@ import de.dc.fx.ui.renderer.model.FXRadioButton;
 import de.dc.fx.ui.renderer.model.FXRoot;
 import de.dc.fx.ui.renderer.model.FXSortFilteredTableView;
 import de.dc.fx.ui.renderer.model.FXTab;
+import de.dc.fx.ui.renderer.model.FXTabClosePolicy;
 import de.dc.fx.ui.renderer.model.FXTabPane;
 import de.dc.fx.ui.renderer.model.FXTableColumn;
 import de.dc.fx.ui.renderer.model.FXTableView;
@@ -28,6 +29,7 @@ import de.dc.fx.ui.renderer.model.UIPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -187,6 +189,13 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	private EClass fxTableColumnEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum fxTabClosePolicyEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -660,6 +669,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getFXTabPane_TabClosePolicy() {
+		return (EAttribute) fxTabPaneEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXHBox() {
 		return fxhBoxEClass;
 	}
@@ -930,6 +949,16 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EEnum getFXTabClosePolicy() {
+		return fxTabClosePolicyEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public UIFactory getUIFactory() {
 		return (UIFactory) getEFactoryInstance();
 	}
@@ -1001,6 +1030,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxAccordionEClass = createEClass(FX_ACCORDION);
 
 		fxTabPaneEClass = createEClass(FX_TAB_PANE);
+		createEAttribute(fxTabPaneEClass, FX_TAB_PANE__TAB_CLOSE_POLICY);
 
 		fxhBoxEClass = createEClass(FXH_BOX);
 		createEAttribute(fxhBoxEClass, FXH_BOX__SPACING);
@@ -1041,6 +1071,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEAttribute(fxTableColumnEClass, FX_TABLE_COLUMN__WIDTH);
 		createEAttribute(fxTableColumnEClass, FX_TABLE_COLUMN__CELL_VALUE_FACTORY);
 		createEAttribute(fxTableColumnEClass, FX_TABLE_COLUMN__CELL_FACTORY);
+
+		// Create enums
+		fxTabClosePolicyEEnum = createEEnum(FX_TAB_CLOSE_POLICY);
 	}
 
 	/**
@@ -1205,6 +1238,9 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		initEClass(fxTabPaneEClass, FXTabPane.class, "FXTabPane", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXTabPane_TabClosePolicy(), this.getFXTabClosePolicy(), "tabClosePolicy", "ALL_TABS", 0, 1,
+				FXTabPane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxhBoxEClass, FXHBox.class, "FXHBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFXHBox_Spacing(), theEcorePackage.getEDouble(), "spacing", null, 0, 1, FXHBox.class,
@@ -1282,6 +1318,12 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		initEAttribute(getFXTableColumn_CellFactory(), theEcorePackage.getEString(), "cellFactory", null, 0, 1,
 				FXTableColumn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(fxTabClosePolicyEEnum, FXTabClosePolicy.class, "FXTabClosePolicy");
+		addEEnumLiteral(fxTabClosePolicyEEnum, FXTabClosePolicy.SELECTED_TAB);
+		addEEnumLiteral(fxTabClosePolicyEEnum, FXTabClosePolicy.ALL_TABS);
+		addEEnumLiteral(fxTabClosePolicyEEnum, FXTabClosePolicy.UNAVAILABLE);
 
 		// Create resource
 		createResource(eNS_URI);

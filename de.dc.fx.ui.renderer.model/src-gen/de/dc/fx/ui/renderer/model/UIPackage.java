@@ -4,6 +4,7 @@ package de.dc.fx.ui.renderer.model;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -1064,13 +1065,22 @@ public interface UIPackage extends EPackage {
 	int FX_TAB_PANE__CHILDREN = FX_LAYOUT__CHILDREN;
 
 	/**
+	 * The feature id for the '<em><b>Tab Close Policy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_TAB_PANE__TAB_CLOSE_POLICY = FX_LAYOUT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>FX Tab Pane</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FX_TAB_PANE_FEATURE_COUNT = FX_LAYOUT_FEATURE_COUNT + 0;
+	int FX_TAB_PANE_FEATURE_COUNT = FX_LAYOUT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>FX Tab Pane</em>' class.
@@ -3561,6 +3571,16 @@ public interface UIPackage extends EPackage {
 	int FX_TABLE_COLUMN_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.FXTabClosePolicy <em>FX Tab Close Policy</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.FXTabClosePolicy
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTabClosePolicy()
+	 * @generated
+	 */
+	int FX_TAB_CLOSE_POLICY = 21;
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXRoot <em>FX Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3993,6 +4013,17 @@ public interface UIPackage extends EPackage {
 	EClass getFXTabPane();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXTabPane#getTabClosePolicy <em>Tab Close Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tab Close Policy</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTabPane#getTabClosePolicy()
+	 * @see #getFXTabPane()
+	 * @generated
+	 */
+	EAttribute getFXTabPane_TabClosePolicy();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXHBox <em>FXH Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4275,6 +4306,16 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFXTableColumn_CellFactory();
+
+	/**
+	 * Returns the meta object for enum '{@link de.dc.fx.ui.renderer.model.FXTabClosePolicy <em>FX Tab Close Policy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>FX Tab Close Policy</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXTabClosePolicy
+	 * @generated
+	 */
+	EEnum getFXTabClosePolicy();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4636,6 +4677,14 @@ public interface UIPackage extends EPackage {
 		EClass FX_TAB_PANE = eINSTANCE.getFXTabPane();
 
 		/**
+		 * The meta object literal for the '<em><b>Tab Close Policy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_TAB_PANE__TAB_CLOSE_POLICY = eINSTANCE.getFXTabPane_TabClosePolicy();
+
+		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXHBoxImpl <em>FXH Box</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4876,6 +4925,16 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FX_TABLE_COLUMN__CELL_FACTORY = eINSTANCE.getFXTableColumn_CellFactory();
+
+		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.FXTabClosePolicy <em>FX Tab Close Policy</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.FXTabClosePolicy
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTabClosePolicy()
+		 * @generated
+		 */
+		EEnum FX_TAB_CLOSE_POLICY = eINSTANCE.getFXTabClosePolicy();
 
 	}
 

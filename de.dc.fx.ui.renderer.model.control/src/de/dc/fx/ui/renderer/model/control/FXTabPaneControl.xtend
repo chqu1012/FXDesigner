@@ -6,6 +6,7 @@ import java.util.Map
 import javafx.scene.Node
 import javafx.scene.control.Tab
 import javafx.scene.control.TabPane
+import javafx.scene.control.TabPane.TabClosingPolicy
 
 class FXTabPaneControl extends TabPane implements IFXNodeControl {
 	
@@ -14,6 +15,7 @@ class FXTabPaneControl extends TabPane implements IFXNodeControl {
 
 	new(FXTabPane model) {
 		this.model = model
+		tabClosingPolicy = TabClosingPolicy.valueOf(model.tabClosePolicy.getName())
 	}
 
 	def createTab(String name, Node content) {

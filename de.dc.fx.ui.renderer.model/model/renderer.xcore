@@ -79,6 +79,7 @@ class FXAccordion extends FXLayout{
 }
 
 class FXTabPane extends FXLayout{
+	FXTabClosePolicy tabClosePolicy = 'ALL_TABS'
 }
 
 class FXHBox extends FXLayout{
@@ -125,4 +126,10 @@ class FXTableColumn{
 	double width = '150'
 	String cellValueFactory
 	String cellFactory
+}
+
+enum FXTabClosePolicy{
+	SELECTED_TAB
+	ALL_TABS 
+	UNAVAILABLE
 }
