@@ -1,9 +1,9 @@
 package de.dc.fx.ui.renderer.model;
 
-import de.dc.fx.emf.support.mm.view.EmfRecentlyOpenView;
 import de.dc.fx.ui.renderer.model.view.FXRootDetailedEmfTreeViewCompact;
 import de.dc.fx.ui.renderer.model.view.FXRootPreview;
 import de.dc.javafx.xcore.workbench.emf.ui.EmfPaletteView;
+import de.dc.javafx.xcore.workbench.emf.ui.EmfRecentlyOpenView;
 import de.dc.javafx.xcore.workbench.emf.ui.EmfWorkbench;
 import de.dc.javafx.xcore.workbench.emf.ui.di.EMFPlatform;
 import javafx.application.Application;
