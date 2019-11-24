@@ -14,11 +14,9 @@ import de.dc.javafx.xcore.workbench.emf.ui.event.EventContext;
 import de.dc.javafx.xcore.workbench.emf.ui.event.EventTopic;
 import de.dc.javafx.xcore.workbench.emf.ui.event.IEventBroker;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class FXRootEmfTreeModelView extends EmfTreeModelView<FXRoot> {
