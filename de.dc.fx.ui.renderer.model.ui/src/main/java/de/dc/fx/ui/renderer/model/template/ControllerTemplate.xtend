@@ -11,8 +11,8 @@ class ControllerTemplate implements IGenerator<FXRoot> {
 	import javafx.fxml.*;
 	import javafx.scene.control.*;
 	import javafx.scene.layout.*;
-	
-	public class «input.controller»{
+	«val className = Class.forName(input.controller).simpleName»
+	public class «className»{
 		
 		«FOR e: input.eResource.allContents.toIterable»
 		«IF e instanceof FXNode»
