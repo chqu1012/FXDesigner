@@ -7,10 +7,12 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class FXRootApplication extends Application{
+public class FXDesigner extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		primaryStage.setTitle("FXDesigner");
+		
 		EmfWorkbench workbench = new EmfWorkbench(); 
 		workbench.registerEmfEditor(FXRootDetailedEmfTreeViewCompact.class);
 		workbench.addViewToLeft(new EmfRecentlyOpenView());
