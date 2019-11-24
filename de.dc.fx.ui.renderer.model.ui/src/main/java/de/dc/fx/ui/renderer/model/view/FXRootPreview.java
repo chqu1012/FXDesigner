@@ -12,5 +12,10 @@ public class FXRootPreview extends EmfPreview{
 	public Switch<Node> initRenderer() {
 		return new UIRenderer();
 	}
+	
+	@Override
+	protected String getTitle() {
+		return "FXPreview";
+	}
 
 }
