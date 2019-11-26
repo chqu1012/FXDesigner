@@ -11,6 +11,11 @@
 	tableProviders="true", dataTypeConverters="true", modelName="UI", prefix="UI")
 package de.dc.fx.ui.renderer.model
 
+abstract class FXNamedElement{
+	String ^id
+	String name
+}
+
 class FXRoot{
 	contains FXNode [0..*] children
 	String basePackage
@@ -25,9 +30,7 @@ class FXEvent{
   String onMouseClicked
 }
 
-abstract class FXNode extends FXEvent{
-	String ^id
-	String name
+abstract class FXNode extends FXEvent, FXNamedElement{
 	double opacity
 	boolean visible
 	boolean disable

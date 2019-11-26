@@ -13,6 +13,7 @@ import de.dc.fx.ui.renderer.model.FXLabel;
 import de.dc.fx.ui.renderer.model.FXLayout;
 import de.dc.fx.ui.renderer.model.FXListView;
 import de.dc.fx.ui.renderer.model.FXMargin;
+import de.dc.fx.ui.renderer.model.FXNamedElement;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.FXRadioButton;
@@ -44,6 +45,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class UIPackageImpl extends EPackageImpl implements UIPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fxNamedElementEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -277,6 +285,36 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getFXNamedElement() {
+		return fxNamedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXNamedElement_Id() {
+		return (EAttribute) fxNamedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getFXNamedElement_Name() {
+		return (EAttribute) fxNamedElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getFXRoot() {
 		return fxRootEClass;
 	}
@@ -367,7 +405,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Id() {
+	public EAttribute getFXNode_Opacity() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -377,7 +415,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Name() {
+	public EAttribute getFXNode_Visible() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -387,7 +425,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Opacity() {
+	public EAttribute getFXNode_Disable() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -397,7 +435,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Visible() {
+	public EAttribute getFXNode_Style() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -407,7 +445,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Disable() {
+	public EAttribute getFXNode_StyleClass() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -417,7 +455,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_Style() {
+	public EAttribute getFXNode_LayoutX() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -427,7 +465,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_StyleClass() {
+	public EAttribute getFXNode_LayoutY() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -437,7 +475,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_LayoutX() {
+	public EAttribute getFXNode_PrefWidth() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -447,7 +485,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_LayoutY() {
+	public EAttribute getFXNode_PrefHeight() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -457,7 +495,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_PrefWidth() {
+	public EAttribute getFXNode_MinWidth() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -467,7 +505,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_PrefHeight() {
+	public EAttribute getFXNode_MinHeight() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -477,7 +515,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_MinWidth() {
+	public EAttribute getFXNode_MaxWidth() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -487,7 +525,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_MinHeight() {
+	public EAttribute getFXNode_MaxHeight() {
 		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -497,28 +535,8 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getFXNode_MaxWidth() {
-		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getFXNode_MaxHeight() {
-		return (EAttribute) fxNodeEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getFXNode_Padding() {
-		return (EReference) fxNodeEClass.getEStructuralFeatures().get(15);
+		return (EReference) fxNodeEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -528,7 +546,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 	 */
 	@Override
 	public EReference getFXNode_Margin() {
-		return (EReference) fxNodeEClass.getEStructuralFeatures().get(16);
+		return (EReference) fxNodeEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1001,6 +1019,10 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		fxNamedElementEClass = createEClass(FX_NAMED_ELEMENT);
+		createEAttribute(fxNamedElementEClass, FX_NAMED_ELEMENT__ID);
+		createEAttribute(fxNamedElementEClass, FX_NAMED_ELEMENT__NAME);
+
 		fxRootEClass = createEClass(FX_ROOT);
 		createEReference(fxRootEClass, FX_ROOT__CHILDREN);
 		createEAttribute(fxRootEClass, FX_ROOT__BASE_PACKAGE);
@@ -1012,8 +1034,6 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		createEAttribute(fxEventEClass, FX_EVENT__ON_MOUSE_CLICKED);
 
 		fxNodeEClass = createEClass(FX_NODE);
-		createEAttribute(fxNodeEClass, FX_NODE__ID);
-		createEAttribute(fxNodeEClass, FX_NODE__NAME);
 		createEAttribute(fxNodeEClass, FX_NODE__OPACITY);
 		createEAttribute(fxNodeEClass, FX_NODE__VISIBLE);
 		createEAttribute(fxNodeEClass, FX_NODE__DISABLE);
@@ -1129,6 +1149,7 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 
 		// Add supertypes to classes
 		fxNodeEClass.getESuperTypes().add(this.getFXEvent());
+		fxNodeEClass.getESuperTypes().add(this.getFXNamedElement());
 		fxLayoutEClass.getESuperTypes().add(this.getFXNode());
 		fxAccordionEClass.getESuperTypes().add(this.getFXLayout());
 		fxTiledPaneEClass.getESuperTypes().add(this.getFXLayout());
@@ -1147,6 +1168,15 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 		fxSortFilteredTableViewEClass.getESuperTypes().add(this.getFXFilteredTableView());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(fxNamedElementEClass, FXNamedElement.class, "FXNamedElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFXNamedElement_Id(), theEcorePackage.getEString(), "id", null, 0, 1, FXNamedElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getFXNamedElement_Name(), theEcorePackage.getEString(), "name", null, 0, 1, FXNamedElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
 		initEClass(fxRootEClass, FXRoot.class, "FXRoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFXRoot_Children(), this.getFXNode(), null, "children", null, 0, -1, FXRoot.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
@@ -1169,10 +1199,6 @@ public class UIPackageImpl extends EPackageImpl implements UIPackage {
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(fxNodeEClass, FXNode.class, "FXNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFXNode_Id(), theEcorePackage.getEString(), "id", null, 0, 1, FXNode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getFXNode_Name(), theEcorePackage.getEString(), "name", null, 0, 1, FXNode.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFXNode_Opacity(), theEcorePackage.getEDouble(), "opacity", null, 0, 1, FXNode.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);

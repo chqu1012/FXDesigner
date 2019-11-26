@@ -2,6 +2,7 @@ package de.dc.fx.ui.renderer.model.template
 
 import de.dc.fx.ui.renderer.model.FXNode
 import de.dc.fx.ui.renderer.model.FXRoot
+import de.dc.fx.ui.renderer.model.FXNamedElement
 
 class BaseControllerTemplate implements IGenerator<FXRoot> {
 	
@@ -11,17 +12,15 @@ class BaseControllerTemplate implements IGenerator<FXRoot> {
 	import javafx.fxml.*;
 	import javafx.scene.control.*;
 	import javafx.scene.layout.*;
+	
 	«val className = Class.forName(input.controller).simpleName»
 	public class Base«className»{
 		
-		«FOR e: input.eResource.allContents.toIterable»
-		«IF e instanceof FXNode»
-		«val node = e as FXNode»
-		«IF node.id !== null»
+		«FOR e: input.eResource.allContents.toIterable.filter(FXNamedElement)»
+		«IF e.id !== null»
 		@FXML
-		protected «node.eClass.name.replaceFirst("FX", "")» «e.id»;
+		protected «e.eClass.name.replaceFirst("FX", "")» «e.id»;
 		
-		«ENDIF»
 		«ENDIF»
 		«ENDFOR»
 		public void initialize(){}

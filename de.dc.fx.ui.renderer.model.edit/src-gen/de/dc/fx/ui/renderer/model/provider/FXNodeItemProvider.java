@@ -72,10 +72,11 @@ public class FXNodeItemProvider extends FXEventItemProvider {
 	protected void addIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXNode_id_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_id_feature", "_UI_FXNode_type"),
-						UIPackage.Literals.FX_NODE__ID, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
+						getResourceLocator(), getString("_UI_FXNamedElement_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXNamedElement_id_feature",
+								"_UI_FXNamedElement_type"),
+						UIPackage.Literals.FX_NAMED_ELEMENT__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -87,9 +88,10 @@ public class FXNodeItemProvider extends FXEventItemProvider {
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_FXNode_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_FXNode_name_feature", "_UI_FXNode_type"),
-						UIPackage.Literals.FX_NODE__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_FXNamedElement_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_FXNamedElement_name_feature",
+								"_UI_FXNamedElement_type"),
+						UIPackage.Literals.FX_NAMED_ELEMENT__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 

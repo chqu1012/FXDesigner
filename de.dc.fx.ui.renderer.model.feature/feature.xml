@@ -2,7 +2,7 @@
 <feature
       id="de.dc.fx.ui.renderer.model.feature"
       label="FX Renderer Feature"
-      version="1.0.0.qualifier"
+      version="1.0.1.qualifier"
       provider-name="Frater Anatis">
 
    <description url="http://www.example.com/description">
@@ -17,12 +17,9 @@
       [Enter License Description here.]
    </license>
 
-   <plugin
-         id="de.dc.fx.emf.support.ide"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
+   <includes
+         id="de.dc.fx.emf.support.ide.feature"
+         version="0.0.0"/>
 
    <plugin
          id="de.dc.fx.emf.ui.support"
@@ -30,12 +27,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-   <plugin
-         id="de.dc.fx.emf.support.mm.editor"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
 
    <plugin
          id="de.dc.fx.ui.renderer.model.control"
@@ -46,13 +37,6 @@
 
    <plugin
          id="de.dc.fx.ui.renderer.model.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.dc.fx.emf.support.mm"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -74,33 +58,6 @@
 
    <plugin
          id="de.dc.fx.ui.renderer.model"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.dc.fx.emf.support.mm.edit"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
-         id="de.dc.fx.emf.support"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.dc.fx.emf.support.mm.ui"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="de.dc.fx.emf.efxclipse.runtime"
          download-size="0"
          install-size="0"
          version="0.0.0"

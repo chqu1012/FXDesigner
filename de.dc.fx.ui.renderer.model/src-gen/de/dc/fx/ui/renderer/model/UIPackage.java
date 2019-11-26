@@ -58,6 +58,52 @@ public interface UIPackage extends EPackage {
 	UIPackage eINSTANCE = de.dc.fx.ui.renderer.model.impl.UIPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXNamedElementImpl <em>FX Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see de.dc.fx.ui.renderer.model.impl.FXNamedElementImpl
+	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXNamedElement()
+	 * @generated
+	 */
+	int FX_NAMED_ELEMENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NAMED_ELEMENT__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NAMED_ELEMENT__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>FX Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NAMED_ELEMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>FX Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FX_NAMED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl <em>FX Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,7 +111,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXRoot()
 	 * @generated
 	 */
-	int FX_ROOT = 0;
+	int FX_ROOT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Children</b></em>' containment reference list.
@@ -138,7 +184,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXEvent()
 	 * @generated
 	 */
-	int FX_EVENT = 1;
+	int FX_EVENT = 2;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -175,7 +221,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXNode()
 	 * @generated
 	 */
-	int FX_NODE = 2;
+	int FX_NODE = 3;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -365,7 +411,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXMargin()
 	 * @generated
 	 */
-	int FX_MARGIN = 3;
+	int FX_MARGIN = 4;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' attribute.
@@ -429,7 +475,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXPadding()
 	 * @generated
 	 */
-	int FX_PADDING = 4;
+	int FX_PADDING = 5;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' attribute.
@@ -493,7 +539,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLayout()
 	 * @generated
 	 */
-	int FX_LAYOUT = 5;
+	int FX_LAYOUT = 6;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -692,7 +738,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXAccordion()
 	 * @generated
 	 */
-	int FX_ACCORDION = 6;
+	int FX_ACCORDION = 7;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -891,7 +937,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTiledPane()
 	 * @generated
 	 */
-	int FX_TILED_PANE = 7;
+	int FX_TILED_PANE = 8;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1090,7 +1136,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTabPane()
 	 * @generated
 	 */
-	int FX_TAB_PANE = 8;
+	int FX_TAB_PANE = 9;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1298,7 +1344,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXHBox()
 	 * @generated
 	 */
-	int FXH_BOX = 9;
+	int FXH_BOX = 10;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1506,7 +1552,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXVBox()
 	 * @generated
 	 */
-	int FXV_BOX = 10;
+	int FXV_BOX = 11;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1714,7 +1760,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXBorderPane()
 	 * @generated
 	 */
-	int FX_BORDER_PANE = 11;
+	int FX_BORDER_PANE = 12;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -1958,7 +2004,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTab()
 	 * @generated
 	 */
-	int FX_TAB = 12;
+	int FX_TAB = 13;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2157,7 +2203,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXButton()
 	 * @generated
 	 */
-	int FX_BUTTON = 13;
+	int FX_BUTTON = 14;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2347,7 +2393,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXLabel()
 	 * @generated
 	 */
-	int FX_LABEL = 14;
+	int FX_LABEL = 15;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2537,7 +2583,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXCheckButton()
 	 * @generated
 	 */
-	int FX_CHECK_BUTTON = 15;
+	int FX_CHECK_BUTTON = 16;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2727,7 +2773,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXRadioButton()
 	 * @generated
 	 */
-	int FX_RADIO_BUTTON = 16;
+	int FX_RADIO_BUTTON = 17;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -2917,7 +2963,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXListView()
 	 * @generated
 	 */
-	int FX_LIST_VIEW = 17;
+	int FX_LIST_VIEW = 18;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -3107,7 +3153,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableView()
 	 * @generated
 	 */
-	int FX_TABLE_VIEW = 18;
+	int FX_TABLE_VIEW = 19;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -3306,7 +3352,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXFilteredTableView()
 	 * @generated
 	 */
-	int FX_FILTERED_TABLE_VIEW = 19;
+	int FX_FILTERED_TABLE_VIEW = 20;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -3505,7 +3551,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXSortFilteredTableView()
 	 * @generated
 	 */
-	int FX_SORT_FILTERED_TABLE_VIEW = 20;
+	int FX_SORT_FILTERED_TABLE_VIEW = 21;
 
 	/**
 	 * The feature id for the '<em><b>On Mouse Clicked</b></em>' attribute.
@@ -3704,7 +3750,7 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTableColumn()
 	 * @generated
 	 */
-	int FX_TABLE_COLUMN = 21;
+	int FX_TABLE_COLUMN = 22;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3777,7 +3823,39 @@ public interface UIPackage extends EPackage {
 	 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXTabClosePolicy()
 	 * @generated
 	 */
-	int FX_TAB_CLOSE_POLICY = 22;
+	int FX_TAB_CLOSE_POLICY = 23;
+
+	/**
+	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXNamedElement <em>FX Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FX Named Element</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNamedElement
+	 * @generated
+	 */
+	EClass getFXNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNamedElement#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNamedElement#getId()
+	 * @see #getFXNamedElement()
+	 * @generated
+	 */
+	EAttribute getFXNamedElement_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see de.dc.fx.ui.renderer.model.FXNamedElement#getName()
+	 * @see #getFXNamedElement()
+	 * @generated
+	 */
+	EAttribute getFXNamedElement_Name();
 
 	/**
 	 * Returns the meta object for class '{@link de.dc.fx.ui.renderer.model.FXRoot <em>FX Root</em>}'.
@@ -3874,28 +3952,6 @@ public interface UIPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFXNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#getId()
-	 * @see #getFXNode()
-	 * @generated
-	 */
-	EAttribute getFXNode_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see de.dc.fx.ui.renderer.model.FXNode#getName()
-	 * @see #getFXNode()
-	 * @generated
-	 */
-	EAttribute getFXNode_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.dc.fx.ui.renderer.model.FXNode#getOpacity <em>Opacity</em>}'.
@@ -4550,6 +4606,32 @@ public interface UIPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXNamedElementImpl <em>FX Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see de.dc.fx.ui.renderer.model.impl.FXNamedElementImpl
+		 * @see de.dc.fx.ui.renderer.model.impl.UIPackageImpl#getFXNamedElement()
+		 * @generated
+		 */
+		EClass FX_NAMED_ELEMENT = eINSTANCE.getFXNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NAMED_ELEMENT__ID = eINSTANCE.getFXNamedElement_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FX_NAMED_ELEMENT__NAME = eINSTANCE.getFXNamedElement_Name();
+
+		/**
 		 * The meta object literal for the '{@link de.dc.fx.ui.renderer.model.impl.FXRootImpl <em>FX Root</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4626,22 +4708,6 @@ public interface UIPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FX_NODE = eINSTANCE.getFXNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FX_NODE__ID = eINSTANCE.getFXNode_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FX_NODE__NAME = eINSTANCE.getFXNode_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.

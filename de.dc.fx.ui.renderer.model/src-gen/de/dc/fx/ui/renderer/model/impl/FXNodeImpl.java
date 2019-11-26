@@ -3,6 +3,7 @@
 package de.dc.fx.ui.renderer.model.impl;
 
 import de.dc.fx.ui.renderer.model.FXMargin;
+import de.dc.fx.ui.renderer.model.FXNamedElement;
 import de.dc.fx.ui.renderer.model.FXNode;
 import de.dc.fx.ui.renderer.model.FXPadding;
 import de.dc.fx.ui.renderer.model.UIPackage;
@@ -1055,6 +1056,46 @@ public abstract class FXNodeImpl extends FXEventImpl implements FXNode {
 			return margin != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == FXNamedElement.class) {
+			switch (derivedFeatureID) {
+			case UIPackage.FX_NODE__ID:
+				return UIPackage.FX_NAMED_ELEMENT__ID;
+			case UIPackage.FX_NODE__NAME:
+				return UIPackage.FX_NAMED_ELEMENT__NAME;
+			default:
+				return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == FXNamedElement.class) {
+			switch (baseFeatureID) {
+			case UIPackage.FX_NAMED_ELEMENT__ID:
+				return UIPackage.FX_NODE__ID;
+			case UIPackage.FX_NAMED_ELEMENT__NAME:
+				return UIPackage.FX_NODE__NAME;
+			default:
+				return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**

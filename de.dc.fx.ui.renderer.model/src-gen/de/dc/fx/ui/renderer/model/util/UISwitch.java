@@ -66,6 +66,13 @@ public class UISwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+		case UIPackage.FX_NAMED_ELEMENT: {
+			FXNamedElement fxNamedElement = (FXNamedElement) theEObject;
+			T result = caseFXNamedElement(fxNamedElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case UIPackage.FX_ROOT: {
 			FXRoot fxRoot = (FXRoot) theEObject;
 			T result = caseFXRoot(fxRoot);
@@ -85,6 +92,8 @@ public class UISwitch<T> extends Switch<T> {
 			T result = caseFXNode(fxNode);
 			if (result == null)
 				result = caseFXEvent(fxNode);
+			if (result == null)
+				result = caseFXNamedElement(fxNode);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -111,6 +120,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxLayout);
 			if (result == null)
+				result = caseFXNamedElement(fxLayout);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -123,6 +134,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxAccordion);
 			if (result == null)
 				result = caseFXEvent(fxAccordion);
+			if (result == null)
+				result = caseFXNamedElement(fxAccordion);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -137,6 +150,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxTiledPane);
 			if (result == null)
+				result = caseFXNamedElement(fxTiledPane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -149,6 +164,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxTabPane);
 			if (result == null)
 				result = caseFXEvent(fxTabPane);
+			if (result == null)
+				result = caseFXNamedElement(fxTabPane);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -163,6 +180,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxhBox);
 			if (result == null)
+				result = caseFXNamedElement(fxhBox);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -175,6 +194,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxvBox);
 			if (result == null)
 				result = caseFXEvent(fxvBox);
+			if (result == null)
+				result = caseFXNamedElement(fxvBox);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -189,6 +210,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxBorderPane);
 			if (result == null)
+				result = caseFXNamedElement(fxBorderPane);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -199,6 +222,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxTab);
 			if (result == null)
 				result = caseFXEvent(fxTab);
+			if (result == null)
+				result = caseFXNamedElement(fxTab);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -211,6 +236,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxButton);
 			if (result == null)
+				result = caseFXNamedElement(fxButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -221,6 +248,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxLabel);
 			if (result == null)
 				result = caseFXEvent(fxLabel);
+			if (result == null)
+				result = caseFXNamedElement(fxLabel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -233,6 +262,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxCheckButton);
 			if (result == null)
+				result = caseFXNamedElement(fxCheckButton);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -243,6 +274,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxRadioButton);
 			if (result == null)
 				result = caseFXEvent(fxRadioButton);
+			if (result == null)
+				result = caseFXNamedElement(fxRadioButton);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -255,6 +288,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxListView);
 			if (result == null)
+				result = caseFXNamedElement(fxListView);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -265,6 +300,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxTableView);
 			if (result == null)
 				result = caseFXEvent(fxTableView);
+			if (result == null)
+				result = caseFXNamedElement(fxTableView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -278,6 +315,8 @@ public class UISwitch<T> extends Switch<T> {
 				result = caseFXNode(fxFilteredTableView);
 			if (result == null)
 				result = caseFXEvent(fxFilteredTableView);
+			if (result == null)
+				result = caseFXNamedElement(fxFilteredTableView);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -294,6 +333,8 @@ public class UISwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseFXEvent(fxSortFilteredTableView);
 			if (result == null)
+				result = caseFXNamedElement(fxSortFilteredTableView);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -307,6 +348,21 @@ public class UISwitch<T> extends Switch<T> {
 		default:
 			return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FX Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FX Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFXNamedElement(FXNamedElement object) {
+		return null;
 	}
 
 	/**
