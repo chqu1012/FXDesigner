@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <model:FXRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://www.frateranatis.org/ui" basePackage="de.dc.fx.ui.renderer.model.ui" controller="de.dc.fx.ui.renderer.model.ui.controller.TabPaneController">
-  <children xsi:type="model:FXTableView">
-    <columns id="Firstname" name="Firstname"/>
-    <columns name="Lastname"/>
-    <columns name="Age"/>
-    <columns name="Email"/>
+  <children xsi:type="model:FXTableView" id="personTableView">
+    <columns id="columnFirstname" name="Firstname"/>
+    <columns id="columnLastname" name="Lastname"/>
+    <columns id="columnAge" name="Age"/>
+    <columns id="columnEmail" name="Email"/>
   </children>
 </model:FXRoot>
