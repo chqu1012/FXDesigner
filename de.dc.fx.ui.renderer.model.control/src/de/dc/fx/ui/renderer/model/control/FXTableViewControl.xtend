@@ -1,25 +1,28 @@
 package de.dc.fx.ui.renderer.model.control
 
+import de.dc.fx.ui.renderer.model.FXTableColumn
+import de.dc.fx.ui.renderer.model.FXTableView
 import java.util.HashMap
 import java.util.Map
 import java.util.Optional
-import de.dc.fx.ui.renderer.model.FXNode
-import de.dc.fx.ui.renderer.model.FXTableColumn
-import de.dc.fx.ui.renderer.model.FXTableView
+import javafx.collections.transformation.SortedList
 import javafx.scene.control.Control
-import javafx.scene.control.ListView
-import javafx.scene.control.SelectionModel
 import javafx.scene.control.TableColumn
 import javafx.scene.control.TableView
+import javafx.scene.control.cell.PropertyValueFactory
 import javafx.util.Callback
 
 class FXTableViewControl<T> extends FXBaseView<T> {
+	
 	protected Map<String, TableColumn> columnsRegistry = new HashMap<String, TableColumn>()
 
 	new(FXTableView model) {
 		super(model)
 		model.columns.forEach([e|createColumn(e)])
-		((view as TableView<T>)).items = masterData
+		val sortedList = new SortedList(filteredMasterData)
+		val table = view as TableView<T>
+		sortedList.comparatorProperty.bind(table.comparatorProperty)
+		table.items = sortedList
 	}
 
 	def void createColumn(FXTableColumn e) {

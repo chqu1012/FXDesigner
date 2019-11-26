@@ -7,10 +7,12 @@ import javafx.collections.ObservableList
 import javafx.scene.control.Control
 import javafx.scene.layout.Priority
 import javafx.scene.layout.VBox
+import javafx.collections.transformation.FilteredList
 
 abstract class FXBaseView<T> extends VBox implements IFXSelectionModelNode<T> {
 	
-	protected ObservableList<T> masterData = FXCollections::observableArrayList()
+	protected ObservableList<T> masterData = FXCollections::observableArrayList
+	protected FilteredList<T> filteredMasterData = new FilteredList(masterData)
 	protected Control view
 	protected FXNode model
 
