@@ -3,6 +3,8 @@ package de.dc.fx.ui.renderer.model.template
 import de.dc.fx.ui.renderer.model.FXNode
 import de.dc.fx.ui.renderer.model.FXRoot
 import de.dc.fx.ui.renderer.model.FXNamedElement
+import de.dc.fx.ui.renderer.model.FXTableView
+import de.dc.fx.ui.renderer.model.FXTableColumn
 
 class BaseControllerTemplate implements IGenerator<FXRoot> {
 	
@@ -12,6 +14,8 @@ class BaseControllerTemplate implements IGenerator<FXRoot> {
 	import javafx.fxml.*;
 	import javafx.scene.control.*;
 	import javafx.scene.layout.*;
+	import javafx.collections.*;
+	import javafx.scene.control.cell.*;
 	
 	«val className = Class.forName(input.controller).simpleName»
 	public class Base«className»{
@@ -23,7 +27,33 @@ class BaseControllerTemplate implements IGenerator<FXRoot> {
 		
 		«ENDIF»
 		«ENDFOR»
-		public void initialize(){}
+		«FOR e: input.eResource.allContents.toIterable.filter(FXTableView)»
+		«val table = e as FXTableView»
+		protected ObservableList «table.id.toFirstLower»Data = FXCollection.observableArrayList();
+		
+		protected FilteredList filtered«table.id.toFirstUpper»Data = new FilteredList(«table.name.toFirstLower»Data);
+		
+		«FOR column : table.columns»
+		@FXML
+		protected TableColumn «column.id»;
+		
+		«ENDFOR»
+		«ENDFOR»
+		public void initialize(){
+			«FOR e : input.eResource.allContents.toIterable.filter(FXTableView)»
+			«e.id».setItems(filtered«e.id.toFirstUpper»Data);
+			«ENDFOR»
+			«FOR e : input.eResource.allContents.toIterable.filter(FXTableColumn)»
+			«IF e.cellFactory !== null»
+			«e.id».setCellFactory(new «e.cellFactory»());
+			«ELSE»
+			«e.id».setCellFactory(new PropertyValueFactory<>("«e.name»"));
+			«ENDIF»
+			«IF e.cellValueFactory !== null»
+			«e.id».setCellValueFactory(new «e.cellFactory»());
+			«ENDIF»
+			«ENDFOR»
+		}
 	}
 	'''
 	
