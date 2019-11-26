@@ -19,9 +19,12 @@ public class TableViewApplication extends UIApplication{
 		tableView.findColumnBy("columnAge").ifPresent(e-> e.setCellValueFactory(new PropertyValueFactory<>("age")));
 		tableView.findColumnBy("columnEmail").ifPresent(e-> e.setCellValueFactory(new PropertyValueFactory<>("email")));
 		
-		for (int i = 0; i < 20; i++) {
-			tableView.add(new Person("Hello", "World", "For", "Your"));
-		}
+		tableView.add(new Person("Jules", "Pumas", "15", "jules.pumas@mail.com"));
+		tableView.add(new Person("Peter", "Jackman", "43", "peter.jack@mail.com"));
+		tableView.add(new Person("Rick", "Ross", "23", "rick.ross@mail.com"));
+		tableView.add(new Person("Anna", "Liesa", "54", "anna.liesa@mail.com"));
+		
+		tableView.setOnMouseClicked(e-> System.out.println(tableView.getMasterData().size()));
 	}
 	
 	@Override
