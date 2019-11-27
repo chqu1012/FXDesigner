@@ -227,14 +227,19 @@ public class UIRenderer extends UISwitch<Node> {
 			Field[] declaredFields = e.getClass().getDeclaredFields();
 			for (Field field : declaredFields) {
 				if (field.isAnnotationPresent(UI.class)) {
-					Region control = controlRegistry.get(field.getName());
-					if (control != null) {
-						try {
+					try {
+						if (field.getType() == UIRenderer.class) {
 							field.setAccessible(true);
-							field.set(e, control);
-						} catch (IllegalArgumentException | IllegalAccessException e1) {
-							e1.printStackTrace();
+							field.set(e, this);
+						} else {
+							Region control = controlRegistry.get(field.getName());
+							if (control != null) {
+								field.setAccessible(true);
+								field.set(e, control);
+							}
 						}
+					} catch (IllegalArgumentException | IllegalAccessException e1) {
+						e1.printStackTrace();
 					}
 				}
 			}
