@@ -13,7 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory
 import javafx.util.Callback
 
 class FXTableViewControl<T> extends FXBaseView<T> {
-	
+
 	protected Map<String, TableColumn> columnsRegistry = new HashMap<String, TableColumn>()
 
 	new(FXTableView model) {
@@ -33,6 +33,14 @@ class FXTableViewControl<T> extends FXBaseView<T> {
 			if (instance instanceof Callback) {
 				var feature = instance as Callback
 				column.cellFactory = feature
+			}
+		}
+		if (null !== e.cellValueFactory) {
+			var c = Class.forName(e.cellValueFactory)
+			var Object instance = c.newInstance
+			if (instance instanceof Callback) {
+				var feature = instance as Callback
+				column.cellValueFactory = feature
 			}
 		}
 		var id = if(e.getId() === null) e.name else e.id
