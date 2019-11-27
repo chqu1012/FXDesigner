@@ -15,12 +15,13 @@ import javafx.util.Callback
 class FXTableViewControl<T> extends FXBaseView<T> {
 
 	protected Map<String, TableColumn> columnsRegistry = new HashMap<String, TableColumn>()
+	protected TableView<T> table
 
 	new(FXTableView model) {
 		super(model)
 		model.columns.forEach([e|createColumn(e)])
 		val sortedList = new SortedList(filteredMasterData)
-		val table = view as TableView<T>
+		table = view as TableView<T>
 		sortedList.comparatorProperty.bind(table.comparatorProperty)
 		table.items = sortedList
 	}
@@ -46,6 +47,10 @@ class FXTableViewControl<T> extends FXBaseView<T> {
 		var id = if(e.getId() === null) e.name else e.id
 		columnsRegistry.put(id, column)
 		((view as TableView<T>)).columns += column
+	}
+
+	def getTableView(){
+		table
 	}
 
 	override getSelectionModel() {
