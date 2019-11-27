@@ -15,8 +15,11 @@ class FXRootControl extends BorderPane {
 		if (model.controller !== null) {
 			controllerClass = Class.forName(model.controller)
 			controller = controllerClass.newInstance
-			invokeMethodBy("initialize", null)
 		}
+	}
+
+	def callInitializeMethod(){
+		invokeMethodBy("initialize", null)
 	}
 
 	def invokeMethodBy(String methodName, Object params) {
