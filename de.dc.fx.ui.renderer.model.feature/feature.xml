@@ -2,7 +2,7 @@
 <feature
       id="de.dc.fx.ui.renderer.model.feature"
       label="FX Renderer Feature"
-      version="1.0.1.qualifier"
+      version="1.0.2.qualifier"
       provider-name="Frater Anatis">
 
    <description url="http://www.example.com/description">

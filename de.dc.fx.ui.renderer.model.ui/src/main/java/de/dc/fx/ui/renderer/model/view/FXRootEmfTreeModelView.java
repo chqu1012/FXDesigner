@@ -5,6 +5,7 @@ import org.greenrobot.eventbus.Subscribe;
 
 import de.dc.fx.emf.support.file.IEmfManager;
 import de.dc.fx.ui.renderer.model.FXRoot;
+import de.dc.fx.ui.renderer.model.UIPackage;
 import de.dc.fx.ui.renderer.model.manager.FXRootEmfManager;
 import de.dc.fx.ui.renderer.model.renderer.UIRenderer;
 import de.dc.javafx.xcore.workbench.emf.ui.EmfTreeModelView;
@@ -25,8 +26,8 @@ public class FXRootEmfTreeModelView extends EmfTreeModelView<FXRoot> {
 	
 	public FXRootEmfTreeModelView() {
 		// Set edit mode for several attributes
-		// addEditableFor(FXRootPackage.eINSTANCE.getName());
-
+		addEditableFor(UIPackage.eINSTANCE.getFXTableColumn_Name());
+		addEditableFor(UIPackage.eINSTANCE.getFXNamedElement_Name());
 		
 		EMFPlatform.getInstance(IEventBroker.class).register(this);
 	}
