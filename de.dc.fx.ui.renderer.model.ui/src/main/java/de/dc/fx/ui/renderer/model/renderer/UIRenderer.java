@@ -50,9 +50,9 @@ public class UIRenderer extends UISwitch<Node> {
 
 	private Map<String, Region> controlRegistry = new HashMap<>();
 	private Map<String, Tab> tabRegistry = new HashMap<>();
-	
+
 	private FXRootControl root;
-	
+
 	@SuppressWarnings("unchecked")
 	public <T extends Region> T findNodeBy(String id) {
 		return (T) controlRegistry.get(id);
@@ -64,7 +64,7 @@ public class UIRenderer extends UISwitch<Node> {
 		caseFXEvent(object);
 		return node;
 	}
-	
+
 	private void initSize(FXNode object, Region node) {
 		node.setMinHeight(object.getMinHeight() == 0 ? Double.MIN_VALUE : object.getMinHeight());
 		node.setMinWidth(object.getMinWidth() == 0 ? Double.MIN_VALUE : object.getMinWidth());
@@ -81,38 +81,39 @@ public class UIRenderer extends UISwitch<Node> {
 	@Override
 	public Node caseFXTabPane(FXTabPane object) {
 		FXTabPaneControl node = new FXTabPaneControl(object);
-		object.getChildren().stream().map(e->(FXTab)e).forEach(e-> node.createTab(e.getName(), doSwitch(e)));
+		object.getChildren().stream().map(e -> (FXTab) e).forEach(e -> node.createTab(e.getName(), doSwitch(e)));
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXEvent(FXEvent object) {
 		FXNode fxNode = (FXNode) object;
 		String id = fxNode.getId();
 		Region control = controlRegistry.get(id);
 		if (control != null) {
-			if (object.getOnMouseClicked()!=null) {
+			if (object.getOnMouseClicked() != null) {
 				// Used for viewers
 				if (control instanceof FXBaseView) {
-					((FXBaseView)control).getControl().setOnMouseClicked(e-> root.invokeMethodBy(object.getOnMouseClicked(), e));
-				}else {
-					control.setOnMouseClicked(e-> root.invokeMethodBy(object.getOnMouseClicked(), e));
+					((FXBaseView) control).getControl()
+							.setOnMouseClicked(e -> root.invokeMethodBy(object.getOnMouseClicked(), e));
+				} else {
+					control.setOnMouseClicked(e -> root.invokeMethodBy(object.getOnMouseClicked(), e));
 				}
 			}
 		}
 		return super.caseFXEvent(object);
 	}
-	
+
 	@Override
 	public Node caseFXLabel(FXLabel object) {
-		Label node = new Label(object.getName()==null?"":object.getName());
+		Label node = new Label(object.getName() == null ? "" : object.getName());
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXRoot(FXRoot object) {
 		root = new FXRootControl(object);
-		object.getChildren().forEach(e->root.setCenter(doSwitch(e)));
+		object.getChildren().forEach(e -> root.setCenter(doSwitch(e)));
 		initialize();
 		return root;
 	}
@@ -122,61 +123,61 @@ public class UIRenderer extends UISwitch<Node> {
 		FXSortFilteredTableViewControl<Object> node = new FXSortFilteredTableViewControl<>(object);
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXFilteredTableView(FXFilteredTableView object) {
 		FXFilteredTableViewControl<Object> node = new FXFilteredTableViewControl<>(object);
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXTableView(FXTableView object) {
 		FXTableViewControl<Object> node = new FXTableViewControl<>(object);
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXListView(FXListView object) {
 		FXListViewControl<Object> node = new FXListViewControl<>(object);
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXButton(FXButton object) {
 		Button node = new Button(object.getName());
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXAccordion(FXAccordion object) {
 		FXAccordionControl node = new FXAccordionControl(object);
-		object.getChildren().stream().filter(e-> e instanceof FXTiledPane).map(e-> (FXTiledPane)e).
-		forEach(e->node.createTtitlePane(e.getName(), caseFXTiledPane(e)));
+		object.getChildren().stream().filter(e -> e instanceof FXTiledPane).map(e -> (FXTiledPane) e)
+				.forEach(e -> node.createTtitlePane(e.getName(), caseFXTiledPane(e)));
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXTiledPane(FXTiledPane object) {
 		TitledPane node = new TitledPane();
 		node.setText(object.getName());
-		object.getChildren().forEach(e->node.setContent(doSwitch(e)));
+		object.getChildren().forEach(e -> node.setContent(doSwitch(e)));
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXHBox(FXHBox object) {
 		HBox node = new HBox(object.getSpacing());
-		object.getChildren().forEach(e->addChild(node, e));
+		object.getChildren().forEach(e -> addChild(node, e));
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXVBox(FXVBox object) {
 		VBox node = new VBox(object.getSpacing());
-		object.getChildren().forEach(e->addChild(node, e));
+		object.getChildren().forEach(e -> addChild(node, e));
 		return init(object, node);
 	}
-	
+
 	@Override
 	public Node caseFXBorderPane(FXBorderPane object) {
 		BorderPane node = new BorderPane();
@@ -191,27 +192,27 @@ public class UIRenderer extends UISwitch<Node> {
 
 		return init(object, node);
 	}
-	
+
 	private Optional<Node> createBorderPaneItem(FXNode mNode) {
-		if (mNode!=null) {
+		if (mNode != null) {
 			Optional<Node> node = Optional.ofNullable(doSwitch(mNode));
 //			BorderPane.setMargin(node.get(), createInsets(mNode.getMargin()));
 			return node;
 		}
 		return Optional.empty();
 	}
-	
+
 	@Override
 	public Node caseFXPadding(FXPadding object) {
 		FXNode node = (FXNode) object.eContainer();
 		Region uiNode = controlRegistry.get(node.getId());
-		if (uiNode!=null) {
+		if (uiNode != null) {
 			uiNode.setPadding(new Insets(object.getLeft(), object.getRight(), object.getTop(), object.getBottom()));
 		}
 		// Emtpy Node
 		return new Pane();
 	}
-	
+
 	private void addChild(Pane node, FXNode eNode) {
 		Node current = doSwitch(eNode);
 		initSize(eNode, node);
@@ -219,15 +220,15 @@ public class UIRenderer extends UISwitch<Node> {
 	}
 
 	public void initialize() {
-		if (root==null && root.getController()==null) {
+		if (root == null && root.getController() == null) {
 			return;
 		}
-		root.getController().ifPresent(e->{
+		root.getController().ifPresent(e -> {
 			Field[] declaredFields = e.getClass().getDeclaredFields();
 			for (Field field : declaredFields) {
 				if (field.isAnnotationPresent(UI.class)) {
 					Region control = controlRegistry.get(field.getName());
-					if (control!=null) {
+					if (control != null) {
 						try {
 							field.setAccessible(true);
 							field.set(e, control);
@@ -237,6 +238,7 @@ public class UIRenderer extends UISwitch<Node> {
 					}
 				}
 			}
+			root.callInitializeMethod();
 		});
 	}
 }
